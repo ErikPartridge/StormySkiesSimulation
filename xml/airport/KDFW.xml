@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Airport>
+	<Name>Dallas/Fort Worth International</Name>
+	<Latitude>32.8968281</Latitude>
+	<Longitude>-97.0379958</Longitude>
+	<ICAO>KDFW</ICAO>
+	<IATA>DFW</IATA>
+	<Elevation>607</Elevation>
+	<Gates>175</Gates>
+	<HourlyFlights>130</HourlyFlights>
+	<Country>US</Country>
+	<Delay>1.0</Delay>
+	<DemandBonus>1.0</DemandBonus>
+	<TimeZone>US/Central</TimeZone>
+	<Regions>Texas,Oklahoma</Country>
+	<LongestRunway>13401</LongestRunway>
+</Airport>

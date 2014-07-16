@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Airport>
+	<Name>Los Angeles International</Name>
+	<Latitude>33.9424955</Latitude>
+	<Longitude>-118.4080684</Longitude>
+	<ICAO>KLAX</ICAO>
+	<IATA>LAX</IATA>
+	<Elevation>125</Elevation>
+	<Gates>121</Gates>
+	<HourlyFlights>100</HourlyFlights>
+	<Country>US</Country>
+	<Delay>-4.0</Delay>
+	<DemandBonus>15.0</DemandBonus>
+	<TimeZone>US/Western</TimeZone>
+	<Regions>California,Nevada</Country>
+	<LongestRunway>12091</LongestRunway>
+</Airport>

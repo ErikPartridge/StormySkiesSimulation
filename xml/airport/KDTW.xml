@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+(c) Erik Malmstrom-Partridge 2014 All in FEET (Elevation is int) Delay: Positive is good
+-->
+<Airport>
+    <Name>Detroit Metropolitan Wayne County Airport</Name>
+    <Latitude>42.2124167</Latitude>
+    <Longitude>-83.3533889</Longitude>
+    <ICAO>KDTW</ICAO>
+    <IATA>DTW</IATA>
+    <Elevation>645</Elevation>
+    <Gates>145</Gates>
+    <HourlyFlights>120</HourlyFlights>
+    <Country>US</Country>
+    <Delay>4.06</Delay>
+    <DemandBonus>0</DemandBonus>
+    <TimeZone>US/Michigan</TimeZone>
+    <Regions>Michigan,Ohio</Regions>
+    <LongestRunway>12003</LongestRunway>
+</Airport>

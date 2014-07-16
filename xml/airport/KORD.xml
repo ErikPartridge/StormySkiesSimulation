@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Airport>
+	<Name>Chicago O'Hare International</Name>
+	<Latitude>41.979333</Latitude>
+	<Longitude>-87.9073889</Longitude>
+	<ICAO>KORD</ICAO>
+	<IATA>ORD</IATA>
+	<Elevation>672</Elevation>
+	<Gates>182</Gates>
+	<HourlyFlights>100</HourlyFlights>
+	<Country>US</Country>
+	<Delay>12.0</Delay>
+	<DemandBonus>6.4</DemandBonus>
+	<TimeZone>US/Central</TimeZone>
+	<Regions>Illinois,Indiana,Iowa,Wisconsin</Country>
+	<LongestRunway>13000</LongestRunway>
+</Airport>

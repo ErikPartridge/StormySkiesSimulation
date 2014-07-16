@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Airport>
+	<Name>Atlanta Hartsfeld Jackson International</Name>
+	<Latitude>33.6366995</Latitude>
+	<Longitude>-84.4278639</Longitude>
+	<ICAO>KATL</ICAO>
+	<IATA>ATL</IATA>
+	<Elevation>1026</Elevation>
+	<Gates>207</Gates>
+	<HourlyFlights>140</HourlyFlights>
+	<Country>US</Country>
+	<Delay>4.4</Delay>
+	<DemandBonus>0.4</DemandBonus>
+	<TimeZone>US/Eastern</TimeZone>
+	<Regions>Tennessee,Georgia,SouthCarolina,Alabama</Country>
+	<LongestRunway>12390</LongestRunway>
+</Airport>

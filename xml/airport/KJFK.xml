@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Airport>
+	<Name>John F Kennedy International</Name>
+	<Latitude>39.8616667</Latitude>
+	<Longitude>-104.6731667</Longitude>
+	<ICAO>KJFK</ICAO>
+	<IATA>JFK</IATA>
+	<Elevation>14</Elevation>
+	<Gates>151</Gates>
+	<HourlyFlights>83</HourlyFlights>
+	<Country>US</Country>
+	<Delay>4.0</Delay>
+	<DemandBonus>20.0</DemandBonus>
+	<TimeZone>US/Eastern</TimeZone>
+	<Regions>NewYork,Pennsylvania,NewJersey,Connecticut</Country>
+	<LongestRunway>14511</LongestRunway>
+    <Slots>true</Slots>
+    
+</Airport>

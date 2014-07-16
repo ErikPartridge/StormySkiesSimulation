@@ -1,0 +1,20 @@
+body{
+    font-family: 'Avenir', sans-serif;
+    font-size: 1em;
+    color: #363636;
+    background-color: #FDFDFD;
+}
+h1{
+    font-family: 'Avenir', sans-serif;
+    font-size: 2em;
+    color: #363636;
+}
+#main-header {
+    font-family: 'Avenir',sans-serif;
+    font-size: 1.5em;
+    color: #363636;
+    background-color: #2952CC;
+    position: fixed;
+    top: 1.2em;
+    left: 1.2em;
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+(c) Erik Malmstrom-Partridge 2014 All in FEET (Elevation is int) Delay: Positive is bad
+-->
+<Airport>
+    <Name>Boston Logan International Airport</Name>
+    <Latitude>42.363056</Latitude>
+    <Longitude>-71.006389</Longitude>
+    <ICAO>KBOS</ICAO>
+    <IATA>BOS</IATA>
+    <Elevation>20</Elevation>
+    <Gates>103</Gates>
+    <HourlyFlights>60</HourlyFlights>
+    <Country>US</Country>
+    <Delay>.9</Delay>
+    <DemandBonus>2.4</DemandBonus>
+    <TimeZone>US/Eastern</TimeZone>
+    <Regions>RhodeIsland,Connecticut,Massachusetts,NewHampshire,Maine,Vermont</Regions>
+    <LongestRunway>10083</LongestRunway>
+</Airport>

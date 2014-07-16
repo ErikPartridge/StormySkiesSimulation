@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Airport>
+	<Name>Denver International</Name>
+	<Latitude>39.8616667</Latitude>
+	<Longitude>-104.6731667</Longitude>
+	<ICAO>KDEN</ICAO>
+	<IATA>DEN</IATA>
+	<Elevation>5434</Elevation>
+	<Gates>136</Gates>
+	<HourlyFlights>120</HourlyFlights>
+	<Country>US</Country>
+	<Delay>6.0</Delay>
+	<DemandBonus>1.0</DemandBonus>
+	<TimeZone>US/Mountain</TimeZone>
+	<Regions>Colorado</Country>
+	<LongestRunway>16000</LongestRunway>
+</Airport>
