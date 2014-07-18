@@ -16,4 +16,30 @@ Route::get('/', function()
 	return View::make('home');
 });
 
+Route::get('/backend/corporate', "CorporateController@get");
 
+Route::post('/backend/corporate', "CorporateController@post");
+
+Route::get('/backend/overview', "OverviewController@get");
+
+Route::post('/backend/overview', "OverviewController@post");
+
+Route::get('/backend/aircraft', "AircraftController@mainGet");
+
+Route::post('/backend/aircraft', "AircraftController@mainPost");
+
+Route::get('/backend/my_fleet', "FleetController@get");
+
+Route::post('/backend/my_fleet', "FleetController@post");
+
+Route::get('/backend/lease_aircraft', "AircraftController@leasingGet");
+
+Route::post('/backend/lease_aircraft', "AircraftController@leasingPost");
+
+Route::get('/backend/used_aircraft', "AircraftController@usedGet");
+
+Route::post('/backend/used_aircraft', "AircraftController@usedPost");
+
+Route::get('/backend/new_aircraft', "AircraftController@newGet");
+
+Route::post('/backend/new_aircraft', "AircraftController@newPost");

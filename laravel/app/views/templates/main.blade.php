@@ -5,6 +5,7 @@
     <meta author="Erik Malmstrom-Partridge">
     {{ HTML::style("css/framework/style.css") }}
     <title>Stormy Skies Simulation</title>
+
     @yield('head-details')
 </head>
 <body>
@@ -31,8 +32,10 @@
                     <li>{{HTML::link('backend/slots', "Slots", array())}}</li>
                 </ul>
             </li>
+            <li>{{HTML::link("backend/global", "World", array())}}</li>
         </ul>
     </div>
+    @yield('content')
 </body>
 
 </html>
