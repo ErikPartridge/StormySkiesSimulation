@@ -46,7 +46,7 @@
       <file leaf-file-name="main.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/templates/main.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="690">
+            <state line="7" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="-2.25" vertical-offset="51" max-vertical-offset="690">
               <folding />
             </state>
           </provider>
@@ -55,7 +55,7 @@
       <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.8450704" vertical-offset="0" max-vertical-offset="639">
+            <state line="93" column="0" selection-start="2897" selection-end="2897" vertical-scroll-proportion="0.85915494" vertical-offset="711" max-vertical-offset="1350">
               <folding />
             </state>
           </provider>
@@ -741,15 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="10" selection-start="562" selection-end="573" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="495">
-          <folding>
-            <element signature="n#style#0;n#span#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/framework/css/img/gray_jean.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -769,13 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/AirlineController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="10" selection-start="162" selection-end="164" vertical-scroll-proportion="24.0" vertical-offset="741" max-vertical-offset="1380">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/backend/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="105">
@@ -785,14 +769,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/templates/main.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="690">
+        <state line="7" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="-2.25" vertical-offset="51" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="10" selection-start="562" selection-end="573" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="495">
+          <folding>
+            <element signature="n#style#0;n#span#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AirlineController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="10" selection-start="162" selection-end="164" vertical-scroll-proportion="24.0" vertical-offset="741" max-vertical-offset="1380">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.8450704" vertical-offset="0" max-vertical-offset="639">
+        <state line="93" column="0" selection-start="2897" selection-end="2897" vertical-scroll-proportion="0.85915494" vertical-offset="711" max-vertical-offset="1350">
           <folding />
         </state>
       </provider>
