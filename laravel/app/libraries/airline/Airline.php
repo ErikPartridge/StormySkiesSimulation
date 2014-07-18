@@ -282,5 +282,10 @@ class Airline extends economics\Company{
         return $this->reputation;
     }
 
+    public function hubs(){
+
+        return $this->belongsToMany('\libraries\airports\Airport');
+    }
+
 
 } 
