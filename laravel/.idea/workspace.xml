@@ -59,10 +59,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2014_07_18_151444_create_airlines.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="2014_07_18_151444_create_airlines.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_151444_create_airlines.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="8" selection-start="611" selection-end="611" vertical-scroll-proportion="0.5164319" vertical-offset="0" max-vertical-offset="660">
+            <state line="23" column="0" selection-start="603" selection-end="603" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="660">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="134" selection-start="402" selection-end="402" vertical-scroll-proportion="0.375" vertical-offset="0" max-vertical-offset="600">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="26" selection-start="215" selection-end="215" vertical-scroll-proportion="-2.9166667" vertical-offset="35" max-vertical-offset="675">
               <folding />
             </state>
           </provider>
@@ -118,6 +139,7 @@
         <option value="$PROJECT_DIR$/app/libraries/airline/Airline.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_07_17_150525_create_routes.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_07_18_151444_create_airlines.php" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
@@ -638,14 +660,6 @@
         <state line="74" column="4" selection-start="1150" selection-end="1150" vertical-scroll-proportion="1.6197183" vertical-offset="0" max-vertical-offset="1155" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="623" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/libraries/manufacturers/AircraftManufacturer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="25" selection-start="150" selection-end="150" vertical-scroll-proportion="0.14084508" vertical-offset="0" max-vertical-offset="639" />
@@ -799,11 +813,6 @@
         <state line="16" column="19" selection-start="343" selection-end="348" vertical-scroll-proportion="0.36199096" vertical-offset="0" max-vertical-offset="663" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="9" selection-start="484" selection-end="484" vertical-scroll-proportion="0.38967136" vertical-offset="36" max-vertical-offset="675" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/libraries/airport/Airport.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="21" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="5250">
@@ -862,7 +871,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_151444_create_airlines.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="8" selection-start="611" selection-end="611" vertical-scroll-proportion="0.5164319" vertical-offset="0" max-vertical-offset="660">
+        <state line="23" column="0" selection-start="603" selection-end="603" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="26" selection-start="215" selection-end="215" vertical-scroll-proportion="-2.9166667" vertical-offset="35" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="134" selection-start="402" selection-end="402" vertical-scroll-proportion="0.375" vertical-offset="0" max-vertical-offset="600">
           <folding />
         </state>
       </provider>

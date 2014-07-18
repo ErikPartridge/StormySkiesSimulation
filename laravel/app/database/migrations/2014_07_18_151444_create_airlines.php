@@ -21,7 +21,7 @@ class CreateAirlines extends Migration {
             $table->decimal('mechanic_pay');
             $table->decimal('pilot_pay');
             $table->decimal('executive_pay');
-        
+
         });
 
 	}
