@@ -12,6 +12,6 @@
 	<Delay>4.4</Delay>
 	<DemandBonus>0.4</DemandBonus>
 	<TimeZone>US/Eastern</TimeZone>
-	<Regions>Tennessee,Georgia,SouthCarolina,Alabama</Country>
+	<Regions>Tennessee,Georgia,SouthCarolina,Alabama</Regions>
 	<LongestRunway>12390</LongestRunway>
 </Airport>
