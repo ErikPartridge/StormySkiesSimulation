@@ -9,7 +9,7 @@
 namespace libraries\economics;
 
 
-class Entity {
+class Entity extends Eloquent{
 
     protected  $funds;
 

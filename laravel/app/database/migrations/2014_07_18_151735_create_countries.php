@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAirplane extends Migration {
+class CreateCountries extends Migration {
 
 	/**
 	 * Run the migrations.

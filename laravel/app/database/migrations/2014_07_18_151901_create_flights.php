@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAirline extends Migration {
+class CreateFlights extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,7 @@ class CreateAirline extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('airlines', function(Blueprint $table)
-        {
-            $table->string('id', 4)->primary()->unique();
-            $table->string('iata', 4);
-
-        });
+		//
 	}
 
 	/**

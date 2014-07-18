@@ -9,7 +9,7 @@
 namespace libraries\airline;
 
 
-class Route {
+class Route extends Eloquent{
 
     private $flightNumber;
 
@@ -26,10 +26,6 @@ class Route {
     private $delayed;
 
     private $cancelled;
-
-    private $flights;
-
-    private $operates;
 
     private $bizPrice;
 

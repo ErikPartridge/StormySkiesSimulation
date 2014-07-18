@@ -12,7 +12,26 @@ class CreateRoutes extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('routes', function($table){
+            $table->increments('id');
+            $table->string('flight_number', 7);
+            $table->foreign('departs')->references('icao')->on('airports');
+            $table->foreign('arrives')->references('icao')->on('airports');
+            $table->foreign('aircraft_type')->references('icao')->on('aircraft_types');
+            $table->foreign('airline')->references('icao')->on('airlines');
+            $table->double('on_time', 6, 2);
+            $table->double('delayed', 6, 2);
+            $table->double('cancelled', 6, 2);
+            $table->decimal('business_price');
+            $table->decimal('first_price');
+            $table->decimal('economy_price');
+            $table->decimal('eco_plus_price');
+            $table->decimal('revenue');
+            $table->integer('flight_time');
+            $table->time('departs_gmt');
+            $table->date('started');
+            $table->timestamps();
+        });
 	}
 
 	/**
@@ -22,7 +41,7 @@ class CreateRoutes extends Migration {
 	 */
 	public function down()
 	{
-		//
-	}
+		Schema::drop('routes');
+    }
 
 }

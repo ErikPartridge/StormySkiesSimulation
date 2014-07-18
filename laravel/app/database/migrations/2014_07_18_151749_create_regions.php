@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAirport extends Migration {
+class CreateRegions extends Migration {
 
 	/**
 	 * Run the migrations.
