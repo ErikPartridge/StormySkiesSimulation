@@ -1,6 +1,6 @@
 <?php
 
-class UserController extends \BaseController {
+class AirportsController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -82,35 +82,27 @@ class UserController extends \BaseController {
 		//
 	}
 
-    public function getLogin(){
+    public function mainGet(){
 
     }
 
-    public function postLogin(){
+    public function mainPost(){
 
     }
 
-    public function getLogoff(){
+    public function gatesPost(){
 
     }
 
-    public function postLogoff(){
+    public function gatesGet(){
 
     }
 
-    public function getSettings(){
+    public function slotsPost(){
 
     }
 
-    public function postSettings(){
-
-    }
-
-    public function getPayment(){
-
-    }
-
-    public function postPayment(){
+    public function slotsGet(){
 
     }
 

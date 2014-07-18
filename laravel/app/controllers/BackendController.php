@@ -1,6 +1,6 @@
 <?php
 
-class UserController extends \BaseController {
+class BackendController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -82,37 +82,12 @@ class UserController extends \BaseController {
 		//
 	}
 
-    public function getLogin(){
+    public function overviewGet(){
 
     }
 
-    public function postLogin(){
+    public function overviewPost(){
 
     }
-
-    public function getLogoff(){
-
-    }
-
-    public function postLogoff(){
-
-    }
-
-    public function getSettings(){
-
-    }
-
-    public function postSettings(){
-
-    }
-
-    public function getPayment(){
-
-    }
-
-    public function postPayment(){
-
-    }
-
 
 }

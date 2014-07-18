@@ -2,7 +2,7 @@
 <html lang = "en">
 <head>
     <meta charset="UTF-8">
-    <meta author="Erik Malmstrom-Partridge">
+    <meta name="author" content="Erik Malmstrom-Partridge">
     {{ HTML::style("css/framework/style.css") }}
     <title>Stormy Skies Simulation</title>
 
@@ -33,6 +33,7 @@
                 </ul>
             </li>
             <li>{{HTML::link("backend/global", "World", array())}}</li>
+            <li>{{HTML::link("/", "Back", array())}}</li>
         </ul>
     </div>
     @yield('content')

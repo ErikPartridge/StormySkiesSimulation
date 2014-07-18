@@ -1,6 +1,6 @@
 <?php
 
-class UserController extends \BaseController {
+class AircraftController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -82,37 +82,35 @@ class UserController extends \BaseController {
 		//
 	}
 
-    public function getLogin(){
+    public function mainGet(){
 
     }
 
-    public function postLogin(){
+    public function mainPost(){
+
+    }
+    public function leasingGet(){
 
     }
 
-    public function getLogoff(){
+    public function leasingPost(){
 
     }
 
-    public function postLogoff(){
+    public function usedGet(){
 
     }
 
-    public function getSettings(){
+    public function usedPost(){
 
     }
 
-    public function postSettings(){
+    public function newGet(){
 
     }
 
-    public function getPayment(){
+    public function newPost(){
 
     }
-
-    public function postPayment(){
-
-    }
-
 
 }
