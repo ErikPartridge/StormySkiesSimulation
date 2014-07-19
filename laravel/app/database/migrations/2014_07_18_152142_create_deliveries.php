@@ -12,7 +12,9 @@ class CreateDeliveries extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('deliveries', function(){
+
+        });
 	}
 
 	/**

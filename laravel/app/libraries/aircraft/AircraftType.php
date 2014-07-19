@@ -31,8 +31,6 @@ class AircraftType {
 
     private $manufacturer;
 
-    private $maintenanceProfile;
-
     private $fuelburn;
 
     private $mtow;
@@ -43,28 +41,45 @@ class AircraftType {
 
     private $mzfw;
 
-    function __construct($cruiseSpeed, $fuelburn, $icao, $maintenanceProfile, $manufacturer, $maxSeats, $minimumRunway, $mtow, $mlw, $mzfw, $name, $numberOfEngines, $oew, $price, $productionRate, $range)
+    private $priceA;
+
+    private $priceB;
+
+    private $priceC;
+
+    private $hoursA;
+
+    private $hoursB;
+
+    private $hoursC;
+
+    function __construct($cruiseSpeed, $hoursA, $fuelburn, $hoursB, $hoursC, $manufacturer, $icao, $maxSeats, $minimumRunway, $mlw, $mtow, $mzfw, $name, $numberOfEngines, $price, $oew, $priceA, $priceB, $priceC, $range, $productionRate)
     {
         $this->cruiseSpeed = $cruiseSpeed;
+        $this->hoursA = $hoursA;
         $this->fuelburn = $fuelburn;
-        $this->icao = $icao;
-        $this->maintenanceProfile = $maintenanceProfile;
+        $this->hoursB = $hoursB;
+        $this->hoursC = $hoursC;
         $this->manufacturer = $manufacturer;
+        $this->icao = $icao;
         $this->maxSeats = $maxSeats;
         $this->minimumRunway = $minimumRunway;
-        $this->mtow = $mtow;
         $this->mlw = $mlw;
+        $this->mtow = $mtow;
         $this->mzfw = $mzfw;
         $this->name = $name;
         $this->numberOfEngines = $numberOfEngines;
-        $this->oew = $oew;
         $this->price = $price;
-        $this->productionRate = $productionRate;
+        $this->oew = $oew;
+        $this->priceA = $priceA;
+        $this->priceB = $priceB;
+        $this->priceC = $priceC;
         $this->range = $range;
+        $this->productionRate = $productionRate;
     }
 
     /**
-     * @param int $cruiseSpeed
+     * @param mixed $cruiseSpeed
      */
     public function setCruiseSpeed($cruiseSpeed)
     {
@@ -78,7 +93,6 @@ class AircraftType {
     {
         return $this->cruiseSpeed;
     }
-
 
     /**
      * @param mixed $fuelburn
@@ -97,6 +111,54 @@ class AircraftType {
     }
 
     /**
+     * @param mixed $hoursA
+     */
+    public function setHoursA($hoursA)
+    {
+        $this->hoursA = $hoursA;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHoursA()
+    {
+        return $this->hoursA;
+    }
+
+    /**
+     * @param mixed $hoursB
+     */
+    public function setHoursB($hoursB)
+    {
+        $this->hoursB = $hoursB;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHoursB()
+    {
+        return $this->hoursB;
+    }
+
+    /**
+     * @param mixed $hoursC
+     */
+    public function setHoursC($hoursC)
+    {
+        $this->hoursC = $hoursC;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHoursC()
+    {
+        return $this->hoursC;
+    }
+
+    /**
      * @param mixed $icao
      */
     public function setIcao($icao)
@@ -110,22 +172,6 @@ class AircraftType {
     public function getIcao()
     {
         return $this->icao;
-    }
-
-    /**
-     * @param mixed $maintenanceProfile
-     */
-    public function setMaintenanceProfile($maintenanceProfile)
-    {
-        $this->maintenanceProfile = $maintenanceProfile;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMaintenanceProfile()
-    {
-        return $this->maintenanceProfile;
     }
 
     /**
@@ -177,22 +223,6 @@ class AircraftType {
     }
 
     /**
-     * @param mixed $mtow
-     */
-    public function setMtow($mtow)
-    {
-        $this->mtow = $mtow;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMtow()
-    {
-        return $this->mtow;
-    }
-
-    /**
      * @param mixed $mlw
      */
     public function setMlw($mlw)
@@ -206,6 +236,22 @@ class AircraftType {
     public function getMlw()
     {
         return $this->mlw;
+    }
+
+    /**
+     * @param mixed $mtow
+     */
+    public function setMtow($mtow)
+    {
+        $this->mtow = $mtow;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMtow()
+    {
+        return $this->mtow;
     }
 
     /**
@@ -257,6 +303,22 @@ class AircraftType {
     }
 
     /**
+     * @param mixed $price
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
      * @param mixed $oew
      */
     public function setOew($oew)
@@ -273,19 +335,51 @@ class AircraftType {
     }
 
     /**
-     * @param mixed $price
+     * @param mixed $priceA
      */
-    public function setPrice($price)
+    public function setPriceA($priceA)
     {
-        $this->price = $price;
+        $this->priceA = $priceA;
     }
 
     /**
      * @return mixed
      */
-    public function getPrice()
+    public function getPriceA()
     {
-        return $this->price;
+        return $this->priceA;
+    }
+
+    /**
+     * @param mixed $priceB
+     */
+    public function setPriceB($priceB)
+    {
+        $this->priceB = $priceB;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPriceB()
+    {
+        return $this->priceB;
+    }
+
+    /**
+     * @param mixed $priceC
+     */
+    public function setPriceC($priceC)
+    {
+        $this->priceC = $priceC;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPriceC()
+    {
+        return $this->priceC;
     }
 
     /**
@@ -319,6 +413,7 @@ class AircraftType {
     {
         return $this->range;
     }
+
 
 
 } 

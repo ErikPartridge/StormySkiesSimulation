@@ -13,6 +13,7 @@ class CreateAircraftTypes extends Migration {
 	public function up()
 	{
 		Schema::create('aircraft_types', function($table){
+           $table->increments('id');
            $table->string('name');
            $table->integer('cruise_speed');
            $table->integer('minimum_runway');
@@ -20,7 +21,21 @@ class CreateAircraftTypes extends Migration {
            $table->integer('range');
            $table->integer('price');
            $table->integer('number_of_engines');
-           $table->
+           $table->integer('max_seats');
+           $table->integer('production_rate');
+           $table->string('manufacturer');
+           $table->integer('fuel_burn');
+           $table->integer('mtow');
+           $table->integer('mlw');
+           $table->integer('oew');
+           $table->integer('mzfw');
+           $table->decimal('price_a');
+           $table->decimal('price_b');
+           $table->decimal('price_c');
+           $table->integer('hours_a');
+           $table->integer('hours_b');
+           $table->integer('hours_c');
+
         });
 	}
 
@@ -31,7 +46,7 @@ class CreateAircraftTypes extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('aircraft_types');
 	}
 
 }
