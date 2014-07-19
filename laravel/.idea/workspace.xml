@@ -22,26 +22,7 @@
     <favorites_list name="PhpAirline" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="2014_07_19_013602_create_engines.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_19_013602_create_engines.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Delivery.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/libraries/economics/Delivery.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="0" selection-start="1428" selection-end="1428" vertical-scroll-proportion="-54.375" vertical-offset="0" max-vertical-offset="1455">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -51,7 +32,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/libraries/people/Employee.php" />
         <option value="$PROJECT_DIR$/app/libraries/people/Executive.php" />
         <option value="$PROJECT_DIR$/app/libraries/people/FlightAttendant.php" />
         <option value="$PROJECT_DIR$/app/libraries/people/Mechanic.php" />
@@ -85,7 +65,6 @@
         <option value="$PROJECT_DIR$/app/libraries/economics/Company.php" />
         <option value="$PROJECT_DIR$/app/libraries/airline/Airline.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_07_18_151444_create_airlines.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_07_18_151735_create_countries.php" />
         <option value="$PROJECT_DIR$/app/libraries/world/City.php" />
         <option value="$PROJECT_DIR$/app/libraries/airline/Flight.php" />
         <option value="$PROJECT_DIR$/app/libraries/aircraft/AircraftType.php" />
@@ -102,6 +81,8 @@
         <option value="$PROJECT_DIR$/app/database/migrations/2014_07_19_012028_create_airplanes.php" />
         <option value="$PROJECT_DIR$/app/libraries/economics/Delivery.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_07_18_152142_create_deliveries.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_07_19_013602_create_engines.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_07_18_151735_create_countries.php" />
       </list>
     </option>
   </component>
@@ -552,14 +533,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="7" y="22" width="1260" height="760" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -764,8 +745,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="112" column="0" selection-start="1668" selection-end="1668" vertical-scroll-proportion="-70.0" vertical-offset="0" max-vertical-offset="1800">
           <folding>
-            <element signature="e#6#85#0" expanded="true" />
+            <element signature="e#6#85#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libraries/world/City.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="769" selection-end="769" vertical-scroll-proportion="-26.375" vertical-offset="12" max-vertical-offset="1725">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libraries/economics/Delivery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="0" selection-start="1428" selection-end="1428" vertical-scroll-proportion="-54.375" vertical-offset="0" max-vertical-offset="1455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libraries/aircraft/Engine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_19_013602_create_engines.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="32" selection-start="576" selection-end="576" vertical-scroll-proportion="0.68075114" vertical-offset="0" max-vertical-offset="639">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -778,7 +787,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_151444_create_airlines.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="33" selection-start="983" selection-end="983" vertical-scroll-proportion="0.657277" vertical-offset="0" max-vertical-offset="750">
+        <state line="29" column="33" selection-start="983" selection-end="983" vertical-scroll-proportion="0.48356807" vertical-offset="111" max-vertical-offset="750">
           <folding />
         </state>
       </provider>
@@ -790,16 +799,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_151735_create_countries.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_151718_create_cities.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="32" selection-start="489" selection-end="489" vertical-scroll-proportion="0.4460094" vertical-offset="0" max-vertical-offset="639">
+        <state line="20" column="41" selection-start="568" selection-end="568" vertical-scroll-proportion="0.4460094" vertical-offset="0" max-vertical-offset="639">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_151901_create_flights.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_151735_create_countries.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="33" selection-start="825" selection-end="825" vertical-scroll-proportion="0.6103286" vertical-offset="0" max-vertical-offset="705">
+        <state line="31" column="34" selection-start="620" selection-end="620" vertical-scroll-proportion="0.70422536" vertical-offset="0" max-vertical-offset="639">
           <folding />
         </state>
       </provider>
@@ -811,9 +820,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_151901_create_flights.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="33" selection-start="825" selection-end="825" vertical-scroll-proportion="0.5070422" vertical-offset="66" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_152004_create_aircraft_types.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="32" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.54460096" vertical-offset="192" max-vertical-offset="855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_152142_create_deliveries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="35" selection-start="680" selection-end="680" vertical-scroll-proportion="0.68075114" vertical-offset="0" max-vertical-offset="639">
           <folding />
         </state>
       </provider>
@@ -839,60 +862,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_151718_create_cities.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="41" selection-start="568" selection-end="568" vertical-scroll-proportion="0.4460094" vertical-offset="0" max-vertical-offset="639">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libraries/aircraft/Engine.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_19_012028_create_airplanes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="70" selection-start="419" selection-end="419" vertical-scroll-proportion="0.28169015" vertical-offset="0" max-vertical-offset="675">
+        <state line="17" column="70" selection-start="419" selection-end="419" vertical-scroll-proportion="0.26291078" vertical-offset="12" max-vertical-offset="675">
           <folding>
             <element signature="e#140#193#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/libraries/world/City.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="769" selection-end="769" vertical-scroll-proportion="-26.375" vertical-offset="12" max-vertical-offset="1725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_235821_create_users.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="32" selection-start="560" selection-end="560" vertical-scroll-proportion="0.49295774" vertical-offset="0" max-vertical-offset="639">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libraries/economics/Delivery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="0" selection-start="1428" selection-end="1428" vertical-scroll-proportion="-54.375" vertical-offset="0" max-vertical-offset="1455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_152142_create_deliveries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="35" selection-start="680" selection-end="680" vertical-scroll-proportion="0.68075114" vertical-offset="0" max-vertical-offset="639">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_19_013602_create_engines.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
           <folding />
         </state>
       </provider>

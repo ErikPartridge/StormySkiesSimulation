@@ -12,7 +12,13 @@ class CreateEngines extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('engines', function($table){
+           $table->increments('id');
+           $table->decimal('sfc');
+           $table->decimal('bph');
+           $table->string('name');
+           $table->string('manufacturer');
+        });
 	}
 
 	/**
@@ -22,7 +28,7 @@ class CreateEngines extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('engines');
 	}
 
 }
