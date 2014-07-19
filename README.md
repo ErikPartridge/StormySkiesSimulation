@@ -1,6 +1,6 @@
 ## Stormy Skies Simulation
 
-A highly detailed, authentic simulation of the airline industry. Check out our wiki (that still needs to have stuff put in it)!
+A highly detailed, authentic simulation of the airline industry (P4 for DWA15). Check out our wiki (that still needs to have stuff put in it)!
 
 ### Uses
 
