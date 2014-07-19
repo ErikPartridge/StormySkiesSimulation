@@ -23,11 +23,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2014_07_18_235821_create_users.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_235821_create_users.php">
+      <file leaf-file-name="Route.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/libraries/airline/Route.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="452" selection-end="452" vertical-scroll-proportion="0.4460094" vertical-offset="0" max-vertical-offset="639">
+            <state line="28" column="0" selection-start="343" selection-end="343" vertical-scroll-proportion="-11.875" vertical-offset="60" max-vertical-offset="5355">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Airline.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/libraries/airline/Airline.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="-3.75" vertical-offset="165" max-vertical-offset="4740">
+              <folding>
+                <element signature="e#6#85#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014_07_18_151444_create_airlines.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_151444_create_airlines.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="12" selection-start="843" selection-end="843" vertical-scroll-proportion="0.58685446" vertical-offset="0" max-vertical-offset="705">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Company.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/libraries/economics/Company.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="4" selection-start="155" selection-end="287" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="3045">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Airport.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/libraries/airport/Airport.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="21" selection-start="442" selection-end="464" vertical-scroll-proportion="-3.125" vertical-offset="480" max-vertical-offset="5160">
+              <folding>
+                <element signature="e#6#85#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,9 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/libraries/aircraft/AircraftType.php" />
-        <option value="$PROJECT_DIR$/app/libraries/airline/Flight.php" />
-        <option value="$PROJECT_DIR$/app/libraries/airport/Gate.php" />
         <option value="$PROJECT_DIR$/app/libraries/airport/Slot.php" />
         <option value="$PROJECT_DIR$/app/libraries/world/City.php" />
         <option value="$PROJECT_DIR$/app/libraries/database/AirportDatabase.php" />
@@ -52,7 +89,6 @@
         <option value="$PROJECT_DIR$/app/libraries/demand/RouteDemand.php" />
         <option value="$PROJECT_DIR$/app/libraries/economics/Bill.php" />
         <option value="$PROJECT_DIR$/app/libraries/economics/Stock.php" />
-        <option value="$PROJECT_DIR$/app/libraries/economics/Company.php" />
         <option value="$PROJECT_DIR$/app/libraries/economics/FlightPricer.php" />
         <option value="$PROJECT_DIR$/app/libraries/economics/Delivery.php" />
         <option value="$PROJECT_DIR$/app/libraries/demand/FlightDemand.php" />
@@ -67,17 +103,13 @@
         <option value="$PROJECT_DIR$/app/libraries/people/Pilot.php" />
         <option value="$PROJECT_DIR$/app/libraries/people/PersonGenerator.php" />
         <option value="$PROJECT_DIR$/app/libraries/world/Country.php" />
-        <option value="$PROJECT_DIR$/app/libraries/airport/Airport.php" />
         <option value="$PROJECT_DIR$/app/libraries/world/Region.php" />
         <option value="$PROJECT_DIR$/app/css/main.css" />
         <option value="$PROJECT_DIR$/app/views/home.blade.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_07_17_144936_create_airline.php" />
         <option value="$PROJECT_DIR$/app/libraries/airline/Route.php" />
         <option value="$PROJECT_DIR$/app/libraries/economics/Entity.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_07_17_150525_create_routes.php" />
         <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_07_18_151444_create_airlines.php" />
-        <option value="$PROJECT_DIR$/app/libraries/airline/Airline.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/public/css/framework/style.css" />
@@ -93,12 +125,20 @@
         <option value="$PROJECT_DIR$/app/controllers/AirportsController.php" />
         <option value="$PROJECT_DIR$/app/controllers/BackendController.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_07_18_235821_create_users.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_07_18_152753_create_slots.php" />
+        <option value="$PROJECT_DIR$/app/libraries/airport/Airport.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_07_18_151526_create_airports.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_07_17_150525_create_routes.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_07_18_151718_create_cities.php" />
+        <option value="$PROJECT_DIR$/app/libraries/economics/Company.php" />
+        <option value="$PROJECT_DIR$/app/libraries/airline/Airline.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_07_18_151444_create_airlines.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="20" />
+    <option name="x" value="61" />
     <option name="y" value="22" />
     <option name="width" value="1260" />
     <option name="height" value="760" />
@@ -228,6 +268,94 @@
               <option name="myItemId" value="libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="world" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PhpAirline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PhpAirline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="economics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PhpAirline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="airport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PhpAirline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="airline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -296,6 +424,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="SearchEverywhereHistory" value="" />
     <property name="FullScreen" value="false" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -347,7 +476,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="22" width="1260" height="760" extended-state="0" />
+    <frame x="61" y="22" width="1260" height="760" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -387,29 +516,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="640" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phpunit.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libraries/world/Region.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="0" selection-start="1173" selection-end="1173" vertical-scroll-proportion="1.5962441" vertical-offset="0" max-vertical-offset="1125" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/libraries/world/Country.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="131" column="0" selection-start="2024" selection-end="2024" vertical-scroll-proportion="2.7605634" vertical-offset="126" max-vertical-offset="2010" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libraries/world/City.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="29" selection-start="538" selection-end="538" vertical-scroll-proportion="-0.11737089" vertical-offset="480" max-vertical-offset="1425" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/libraries/people/PersonGenerator.php">
@@ -420,11 +529,6 @@
     <entry file="file://$PROJECT_DIR$/app/libraries/aircraft/Engine.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="-0.5633803" vertical-offset="480" max-vertical-offset="1410" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libraries/airport/Slot.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="209" selection-end="209" vertical-scroll-proportion="0.28169015" vertical-offset="30" max-vertical-offset="1170" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/libraries/database/AirportDatabase.php">
@@ -492,23 +596,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/libraries/airline/Route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="343" selection-end="343" vertical-scroll-proportion="-13.125" vertical-offset="30" max-vertical-offset="5355">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/libraries/economics/Entity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="3" selection-start="85" selection-end="85" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="1125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_17_150525_create_routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="30" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.6720779" vertical-offset="51" max-vertical-offset="780">
           <folding />
         </state>
       </provider>
@@ -519,34 +609,6 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="134" selection-start="402" selection-end="402" vertical-scroll-proportion="-8.333333" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libraries/airline/Airline.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="278" column="7" selection-start="4797" selection-end="4797" vertical-scroll-proportion="-17.0" vertical-offset="3687" max-vertical-offset="4365">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libraries/economics/Company.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="19" selection-start="2065" selection-end="2065" vertical-scroll-proportion="-33.75" vertical-offset="810" max-vertical-offset="3465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_151444_create_airlines.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="7" selection-start="142" selection-end="142" vertical-scroll-proportion="0.14084508" vertical-offset="0" max-vertical-offset="660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libraries/airport/Airport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="21" selection-start="1451" selection-end="1451" vertical-scroll-proportion="1.341853" vertical-offset="60" max-vertical-offset="5175">
           <folding />
         </state>
       </provider>
@@ -708,7 +770,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_235821_create_users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="452" selection-end="452" vertical-scroll-proportion="0.4460094" vertical-offset="0" max-vertical-offset="639">
+        <state line="20" column="14" selection-start="466" selection-end="466" vertical-scroll-proportion="0.43661973" vertical-offset="6" max-vertical-offset="645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libraries/airport/Slot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="209" selection-end="209" vertical-scroll-proportion="-7.5" vertical-offset="30" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_152753_create_slots.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="30" selection-start="610" selection-end="610" vertical-scroll-proportion="0.657277" vertical-offset="0" max-vertical-offset="639">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_151526_create_airports.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="33" selection-start="923" selection-end="923" vertical-scroll-proportion="-14.75" vertical-offset="66" max-vertical-offset="735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_17_150525_create_routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="38" selection-start="918" selection-end="918" vertical-scroll-proportion="0.5070422" vertical-offset="51" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libraries/airport/Airport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="21" selection-start="442" selection-end="464" vertical-scroll-proportion="-3.125" vertical-offset="480" max-vertical-offset="5160">
+          <folding>
+            <element signature="e#6#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libraries/world/City.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="29" selection-start="538" selection-end="538" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="1425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_151718_create_cities.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="31" selection-start="581" selection-end="581" vertical-scroll-proportion="0.657277" vertical-offset="0" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libraries/airline/Route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="343" selection-end="343" vertical-scroll-proportion="-11.875" vertical-offset="60" max-vertical-offset="5355">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libraries/economics/Company.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="4" selection-start="155" selection-end="287" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="3045">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libraries/airline/Airline.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="-3.75" vertical-offset="165" max-vertical-offset="4740">
+          <folding>
+            <element signature="e#6#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_18_151444_create_airlines.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="12" selection-start="843" selection-end="843" vertical-scroll-proportion="0.58685446" vertical-offset="0" max-vertical-offset="705">
           <folding />
         </state>
       </provider>

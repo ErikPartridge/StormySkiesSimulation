@@ -9,7 +9,7 @@
 namespace libraries\airport;
 
 
-class Airport extends \libraries\economics\Entity{
+class Airport extends Eloquent{
 
     private $name;
 
@@ -39,31 +39,25 @@ class Airport extends \libraries\economics\Entity{
 
     private $allocatedDemand;
 
-    private $gates;
-
     private $slotControlled;
 
-    private $slots;
-
-    function __construct($allocatedDemand, $country, $delayFactor, $demandBonus, $elevation, $gates, $iata, $icao, $latitude, $longitude, $maxFlightsPerHour, $name, $regions, $runways, $slotControlled, $timeZone, $slots)
+    function __construct($allocatedDemand, $country, $demandBonus, $elevation, $regions, $slotControlled, $timeZone, $runways, $name, $maxFlightsPerHour, $longitude, $latitude, $icao, $iata, $delayFactor)
     {
         $this->allocatedDemand = $allocatedDemand;
         $this->country = $country;
-        $this->delayFactor = $delayFactor;
         $this->demandBonus = $demandBonus;
         $this->elevation = $elevation;
-        $this->gates = $gates;
-        $this->iata = $iata;
-        $this->icao = $icao;
-        $this->latitude = $latitude;
-        $this->longitude = $longitude;
-        $this->maxFlightsPerHour = $maxFlightsPerHour;
-        $this->name = $name;
         $this->regions = $regions;
-        $this->runways = $runways;
         $this->slotControlled = $slotControlled;
         $this->timeZone = $timeZone;
-        $this->slots = $slots;
+        $this->runways = $runways;
+        $this->name = $name;
+        $this->maxFlightsPerHour = $maxFlightsPerHour;
+        $this->longitude = $longitude;
+        $this->latitude = $latitude;
+        $this->icao = $icao;
+        $this->iata = $iata;
+        $this->delayFactor = $delayFactor;
     }
 
 

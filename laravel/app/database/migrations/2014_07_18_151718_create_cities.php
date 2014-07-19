@@ -12,7 +12,12 @@ class CreateCities extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('cities', function($table){
+           $table->increments('id');
+           $table->decimal('latitude');
+           $table->decimal('longitude');
+           $table->foreign('country')->references('iso')->on('countries');
+        });
 	}
 
 	/**
@@ -22,7 +27,7 @@ class CreateCities extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('cities');
 	}
 
 }

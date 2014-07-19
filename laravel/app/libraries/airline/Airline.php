@@ -10,7 +10,7 @@ namespace libraries\airline;
 
 use \libraries\economics as economics;
 
-class Airline extends economics\Company{
+class Airline extends Eloquent{
 
     private $hubs;
 
@@ -24,54 +24,121 @@ class Airline extends economics\Company{
 
     private $icao;
 
-    private $onOrder;
-
     private $flightAttendantPay;
 
     private $mechanicPay;
 
     private $pilotPay;
 
-    private $flightAttendants;
+    private $ceo;
 
-    private $pilots;
+    private $headquarters;
 
-    private $mechanics;
+    private $country;
 
-    private $executive;
+    private $earnings;
 
-    function __construct($executive, $fleet, $flightAttendantPay, $flightAttendants, $flights, $iata, $hubs, $icao, $mechanicPay, $mechanics, $onOrder, $pilotPay, $pilots, $reputation)
+    private $costs;
+
+    private $profits;
+
+    function __construct($ceo, $costs, $country, $earnings, $flightAttendantPay, $fleet, $flights, $headquarters, $hubs, $iata, $icao, $mechanicPay, $pilotPay, $profits, $reputation)
     {
-        $this->executive = $executive;
-        $this->fleet = $fleet;
+        $this->ceo = $ceo;
+        $this->costs = $costs;
+        $this->country = $country;
+        $this->earnings = $earnings;
         $this->flightAttendantPay = $flightAttendantPay;
-        $this->flightAttendants = $flightAttendants;
+        $this->fleet = $fleet;
         $this->flights = $flights;
-        $this->iata = $iata;
+        $this->headquarters = $headquarters;
         $this->hubs = $hubs;
+        $this->iata = $iata;
         $this->icao = $icao;
         $this->mechanicPay = $mechanicPay;
-        $this->mechanics = $mechanics;
-        $this->onOrder = $onOrder;
         $this->pilotPay = $pilotPay;
-        $this->pilots = $pilots;
+        $this->profits = $profits;
         $this->reputation = $reputation;
     }
 
     /**
-     * @param mixed $executive
+     * @param mixed $ceo
      */
-    public function setExecutive($executive)
+    public function setCeo($ceo)
     {
-        $this->executive = $executive;
+        $this->ceo = $ceo;
     }
 
     /**
      * @return mixed
      */
-    public function getExecutive()
+    public function getCeo()
     {
-        return $this->executive;
+        return $this->ceo;
+    }
+
+    /**
+     * @param mixed $country
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * @param mixed $costs
+     */
+    public function setCosts($costs)
+    {
+        $this->costs = $costs;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCosts()
+    {
+        return $this->costs;
+    }
+
+    /**
+     * @param mixed $flights
+     */
+    public function setFlights($flights)
+    {
+        $this->flights = $flights;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFlights()
+    {
+        return $this->flights;
+    }
+
+    /**
+     * @param mixed $earnings
+     */
+    public function setEarnings($earnings)
+    {
+        $this->earnings = $earnings;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEarnings()
+    {
+        return $this->earnings;
     }
 
     /**
@@ -107,51 +174,19 @@ class Airline extends economics\Company{
     }
 
     /**
-     * @param mixed $flightAttendants
+     * @param mixed $headquarters
      */
-    public function setFlightAttendants($flightAttendants)
+    public function setHeadquarters($headquarters)
     {
-        $this->flightAttendants = $flightAttendants;
+        $this->headquarters = $headquarters;
     }
 
     /**
      * @return mixed
      */
-    public function getFlightAttendants()
+    public function getHeadquarters()
     {
-        return $this->flightAttendants;
-    }
-
-    /**
-     * @param mixed $flights
-     */
-    public function setFlights($flights)
-    {
-        $this->flights = $flights;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFlights()
-    {
-        return $this->flights;
-    }
-
-    /**
-     * @param mixed $hubs
-     */
-    public function setHubs($hubs)
-    {
-        $this->hubs = $hubs;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getHubs()
-    {
-        return $this->hubs;
+        return $this->headquarters;
     }
 
     /**
@@ -168,6 +203,22 @@ class Airline extends economics\Company{
     public function getIata()
     {
         return $this->iata;
+    }
+
+    /**
+     * @param mixed $hubs
+     */
+    public function setHubs($hubs)
+    {
+        $this->hubs = $hubs;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHubs()
+    {
+        return $this->hubs;
     }
 
     /**
@@ -203,38 +254,6 @@ class Airline extends economics\Company{
     }
 
     /**
-     * @param mixed $mechanics
-     */
-    public function setMechanics($mechanics)
-    {
-        $this->mechanics = $mechanics;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMechanics()
-    {
-        return $this->mechanics;
-    }
-
-    /**
-     * @param mixed $onOrder
-     */
-    public function setOnOrder($onOrder)
-    {
-        $this->onOrder = $onOrder;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getOnOrder()
-    {
-        return $this->onOrder;
-    }
-
-    /**
      * @param mixed $pilotPay
      */
     public function setPilotPay($pilotPay)
@@ -251,19 +270,19 @@ class Airline extends economics\Company{
     }
 
     /**
-     * @param mixed $pilots
+     * @param mixed $profits
      */
-    public function setPilots($pilots)
+    public function setProfits($profits)
     {
-        $this->pilots = $pilots;
+        $this->profits = $profits;
     }
 
     /**
      * @return mixed
      */
-    public function getPilots()
+    public function getProfits()
     {
-        return $this->pilots;
+        return $this->profits;
     }
 
     /**
@@ -281,6 +300,7 @@ class Airline extends economics\Company{
     {
         return $this->reputation;
     }
+
 
     public function hubs(){
 

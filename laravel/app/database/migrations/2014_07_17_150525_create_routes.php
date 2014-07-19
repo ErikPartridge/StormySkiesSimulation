@@ -22,9 +22,9 @@ class CreateRoutes extends Migration {
             $table->double('on_time', 6, 2);
             $table->double('delayed', 6, 2);
             $table->double('cancelled', 6, 2);
-            $table->decimal('business_price');
+            $table->decimal('biz');
             $table->decimal('first_price');
-            $table->decimal('economy_price');
+            $table->decimal('eco_price');
             $table->decimal('eco_plus_price');
             $table->decimal('revenue');
             $table->integer('flight_time');

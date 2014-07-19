@@ -11,15 +11,6 @@ namespace libraries\economics;
 
 class Company extends Entity{
 
-
-    private $holdings;
-
-    private $corporateStock;
-
-    private $numShares;
-
-    private $isSubsidary;
-
     private $ceo;
 
     private $headquarters;
@@ -32,25 +23,6 @@ class Company extends Entity{
 
     private $profits;
 
-    private $dividend;
-
-    function __construct($ceo, $costs, $corporateStock, $dividend, $country, $earnings, $funds, $headquarters, $holdings, $isPrivate, $isSubsidary, $name, $numShares, $profits)
-    {
-        $this->ceo = $ceo;
-        $this->costs = $costs;
-        $this->corporateStock = $corporateStock;
-        $this->dividend = $dividend;
-        $this->country = $country;
-        $this->earnings = $earnings;
-        $this->funds = $funds;
-        $this->headquarters = $headquarters;
-        $this->holdings = $holdings;
-        $this->isPrivate = $isPrivate;
-        $this->isSubsidary = $isSubsidary;
-        $this->name = $name;
-        $this->numShares = $numShares;
-        $this->profits = $profits;
-    }
 
     /**
      * @param mixed $ceo
