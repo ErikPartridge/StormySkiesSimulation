@@ -12,7 +12,20 @@ class CreateFlights extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('flights', function($table){
+            $table->increments('id');
+            $table->integer('departs_gmt');
+            $table->integer('arrives_gmt');
+            $table->boolean('cancelled');
+            $table->integer('economy');
+            $table->integer('eco_plus');
+            $table->integer('business');
+            $table->integer('first');
+            $table->date('date');
+            $table->integer('fuel_burn');
+            $table->integer('flying_time');
+            $table->foreign('route')->references('flight_number')->on('routes');
+        });
 	}
 
 	/**
@@ -22,7 +35,7 @@ class CreateFlights extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('flights');
 	}
 
 }

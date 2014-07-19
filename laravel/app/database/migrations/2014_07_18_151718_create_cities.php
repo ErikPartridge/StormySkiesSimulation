@@ -17,6 +17,8 @@ class CreateCities extends Migration {
            $table->decimal('latitude');
            $table->decimal('longitude');
            $table->foreign('country')->references('iso')->on('countries');
+           $table->foreign('region')->references('name')->on('regions');
+           $table->timestamps();
         });
 	}
 

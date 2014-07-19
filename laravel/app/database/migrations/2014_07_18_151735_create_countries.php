@@ -12,7 +12,14 @@ class CreateCountries extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('countries', function($table){
+           $table->increments('id');
+           $table->string('iso');
+           $table->string('name');
+           $table->boolean('eu_member');
+           $table->boolean('open_market');
+           $table->timestamps();
+        });
 	}
 
 	/**

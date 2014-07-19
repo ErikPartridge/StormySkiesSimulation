@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRegions extends Migration {
+class CreateAirplanes extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,7 @@ class CreateRegions extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('regions', function($table){
-            $table->increments('id');
-            $table->string('name');
-        });
+		//
 	}
 
 	/**
@@ -25,7 +22,7 @@ class CreateRegions extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('regions');
+		//
 	}
 
 }

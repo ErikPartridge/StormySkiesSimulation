@@ -17,15 +17,35 @@ class City {
 
     private $population;
 
+    private $region;
+
     private $country;
 
-    function __construct($country, $latitude, $longitude, $population)
+    function __construct($country, $latitude, $longitude, $population, $region)
     {
         $this->country = $country;
         $this->latitude = $latitude;
         $this->longitude = $longitude;
         $this->population = $population;
+        $this->region = $region;
     }
+
+    /**
+     * @param mixed $region
+     */
+    public function setRegion($region)
+    {
+        $this->region = $region;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRegion()
+    {
+        return $this->region;
+    }
+
 
     /**
      * @param mixed $country

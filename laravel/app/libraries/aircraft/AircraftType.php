@@ -25,8 +25,6 @@ class AircraftType {
 
     private $numberOfEngines;
 
-    private $engineOptions;
-
     private $maxSeats;
 
     private $productionRate;
@@ -45,10 +43,9 @@ class AircraftType {
 
     private $mzfw;
 
-    function __construct($cruiseSpeed, $engineOptions, $fuelburn, $icao, $maintenanceProfile, $manufacturer, $maxSeats, $minimumRunway, $mtow, $mlw, $mzfw, $name, $numberOfEngines, $oew, $price, $productionRate, $range)
+    function __construct($cruiseSpeed, $fuelburn, $icao, $maintenanceProfile, $manufacturer, $maxSeats, $minimumRunway, $mtow, $mlw, $mzfw, $name, $numberOfEngines, $oew, $price, $productionRate, $range)
     {
         $this->cruiseSpeed = $cruiseSpeed;
-        $this->engineOptions = $engineOptions;
         $this->fuelburn = $fuelburn;
         $this->icao = $icao;
         $this->maintenanceProfile = $maintenanceProfile;
@@ -82,21 +79,6 @@ class AircraftType {
         return $this->cruiseSpeed;
     }
 
-    /**
-     * @param mixed $engineOptions
-     */
-    public function setEngineOptions($engineOptions)
-    {
-        $this->engineOptions = $engineOptions;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEngineOptions()
-    {
-        return $this->engineOptions;
-    }
 
     /**
      * @param mixed $fuelburn

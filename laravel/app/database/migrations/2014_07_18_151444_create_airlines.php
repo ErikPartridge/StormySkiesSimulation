@@ -24,7 +24,10 @@ class CreateAirlines extends Migration {
             $table->string('ceo')->references('user_name')->on('users');
             $table->string('headquarters')->references('icao')->on('airports');
             $table->string('country')->references('iso')->on('countries');
-            
+            $table->decimal('costs');
+            $table->decimal('earnings');
+            $table->decimal('profits');
+            $table->timestamps();
         });
 
 	}
