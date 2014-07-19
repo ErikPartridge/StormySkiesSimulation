@@ -35,7 +35,7 @@ class CreateAircraftTypes extends Migration {
            $table->integer('hours_a');
            $table->integer('hours_b');
            $table->integer('hours_c');
-
+           $table->timestamps();
         });
 	}
 

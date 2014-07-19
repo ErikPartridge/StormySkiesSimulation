@@ -15,6 +15,7 @@ class CreateRegions extends Migration {
 		Schema::create('regions', function($table){
             $table->increments('id');
             $table->string('name');
+            $table->timestamps();
         });
 	}
 

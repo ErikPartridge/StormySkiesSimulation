@@ -17,6 +17,7 @@ class CreateSlots extends Migration {
             $table->integer('time');
             $table->foreign('airport')->references('icao')->on('airports');
             $table->foreign('owner')->references('icao')->on('airlines');
+            $table->timestamps();
         });
 	}
 

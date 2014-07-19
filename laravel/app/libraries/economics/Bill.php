@@ -17,20 +17,17 @@ class Bill {
 
     private $to;
 
-    private $frequency;
-
     private $amount;
 
-    private $howLong;
+    private $when;
 
-    function __construct($amount, $description, $frequency, $howLong, $pays, $to)
+    function __construct($amount, $to, $when, $description, $pays)
     {
         $this->amount = $amount;
-        $this->description = $description;
-        $this->frequency = $frequency;
-        $this->howLong = $howLong;
-        $this->pays = $pays;
         $this->to = $to;
+        $this->when = $when;
+        $this->description = $description;
+        $this->pays = $pays;
     }
 
     /**
@@ -50,19 +47,19 @@ class Bill {
     }
 
     /**
-     * @param mixed $howLong
+     * @param mixed $when
      */
-    public function setHowLong($howLong)
+    public function setWhen($when)
     {
-        $this->howLong = $howLong;
+        $this->when = $when;
     }
 
     /**
      * @return mixed
      */
-    public function getHowLong()
+    public function getWhen()
     {
-        return $this->howLong;
+        return $this->when;
     }
 
     /**
@@ -98,22 +95,6 @@ class Bill {
     }
 
     /**
-     * @param mixed $frequency
-     */
-    public function setFrequency($frequency)
-    {
-        $this->frequency = $frequency;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFrequency()
-    {
-        return $this->frequency;
-    }
-
-    /**
      * @param mixed $description
      */
     public function setDescription($description)
@@ -128,6 +109,7 @@ class Bill {
     {
         return $this->description;
     }
+
 
 
 } 

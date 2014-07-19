@@ -21,7 +21,6 @@ class CreateUsers extends Migration {
            $table->string('location');
            $table->date('birthday');
            $table->timestamps();
-
         });
 	}
 

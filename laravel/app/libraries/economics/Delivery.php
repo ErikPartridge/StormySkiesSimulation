@@ -17,11 +17,14 @@ class Delivery {
 
     private $manufacturer;
 
-    function __construct($airline, $manufacturer, $type)
+    private $when;
+
+    function __construct($airline, $manufacturer, $type, $when)
     {
         $this->airline = $airline;
         $this->manufacturer = $manufacturer;
         $this->type = $type;
+        $this->when = $when;
     }
 
     /**
@@ -71,6 +74,23 @@ class Delivery {
     {
         return $this->type;
     }
+
+    /**
+     * @param mixed $when
+     */
+    public function setWhen($when)
+    {
+        $this->when = $when;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWhen()
+    {
+        return $this->when;
+    }
+
 
 
 

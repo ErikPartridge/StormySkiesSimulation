@@ -25,6 +25,7 @@ class CreateFlights extends Migration {
             $table->integer('fuel_burn');
             $table->integer('flying_time');
             $table->foreign('route')->references('flight_number')->on('routes');
+            $table->timestamps();
         });
 	}
 
