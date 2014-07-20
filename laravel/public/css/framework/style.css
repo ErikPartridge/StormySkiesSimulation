@@ -10,6 +10,10 @@
 /*---------------------------------
 	OVERRIDES
 -----------------------------------*/
+
+html{
+    background:#efefef url(css/img/bg.png);
+}
 h1,h2,h3,h4,h5,h6{
 font-family: "Avenir", arial, verdana, sans-serif;
 font-weight:normal;
@@ -40,12 +44,16 @@ font-family: "Avenir", arial, verdana, sans-serif;
 	LAYOUT
 -----------------------------------*/
 body{
-margin:0;
-padding:0 0 0 0;
 color:#000;
-background:#efefef url(css/img/bg.png);
-font:normal 0.9em/150% 'Arimo', arial, verdana, sans-serif;
-text-shadow: 0 0 1px transparent; /* google font pixelation fix */
+font:normal 1em 'Avenir', arial, verdana, sans-serif;
+display: block;
+background-color: #F3F3F3;
+opacity: .85;
+margin-left: 8%;
+margin-right: 8%;
+padding-left: 6%;
+padding-right: 6%;
+border-radius: 10px;
 }
 
 #wrap{
