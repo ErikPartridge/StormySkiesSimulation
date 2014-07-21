@@ -1,4 +1,4 @@
-## Stormy Skies Simulation
+## Takeoff Sim
 
 A highly detailed, authentic simulation of the airline industry. Check out our wiki!
 

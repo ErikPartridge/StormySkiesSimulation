@@ -1,24 +1,26 @@
-@import url(framework/css/kickstart-buttons.css);
-@import url(framework/css/kickstart-forms.css);
-@import url(framework/css/kickstart-menus.css);
-@import url(framework/css/kickstart-grid.css);
-@import url(framework/css/jquery.fancybox-1.3.4.css);
-@import url(framework/css/kickstart-slideshow.css);
-@import url(framework/css/prettify.css);
-@import url(framework/css/tiptip.css);
-@import url(framework/css/fonts/fontawesome/css/font-awesome.min.css);
+html{
+    background:#efefef url(clouds.png);
+}
 
 body{
-    font-family: 'Avenir', sans-serif;
-    font-size: 1em;
-    color: #363636;
-    background-color: #FDFDFD;
+    color:#000;
+    font:normal 1em 'Avenir', arial, verdana, sans-serif;
+    display: block;
+    background-color: #F3F3F3;
+    opacity: .85;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding-left: 6%;
+    padding-right: 6%;
+    border-radius: 10px;
+    padding-top: 0.4%;
+
 }
-h1{
-    font-family: 'Avenir', sans-serif;
-    font-size: 2em;
-    color: #363636;
+h1,h2,h3,h4,h5,h6{
+    font-family: "Avenir", arial, verdana, sans-serif;
+    font-weight:normal;
 }
+
 #main-header {
     font-family: 'Avenir',sans-serif;
     font-size: 1.5em;
