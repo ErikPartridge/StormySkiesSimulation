@@ -91,3 +91,7 @@ Route::post('/user/settings', "UserController@postSettings");
 Route::get('/user/payment', "UserController@getPayment");
 
 Route::post('/user/payment', "UserController@postPayment");
+
+Route::post('/user/register', "UserController@postRegister");
+
+Route::get('/user/register', "UserController@getRegister");

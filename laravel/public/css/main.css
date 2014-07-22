@@ -1,20 +1,29 @@
 html{
-    background:#efefef url(clouds.png);
+    background-image: url("bg.png");
 }
-
+h2{
+    text-align: center;
+    color: #080808;
+}
+h4{
+    text-align: center;
+}
+.head-right {
+    text-align: right;
+    color: deepskyblue;
+}
 body{
     color:#000;
     font:normal 1em 'Avenir', arial, verdana, sans-serif;
     display: block;
     background-color: #F3F3F3;
-    opacity: .85;
-    margin-left: 8%;
-    margin-right: 8%;
-    padding-left: 6%;
-    padding-right: 6%;
+    opacity: 1;
+    margin-left: 6%;
+    margin-right: 6%;
+    padding-left: 4%;
+    padding-right: 4%;
     border-radius: 10px;
     padding-top: 0.4%;
-
 }
 h1,h2,h3,h4,h5,h6{
     font-family: "Avenir", arial, verdana, sans-serif;
@@ -30,3 +39,4 @@ h1,h2,h3,h4,h5,h6{
     top: 1.2em;
     left: 1.2em;
 }
+

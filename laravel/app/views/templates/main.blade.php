@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Erik Malmstrom-Partridge">
     {{ HTML::style("css/framework/style.css") }}
-    <title>Stormy Skies Simulation</title>
+    <title>Takeoff Sim</title>
 
     @yield('head-details')
 </head>
