@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3ef7e3ca-15bf-4c2e-9e7f-34054247ee39" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/views/home.blade.php" afterPath="$PROJECT_DIR$/laravel/app/views/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/views/templates/main.blade.php" afterPath="$PROJECT_DIR$/laravel/app/views/templates/main.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/public/css/main.css" afterPath="$PROJECT_DIR$/laravel/public/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/routes.php" afterPath="$PROJECT_DIR$/laravel/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TakeoffSim.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.blade.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/laravel/app/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="7" selection-start="954" selection-end="954" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="480">
+            <state line="19" column="0" selection-start="811" selection-end="811" vertical-scroll-proportion="0.45527157" vertical-offset="0" max-vertical-offset="626">
               <folding>
                 <element signature="n#style#0;n#h2#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -44,7 +41,7 @@
       <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="59" selection-start="3020" selection-end="3020" vertical-scroll-proportion="-24.75" vertical-offset="711" max-vertical-offset="1410">
+            <state line="80" column="24" selection-start="2500" selection-end="2505" vertical-scroll-proportion="-12.25" vertical-offset="771" max-vertical-offset="1410">
               <folding />
             </state>
           </provider>
@@ -59,10 +56,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel/public/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="0" selection-start="757" selection-end="757" vertical-scroll-proportion="0.90950227" vertical-offset="27" max-vertical-offset="720">
+            <state line="58" column="15" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0" vertical-offset="447" max-vertical-offset="1125">
               <folding />
             </state>
           </provider>
@@ -340,11 +337,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="59" selection-start="3020" selection-end="3020" vertical-scroll-proportion="-24.75" vertical-offset="711" max-vertical-offset="1410">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/laravel/public/images/core/a380.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/views/templates/main.blade.php">
@@ -354,25 +349,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/public/images/core/a380.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/laravel/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="15" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0" vertical-offset="447" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="24" selection-start="2500" selection-end="2505" vertical-scroll-proportion="-12.25" vertical-offset="771" max-vertical-offset="1410">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="7" selection-start="954" selection-end="954" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="480">
+        <state line="19" column="0" selection-start="811" selection-end="811" vertical-scroll-proportion="0.45527157" vertical-offset="0" max-vertical-offset="626">
           <folding>
             <element signature="n#style#0;n#h2#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/public/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="757" selection-end="757" vertical-scroll-proportion="0.90950227" vertical-offset="27" max-vertical-offset="720">
-          <folding />
         </state>
       </provider>
     </entry>

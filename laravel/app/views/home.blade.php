@@ -14,14 +14,11 @@
     <h2 style="color: deepskyblue">Takeoff Simulation</h2>
     <h4>Run the airline of your dreams</h4>
     <img src={{asset('images/core/a380.jpg')}} alt="Plane ready for takeoff" width="100%" style="opacity: 1.0; border-radius: 6px;">
-    {{ Form::open(array('url' => 'user/register')) }}
-        <input type="submit" value="Join Now!" class="main-button">
+    {{ Form::open(array('url' => '/user/login')) }}
+        <input type="submit" value="Takeoff  /  Board" class="main-button">
     {{ Form::close() }}
 
-    {{ Form::open(array('url' => 'user/register')) }}
-    <input type="submit" value="Sign In" class="main-button">
-    {{ Form::close() }}
-
+    <p>Please enjoy the simulation! Good luck, the airline industry isn't easy.</p>
 </body>
 
 </html>
