@@ -28,7 +28,7 @@ class CreateSlots extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('slots');
+		Schema::connection('world_one')->drop('slots');
 	}
 
 }

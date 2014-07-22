@@ -28,7 +28,7 @@ class CreateEngines extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('engines');
+		Schema::connection('world_one')->drop('engines');
 	}
 
 }

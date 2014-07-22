@@ -29,7 +29,7 @@ class CreateBills extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('bills');
+		Schema::connection('world_one')->drop('bills');
 	}
 
 }

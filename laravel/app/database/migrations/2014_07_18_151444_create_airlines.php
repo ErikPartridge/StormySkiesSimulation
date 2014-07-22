@@ -39,7 +39,7 @@ class CreateAirlines extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('airlines');
+		Schema::connection('world_one')->drop('airlines');
     }
 
 }

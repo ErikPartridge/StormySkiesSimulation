@@ -46,7 +46,7 @@ class CreateAircraftTypes extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('aircraft_types');
+		Schema::connection('world_one')->drop('aircraft_types');
 	}
 
 }

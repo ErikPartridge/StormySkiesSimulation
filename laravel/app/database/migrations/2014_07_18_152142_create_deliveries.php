@@ -28,7 +28,7 @@ class CreateDeliveries extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('deliveries');
+		Schema::connection('world_one')->drop('deliveries');
 	}
 
 }

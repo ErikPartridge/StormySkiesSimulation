@@ -29,7 +29,7 @@ class CreateCountries extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('countries');
+		Schema::connection('world_one')->drop('countries');
 	}
 
 }

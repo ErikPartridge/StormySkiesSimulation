@@ -30,7 +30,7 @@ class CreateCities extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('cities');
+		Schema::connection('world_one')->drop('cities');
 	}
 
 }

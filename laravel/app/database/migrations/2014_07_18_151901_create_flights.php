@@ -36,7 +36,7 @@ class CreateFlights extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('flights');
+		Schema::connection('world_one')->drop('flights');
 	}
 
 }

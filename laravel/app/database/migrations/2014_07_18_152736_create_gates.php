@@ -28,7 +28,7 @@ class CreateGates extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('gates');
+		Schema::connection('world_one')->drop('gates');
 	}
 
 }

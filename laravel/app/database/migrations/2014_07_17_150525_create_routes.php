@@ -41,7 +41,7 @@ class CreateRoutes extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('routes');
+		Schema::connection('world_one')->drop('routes');
     }
 
 }

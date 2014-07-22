@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRegions extends Migration {
+class CreateWorlds extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,8 @@ class CreateRegions extends Migration {
 	 */
 	public function up()
 	{
-		Schema::connection('world_one')->create('regions', function($table){
-            $table->increments('id');
-            $table->string('name');
-            $table->timestamps();
+		Schema::connection('worlds')->create('worlds', function($table){
+
         });
 	}
 
@@ -26,7 +24,7 @@ class CreateRegions extends Migration {
 	 */
 	public function down()
 	{
-		Schema::connection('world_one')->drop('regions');
+		Schema::connection('worlds')->drop('worlds');
 	}
 
 }
