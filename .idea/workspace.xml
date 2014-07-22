@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ef7e3ca-15bf-4c2e-9e7f-34054247ee39" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_17_150525_create_routes.php" afterPath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_17_150525_create_routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151444_create_airlines.php" afterPath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151444_create_airlines.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151526_create_airports.php" afterPath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151526_create_airports.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151718_create_cities.php" afterPath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151718_create_cities.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151735_create_countries.php" afterPath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151735_create_countries.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151749_create_regions.php" afterPath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151749_create_regions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151901_create_flights.php" afterPath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151901_create_flights.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152004_create_aircraft_types.php" afterPath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152004_create_aircraft_types.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152142_create_deliveries.php" afterPath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152142_create_deliveries.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152205_create_bills.php" afterPath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152205_create_bills.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152736_create_gates.php" afterPath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152736_create_gates.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152753_create_slots.php" afterPath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152753_create_slots.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_235821_create_users.php" afterPath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_235821_create_users.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_19_012028_create_airplanes.php" afterPath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_19_012028_create_airplanes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_19_013602_create_engines.php" afterPath="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_19_013602_create_engines.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/config/database.php" afterPath="$PROJECT_DIR$/laravel/app/config/database.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TakeoffSim.iws" />
@@ -39,7 +25,26 @@
     <favorites_list name="TakeoffSim" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="home.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/app/views/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="811" selection-end="811" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="435">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/laravel/app/config/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="37" selection-start="1972" selection-end="1972" vertical-scroll-proportion="0.57746476" vertical-offset="531" max-vertical-offset="1710">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -55,9 +60,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/laravel/app/views/templates/main.blade.php" />
         <option value="$PROJECT_DIR$/laravel/public/css/main.css" />
-        <option value="$PROJECT_DIR$/laravel/app/views/home.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/routes.php" />
-        <option value="$PROJECT_DIR$/laravel/app/config/database.php" />
         <option value="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_22_033609_create_worlds.php" />
         <option value="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_19_013602_create_engines.php" />
         <option value="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_19_012028_create_airplanes.php" />
@@ -74,12 +77,14 @@
         <option value="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151526_create_airports.php" />
         <option value="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151444_create_airlines.php" />
         <option value="$PROJECT_DIR$/laravel/app/database/migrations/2014_07_17_150525_create_routes.php" />
+        <option value="$PROJECT_DIR$/laravel/app/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/app/config/database.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="23" />
+    <option name="x" value="20" />
     <option name="y" value="22" />
     <option name="width" value="1260" />
     <option name="height" value="760" />
@@ -263,11 +268,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -292,20 +293,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="23" y="22" width="1260" height="760" extended-state="0" />
-    <editor active="false" />
+    <frame x="20" y="22" width="1260" height="760" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -334,16 +335,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/laravel/.idea/PhpAirline.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="15" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-          <folding />
-        </state>
+        <state line="2" column="15" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/public/css/bg.png">
@@ -358,154 +355,114 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/public/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="15" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0" vertical-offset="447" max-vertical-offset="1125">
-          <folding />
-        </state>
+        <state line="58" column="15" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0" vertical-offset="447" max-vertical-offset="1125" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/filters.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="25.0" vertical-offset="600" max-vertical-offset="1305">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="25.0" vertical-offset="600" max-vertical-offset="1305" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="31" selection-start="3157" selection-end="3157" vertical-scroll-proportion="-58.75" vertical-offset="0" max-vertical-offset="1530">
-          <folding />
-        </state>
+        <state line="103" column="31" selection-start="3157" selection-end="3157" vertical-scroll-proportion="-58.75" vertical-offset="0" max-vertical-offset="1530" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/views/templates/main.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="6" selection-start="251" selection-end="251" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="705">
+        <state line="10" column="6" selection-start="251" selection-end="251" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="705" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_19_013602_create_engines.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="41" selection-start="610" selection-end="610" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="585" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_19_012028_create_airplanes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="41" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.7652582" vertical-offset="96" max-vertical-offset="735" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_22_033609_create_worlds.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="51" selection-start="431" selection-end="431" vertical-scroll-proportion="0.58685446" vertical-offset="0" max-vertical-offset="639" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_235821_create_users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="36" selection-start="716" selection-end="716" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="630" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152753_create_slots.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="41" selection-start="680" selection-end="680" vertical-scroll-proportion="0.68075114" vertical-offset="0" max-vertical-offset="639" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152736_create_gates.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="41" selection-start="682" selection-end="682" vertical-scroll-proportion="0.68075114" vertical-offset="0" max-vertical-offset="639" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152205_create_bills.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="41" selection-start="710" selection-end="710" vertical-scroll-proportion="0.70422536" vertical-offset="0" max-vertical-offset="639" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152142_create_deliveries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="41" selection-start="711" selection-end="711" vertical-scroll-proportion="0.68075114" vertical-offset="0" max-vertical-offset="639" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152004_create_aircraft_types.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="41" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.9624413" vertical-offset="90" max-vertical-offset="855" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151901_create_flights.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="41" selection-start="988" selection-end="988" vertical-scroll-proportion="0.7652582" vertical-offset="66" max-vertical-offset="705" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151749_create_regions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="41" selection-start="533" selection-end="533" vertical-scroll-proportion="0.63380283" vertical-offset="0" max-vertical-offset="639" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151735_create_countries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="41" selection-start="652" selection-end="652" vertical-scroll-proportion="0.70422536" vertical-offset="0" max-vertical-offset="639" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151718_create_cities.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="41" selection-start="764" selection-end="764" vertical-scroll-proportion="0.7276995" vertical-offset="0" max-vertical-offset="639" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151526_create_airports.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="41" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.8028169" vertical-offset="72" max-vertical-offset="735" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151444_create_airlines.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="41" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.8028169" vertical-offset="87" max-vertical-offset="750" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_17_150525_create_routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="41" selection-start="1327" selection-end="1327" vertical-scroll-proportion="0.8028169" vertical-offset="117" max-vertical-offset="780" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="811" selection-end="811" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="435">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="16" selection-start="1547" selection-end="1547" vertical-scroll-proportion="-0.5492958" vertical-offset="1071" max-vertical-offset="1710">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="29" selection-start="511" selection-end="511" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="435">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_19_013602_create_engines.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="41" selection-start="610" selection-end="610" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_19_012028_create_airplanes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="41" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.7652582" vertical-offset="96" max-vertical-offset="735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_22_033609_create_worlds.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="51" selection-start="431" selection-end="431" vertical-scroll-proportion="0.58685446" vertical-offset="0" max-vertical-offset="639">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_235821_create_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="36" selection-start="716" selection-end="716" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152753_create_slots.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="41" selection-start="680" selection-end="680" vertical-scroll-proportion="0.68075114" vertical-offset="0" max-vertical-offset="639">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152736_create_gates.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="41" selection-start="682" selection-end="682" vertical-scroll-proportion="0.68075114" vertical-offset="0" max-vertical-offset="639">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152205_create_bills.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="41" selection-start="710" selection-end="710" vertical-scroll-proportion="0.70422536" vertical-offset="0" max-vertical-offset="639">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152142_create_deliveries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="41" selection-start="711" selection-end="711" vertical-scroll-proportion="0.68075114" vertical-offset="0" max-vertical-offset="639">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_152004_create_aircraft_types.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="41" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.9624413" vertical-offset="90" max-vertical-offset="855">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151901_create_flights.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="41" selection-start="988" selection-end="988" vertical-scroll-proportion="0.7652582" vertical-offset="66" max-vertical-offset="705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151749_create_regions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="41" selection-start="533" selection-end="533" vertical-scroll-proportion="0.63380283" vertical-offset="0" max-vertical-offset="639">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151735_create_countries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="41" selection-start="652" selection-end="652" vertical-scroll-proportion="0.70422536" vertical-offset="0" max-vertical-offset="639">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151718_create_cities.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="41" selection-start="764" selection-end="764" vertical-scroll-proportion="0.7276995" vertical-offset="0" max-vertical-offset="639">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151526_create_airports.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="41" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.8028169" vertical-offset="72" max-vertical-offset="735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_18_151444_create_airlines.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="41" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.8028169" vertical-offset="87" max-vertical-offset="750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/database/migrations/2014_07_17_150525_create_routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="41" selection-start="1327" selection-end="1327" vertical-scroll-proportion="0.8028169" vertical-offset="117" max-vertical-offset="780">
+        <state line="60" column="37" selection-start="1972" selection-end="1972" vertical-scroll-proportion="0.57746476" vertical-offset="531" max-vertical-offset="1710">
           <folding />
         </state>
       </provider>
