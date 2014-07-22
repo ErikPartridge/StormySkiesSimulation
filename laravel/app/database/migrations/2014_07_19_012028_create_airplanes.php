@@ -12,7 +12,7 @@ class CreateAirplanes extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('airplanes', function($table){
+		Schema::connection('world_one')->create('airplanes', function($table){
             $table->increments('id');
             $table->string('registration');
             $table->foreign('engine')->references('name')->on('engines');

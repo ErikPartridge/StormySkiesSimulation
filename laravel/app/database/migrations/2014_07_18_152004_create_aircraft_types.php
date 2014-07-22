@@ -12,7 +12,7 @@ class CreateAircraftTypes extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('aircraft_types', function($table){
+		Schema::connection('world_one')->create('aircraft_types', function($table){
            $table->increments('id');
            $table->string('name');
            $table->integer('cruise_speed');

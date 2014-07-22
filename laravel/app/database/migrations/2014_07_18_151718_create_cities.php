@@ -12,7 +12,7 @@ class CreateCities extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('cities', function($table){
+		Schema::connection('world_one')->create('cities', function($table){
            $table->increments('id');
            $table->decimal('latitude');
            $table->decimal('longitude');

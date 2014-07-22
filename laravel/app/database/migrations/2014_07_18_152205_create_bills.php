@@ -12,7 +12,7 @@ class CreateBills extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('bills', function($table){
+		Schema::connection('world_one')->create('bills', function($table){
             $table->increments('id');
             $table->foreign('pays')->references('icao')->on('airlines');
             $table->foreign('to')->references('icao')->on('airlines');

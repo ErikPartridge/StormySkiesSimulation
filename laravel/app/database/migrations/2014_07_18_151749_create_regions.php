@@ -12,7 +12,7 @@ class CreateRegions extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('regions', function($table){
+		Schema::connection('world_one')->create('regions', function($table){
             $table->increments('id');
             $table->string('name');
             $table->timestamps();

@@ -95,3 +95,11 @@ Route::post('/user/payment', "UserController@postPayment");
 Route::post('/user/register', "UserController@postRegister");
 
 Route::get('/user/register', "UserController@getRegister");
+
+Route::get('/terms', function(){
+    return View::make('terms');
+});
+
+Route::get('/prices', function(){
+   return View::make('prices');
+});

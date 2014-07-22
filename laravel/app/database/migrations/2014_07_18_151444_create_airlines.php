@@ -12,7 +12,7 @@ class CreateAirlines extends Migration {
 	 */
 	public function up()
 	{
-		Schema:create('airlines', function($table){
+		Schema::connection('world_one')->create('airlines', function($table){
             $table->increments('id');
             $table->integer('reputation');
             $table->string('icao');
@@ -21,9 +21,9 @@ class CreateAirlines extends Migration {
             $table->decimal('mechanic_pay');
             $table->decimal('pilot_pay');
             $table->decimal('executive_pay');
-            $table->string('ceo')->references('user_name')->on('users');
-            $table->string('headquarters')->references('icao')->on('airports');
-            $table->string('country')->references('iso')->on('countries');
+            $table->foreign('ceo')->references('user_name')->on('users');
+            $table->foreign('headquarters')->references('icao')->on('airports');
+            $table->foreign('country')->references('iso')->on('countries');
             $table->decimal('costs');
             $table->decimal('earnings');
             $table->decimal('profits');

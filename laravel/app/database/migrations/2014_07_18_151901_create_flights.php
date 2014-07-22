@@ -12,7 +12,7 @@ class CreateFlights extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('flights', function($table){
+		Schema::connection('world_one')->create('flights', function($table){
             $table->increments('id');
             $table->integer('departs_gmt');
             $table->integer('arrives_gmt');

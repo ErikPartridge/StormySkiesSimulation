@@ -12,7 +12,7 @@ class CreateDeliveries extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('deliveries', function($table){
+		Schema::connection('world_one')->create('deliveries', function($table){
             $table->increments('id');
             $table->foreign('airline')->references('icao')->on('airlines');
             $table->string('manufacturer');

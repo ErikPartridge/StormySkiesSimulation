@@ -12,7 +12,7 @@ class CreateRoutes extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('routes', function($table){
+		Schema::connection('world_one')->create('routes', function($table){
             $table->increments('id');
             $table->string('flight_number', 7);
             $table->foreign('departs')->references('icao')->on('airports');

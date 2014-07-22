@@ -12,7 +12,7 @@ class CreateAirports extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('airports', function($table){
+		Schema::connection('world_one')->create('airports', function($table){
             $table->increments('id');
             $table->string('icao');
             $table->string('iata');

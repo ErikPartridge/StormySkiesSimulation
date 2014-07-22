@@ -12,7 +12,7 @@ class CreateCountries extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('countries', function($table){
+		Schema::connection('world_one')->create('countries', function($table){
            $table->increments('id');
            $table->string('iso');
            $table->string('name');

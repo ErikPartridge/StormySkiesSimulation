@@ -12,7 +12,7 @@ class CreateEngines extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('engines', function($table){
+		Schema::connection('world_one')->create('engines', function($table){
            $table->increments('id');
            $table->decimal('sfc');
            $table->decimal('bph');

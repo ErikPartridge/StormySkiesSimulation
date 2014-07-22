@@ -12,7 +12,7 @@ class CreateSlots extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('slots', function($table){
+		Schema::connection('world_one')->create('slots', function($table){
             $table->increments('id');
             $table->integer('time');
             $table->foreign('airport')->references('icao')->on('airports');
