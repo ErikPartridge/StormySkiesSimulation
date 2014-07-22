@@ -16,8 +16,8 @@ class CreateCities extends Migration {
            $table->increments('id');
            $table->decimal('latitude');
            $table->decimal('longitude');
-           $table->foreign('country')->references('iso')->on('countries');
-           $table->foreign('region')->references('name')->on('regions');
+           $table->string('country')->references('iso')->on('countries');
+           $table->string('region')->references('name')->on('regions');
            $table->integer('population');
            $table->timestamps();
         });

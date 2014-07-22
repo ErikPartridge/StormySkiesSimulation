@@ -15,8 +15,8 @@ class CreateSlots extends Migration {
 		Schema::connection('world_one')->create('slots', function($table){
             $table->increments('id');
             $table->integer('time');
-            $table->foreign('airport')->references('icao')->on('airports');
-            $table->foreign('owner')->references('icao')->on('airlines');
+            $table->string('airport')->references('icao')->on('airports');
+            $table->string('owner')->references('icao')->on('airlines');
             $table->timestamps();
         });
 	}

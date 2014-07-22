@@ -13,9 +13,9 @@ class Route extends Eloquent{
 
     private $flightNumber;
 
-    private $departs;
+    private $depart;
 
-    private $arrives;
+    private $arrive;
 
     private $aircraftType;
 
@@ -43,17 +43,17 @@ class Route extends Eloquent{
 
     private $started;
 
-    function __construct($aircraftType, $airline, $arrives, $cancelled, $bizPrice, $departGmt, $delayed, $ePlusPrice, $departs, $firstPrice, $ecoPrice, $flightTime, $flightNumber, $onTime, $flights, $operates, $revenue, $started)
+    function __construct($aircraftType, $airline, $arrive, $cancelled, $bizPrice, $departGmt, $delayed, $ePlusPrice, $depart, $firstPrice, $ecoPrice, $flightTime, $flightNumber, $onTime, $flights, $operates, $revenue, $started)
     {
         $this->aircraftType = $aircraftType;
         $this->airline = $airline;
-        $this->arrives = $arrives;
+        $this->arrive = $arrive;
         $this->cancelled = $cancelled;
         $this->bizPrice = $bizPrice;
         $this->departGmt = $departGmt;
         $this->delayed = $delayed;
         $this->ePlusPrice = $ePlusPrice;
-        $this->departs = $departs;
+        $this->depart = $depart;
         $this->firstPrice = $firstPrice;
         $this->ecoPrice = $ecoPrice;
         $this->flightTime = $flightTime;
@@ -100,7 +100,7 @@ class Route extends Eloquent{
     /**
      * @param mixed $arrives
      */
-    public function setArrives($arrives)
+    public function setArrive($arrives)
     {
         $this->arrives = $arrives;
     }
@@ -108,7 +108,7 @@ class Route extends Eloquent{
     /**
      * @return mixed
      */
-    public function getArrives()
+    public function getArrive()
     {
         return $this->arrives;
     }
@@ -180,7 +180,7 @@ class Route extends Eloquent{
     /**
      * @param mixed $departs
      */
-    public function setDeparts($departs)
+    public function setDepart($departs)
     {
         $this->departs = $departs;
     }
@@ -188,7 +188,7 @@ class Route extends Eloquent{
     /**
      * @return mixed
      */
-    public function getDeparts()
+    public function getDepart()
     {
         return $this->departs;
     }

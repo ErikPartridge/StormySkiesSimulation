@@ -15,10 +15,10 @@ class CreateRoutes extends Migration {
 		Schema::connection('world_one')->create('routes', function($table){
             $table->increments('id');
             $table->string('flight_number', 7);
-            $table->foreign('departs')->references('icao')->on('airports');
-            $table->foreign('arrives')->references('icao')->on('airports');
-            $table->foreign('aircraft_type')->references('icao')->on('aircraft_types');
-            $table->foreign('airline')->references('icao')->on('airlines');
+            $table->string('depart')->references('icao')->on('airports');
+            $table->string('arrive')->references('icao')->on('airports');
+            $table->string('aircraft_type')->references('icao')->on('aircraft_types');
+            $table->string('airline')->references('icao')->on('airlines');
             $table->double('on_time', 6, 2);
             $table->double('delayed', 6, 2);
             $table->double('cancelled', 6, 2);

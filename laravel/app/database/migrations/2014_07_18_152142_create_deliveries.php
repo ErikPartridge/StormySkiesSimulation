@@ -14,9 +14,9 @@ class CreateDeliveries extends Migration {
 	{
 		Schema::connection('world_one')->create('deliveries', function($table){
             $table->increments('id');
-            $table->foreign('airline')->references('icao')->on('airlines');
+            $table->string('airline')->references('icao')->on('airlines');
             $table->string('manufacturer');
-            $table->foreign('aircraft_type')->references('icao')->on('aircraft_types');
+            $table->string('aircraft_type')->references('icao')->on('aircraft_types');
             $table->date('when');
         });
 	}

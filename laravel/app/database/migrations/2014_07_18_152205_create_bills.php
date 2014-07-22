@@ -14,8 +14,8 @@ class CreateBills extends Migration {
 	{
 		Schema::connection('world_one')->create('bills', function($table){
             $table->increments('id');
-            $table->foreign('pays')->references('icao')->on('airlines');
-            $table->foreign('to')->references('icao')->on('airlines');
+            $table->string('pays')->references('icao')->on('airlines');
+            $table->string('to')->references('icao')->on('airlines');
             $table->decimal('amount');
             $table->date('when');
             $table->timestamps();

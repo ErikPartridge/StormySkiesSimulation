@@ -48,24 +48,36 @@ return array(
 
         'world_one' => array(
             'driver'    => 'mysql',
-            'host'      => '127.0.0.1',
+            'host'      => 'localhost',
             'database'  => 'world_one',
             'username'  => 'root',
-            'password'  => 'P1l2a3y4',
+            'password'  => 'root',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
         ),
         'main' => array(
             'driver'    => 'mysql',
-            'host'      => '127.0.0.1',
+            'host'      => 'localhosy',
             'database'  => 'main',
             'username'  => 'root',
-            'password'  => 'P1l2a3y4',
+            'password'  => 'root',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
         ),
+        'mysql' => array(
+            'driver'    => 'mysql',
+            'host'      => 'localhost',
+            'database'  => 'main',
+            'username'  => 'root',
+            'password'  => 'root',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+
+        ),
+
 
 	),
 

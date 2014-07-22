@@ -14,8 +14,8 @@ class CreateGates extends Migration {
 	{
 		Schema::connection('world_one')->create('gates', function($table){
             $table->increments('id');
-            $table->foreign('airport')->references('icao')->on('airports');
-            $table->foreign('owner')->references('iceo')->on('airlines');
+            $table->string('airport')->references('icao')->on('airports');
+            $table->string('owner')->references('iceo')->on('airlines');
             $table->integer('number');
             $table->timestamps();
         });

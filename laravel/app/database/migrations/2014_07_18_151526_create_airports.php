@@ -21,7 +21,7 @@ class CreateAirports extends Migration {
             $table->decimal('longitude');
             $table->integer('altitude');
             $table->integer('max_flights_per_hour');
-            $table->foreign('country')->refences('iso')->on('countries');
+            $table->string('country')->refences('iso')->on('countries');
             $table->decimal('demand_bonus');
             $table->decimal('delay_factor');
             $table->string('time_zone');
