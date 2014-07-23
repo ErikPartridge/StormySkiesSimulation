@@ -14,12 +14,13 @@ class CreateUsers extends Migration {
 	{
 		Schema::create('users', function($table){
            $table->increments('id');
-           $table->string('username', 20);
+           $table->string('username', 20)->unique();
            $table->string('first_name', 20);
            $table->string('last_name', 255);
-           $table->string('email', 255);
+           $table->string('email', 255)->unique();
            $table->string('location', 255);
            $table->date('birthday');
+           $table->integer('credits');
            $table->timestamps();
         });
 	}

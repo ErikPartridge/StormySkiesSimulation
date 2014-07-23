@@ -16,10 +16,10 @@ class CreateRoutes extends Migration {
             $table->increments('id');
             $table->integer('world_id')->unsigned();
             $table->string('flight_number', 7);
-            $table->string('depart');
-            $table->string('arrive');
-            $table->string('aircraft_type');
-            $table->string('airline');
+            $table->integer('depart')->unsigned();
+            $table->integer('arrive')->unsigned();
+            $table->integer('aircraft_type')->unsigned();
+            $table->integer('airline')->unsigned();
             $table->double('on_time', 6, 2);
             $table->double('delayed', 6, 2);
             $table->double('cancelled', 6, 2);
@@ -34,10 +34,10 @@ class CreateRoutes extends Migration {
             $table->timestamps();
             #foreign
             $table->foreign('world_id')->references('id')->on('worlds');
-            $table->foreign('depart')->references('icao')->on('airports');
-            $table->foreign('arrive')->references('icao')->on('airports');
-            $table->foreign('aircraft_type')->references('icao')->on('aircraft_types');
-            $table->foreign('airline')->references('icao')->on('airlines');
+            $table->foreign('depart')->references('id')->on('airports');
+            $table->foreign('arrive')->references('id')->on('airports');
+            $table->foreign('aircraft_type')->references('id')->on('aircraft_types');
+            $table->foreign('airline')->references('id')->on('airlines');
         });
 	}
 

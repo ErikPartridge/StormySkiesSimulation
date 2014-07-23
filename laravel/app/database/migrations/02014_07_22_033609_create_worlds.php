@@ -14,7 +14,7 @@ class CreateWorlds extends Migration {
 	{
 		Schema::create('worlds', function($table){
             $table->increments('id');
-            $table->string('name')->unique();
+            $table->string('name', 35)->unique();
             $table->integer('number_users');
             $table->integer('cap');
         });

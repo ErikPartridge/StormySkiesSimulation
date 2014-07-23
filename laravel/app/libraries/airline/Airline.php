@@ -42,7 +42,9 @@ class Airline extends Eloquent{
 
     private $profits;
 
-    function __construct($ceo, $costs, $country, $earnings, $flightAttendantPay, $fleet, $flights, $headquarters, $hubs, $iata, $icao, $mechanicPay, $pilotPay, $profits, $reputation)
+    private $worldId;
+
+    function __construct($ceo, $costs, $country, $earnings, $flightAttendantPay, $fleet, $flights, $headquarters, $hubs, $iata, $icao, $mechanicPay, $pilotPay, $profits, $reputation, $worldId)
     {
         $this->ceo = $ceo;
         $this->costs = $costs;
@@ -59,6 +61,7 @@ class Airline extends Eloquent{
         $this->pilotPay = $pilotPay;
         $this->profits = $profits;
         $this->reputation = $reputation;
+        $this->worldId = $worldId;
     }
 
     /**
@@ -306,6 +309,24 @@ class Airline extends Eloquent{
 
         return $this->belongsToMany('\libraries\airports\Airport');
     }
+
+    /**
+     * @param mixed $worldId
+     */
+    public function setWorldId($worldId)
+    {
+        $this->worldId = $worldId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWorldId()
+    {
+        return $this->worldId;
+    }
+
+
 
 
 } 

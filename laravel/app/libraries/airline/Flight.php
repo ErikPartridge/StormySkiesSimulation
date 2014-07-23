@@ -37,7 +37,9 @@ class Flight {
 
     private $route;
 
-    function __construct($aircraft, $arrivesGmt, $cancelled, $business, $delayed, $date, $departsGmt, $ecoPlus, $economy, $first, $flyingTime, $fuelBurn, $route)
+    private $worldId;
+
+    function __construct($aircraft, $arrivesGmt, $cancelled, $business, $delayed, $date, $departsGmt, $ecoPlus, $economy, $first, $flyingTime, $fuelBurn, $route, $worldId)
     {
         $this->aircraft = $aircraft;
         $this->arrivesGmt = $arrivesGmt;
@@ -52,7 +54,26 @@ class Flight {
         $this->flyingTime = $flyingTime;
         $this->fuelBurn = $fuelBurn;
         $this->route = $route;
+        $this->worldId = $worldId;
     }
+
+    /**
+     * @param mixed $worldId
+     */
+    public function setWorldId($worldId)
+    {
+        $this->worldId = $worldId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWorldId()
+    {
+        return $this->worldId;
+    }
+
+
 
     /**
      * @param mixed $aircraft

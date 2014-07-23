@@ -15,14 +15,14 @@ class CreateDeliveries extends Migration {
 		Schema::create('deliveries', function($table){
             $table->increments('id');
             $table->integer('world_id')->unsigned();
-            $table->string('airline');
+            $table->integer('airline');
             $table->string('manufacturer');
-            $table->string('aircraft_type');
+            $table->integer('aircraft_type')->unsigned();
             $table->date('when');
             $table->timestamps();
 
-            $table->foreign('airline')->references('icao')->on('airlines');
-            $table->foreign('aircraft_type')->references('icao')->on('aircraft_types');
+            $table->foreign('airline')->references('id')->on('airlines');
+            $table->foreign('aircraft_type')->references('id')->on('aircraft_types');
             $table->foreign('world_id')->references('id')->on('worlds');
 
         });

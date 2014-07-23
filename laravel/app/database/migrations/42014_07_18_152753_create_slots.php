@@ -16,12 +16,12 @@ class CreateSlots extends Migration {
             $table->increments('id');
             $table->integer('world_id')->unsigned();
             $table->integer('time');
-            $table->string('airport');
-            $table->string('owner');
+            $table->integer('airport')->unsigned();
+            $table->integer('owner')->unsigned();
             $table->timestamps();
 
-            $table->foreign('airport')->references('icao')->on('airports');
-            $table->foreign('owner')->references('icao')->on('airlines');
+            $table->foreign('airport')->references('id')->on('airports');
+            $table->foreign('owner')->references('id')->on('airlines');
             $table->foreign('world_id')->references('id')->on('worlds');
 
         });

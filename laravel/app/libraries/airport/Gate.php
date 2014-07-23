@@ -18,11 +18,14 @@ class Gate {
 
     private $number;
 
-    function __construct($number, $airport, $owner)
+    private $worldId;
+
+    function __construct($number, $airport, $owner, $worldId)
     {
         $this->number = $number;
         $this->airport = $airport;
         $this->owner = $owner;
+        $this->worldId = $worldId;
     }
 
     /**

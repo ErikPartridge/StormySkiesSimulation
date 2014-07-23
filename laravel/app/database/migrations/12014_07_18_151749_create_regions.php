@@ -15,7 +15,7 @@ class CreateRegions extends Migration {
 		Schema::create('regions', function($table){
             $table->increments('id');
             $table->integer('world_id')->unsigned();
-            $table->string('name');
+            $table->string('name', 255);
             $table->timestamps();
         });
         Schema::table('regions', function($table){

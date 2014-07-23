@@ -43,8 +43,11 @@ class Route extends Eloquent{
 
     private $started;
 
-    function __construct($aircraftType, $airline, $arrive, $cancelled, $bizPrice, $departGmt, $delayed, $ePlusPrice, $depart, $firstPrice, $ecoPrice, $flightTime, $flightNumber, $onTime, $flights, $operates, $revenue, $started)
+    private $worldId;
+
+    function __construct($worldId, $aircraftType, $airline, $arrive, $cancelled, $bizPrice, $departGmt, $delayed, $ePlusPrice, $depart, $firstPrice, $ecoPrice, $flightTime, $flightNumber, $onTime, $flights, $operates, $revenue, $started)
     {
+        $this->worldId = $worldId;
         $this->aircraftType = $aircraftType;
         $this->airline = $airline;
         $this->arrive = $arrive;
@@ -352,6 +355,24 @@ class Route extends Eloquent{
     {
         return $this->started;
     }
+
+    /**
+     * @param mixed $worldId
+     */
+    public function setWorldId($worldId)
+    {
+        $this->worldId = $worldId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWorldId()
+    {
+        return $this->worldId;
+    }
+
+
 
 
 } 

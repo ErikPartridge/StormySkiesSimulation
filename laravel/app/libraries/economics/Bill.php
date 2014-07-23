@@ -21,15 +21,33 @@ class Bill {
 
     private $when;
 
-    function __construct($amount, $to, $when, $description, $pays)
+    private $worldId;
+
+    function __construct($amount, $to, $when, $description, $pays, $worldId)
     {
         $this->amount = $amount;
         $this->to = $to;
         $this->when = $when;
         $this->description = $description;
         $this->pays = $pays;
+        $this->worldId = $worldId;
     }
 
+    /**
+     * @param mixed $worldId
+     */
+    public function setWorldId($worldId)
+    {
+        $this->worldId = $worldId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWorldId()
+    {
+        return $this->worldId;
+    }
     /**
      * @param mixed $amount
      */

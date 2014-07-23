@@ -15,7 +15,7 @@ class CreateAirplanes extends Migration {
 		Schema::create('airplanes', function($table){
             $table->increments('id');
             $table->integer('world_id')->unsigned();
-            $table->string('registration');
+            $table->string('registration', 7);
             $table->integer('engine')->unsigned();
             $table->integer('fin');
             $table->decimal('age');

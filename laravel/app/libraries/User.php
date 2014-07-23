@@ -23,7 +23,9 @@ class User {
 
     private $birthday;
 
-    function __construct($birthday, $email, $firstName, $lastName, $username, $location)
+    private $credits;
+
+    function __construct($birthday, $email, $firstName, $lastName, $username, $location, $credits)
     {
         $this->birthday = $birthday;
         $this->email = $email;
@@ -31,6 +33,7 @@ class User {
         $this->lastName = $lastName;
         $this->username = $username;
         $this->location = $location;
+        $this->credits = $credits;
     }
 
     /**
@@ -128,6 +131,23 @@ class User {
     {
         return $this->birthday;
     }
+
+    /**
+     * @param mixed $credits
+     */
+    public function setCredits($credits)
+    {
+        $this->credits = $credits;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCredits()
+    {
+        return $this->credits;
+    }
+
 
 
 

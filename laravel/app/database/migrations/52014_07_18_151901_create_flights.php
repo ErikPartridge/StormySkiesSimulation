@@ -26,11 +26,11 @@ class CreateFlights extends Migration {
             $table->integer('fuel_burn');
             $table->integer('flying_time');
             $table->integer('airplane_id')->unsigned();
-            $table->string('route');
+            $table->integer('route')->unsigned();
             $table->timestamps();
 
             $table->foreign('airplane_id')->references('id')->on('airplanes');
-            $table->foreign('route')->references('flight_number')->on('routes');
+            $table->foreign('route')->references('id')->on('routes');
             $table->foreign('world_id')->references('id')->on('worlds');
 
         });

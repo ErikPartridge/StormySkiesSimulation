@@ -15,16 +15,16 @@ class CreateAircraftTypes extends Migration {
 		Schema::create('aircraft_types', function($table){
            $table->increments('id');
            $table->integer('world_id')->unsigned();
-           $table->string('name');
+           $table->string('name', 50);
            $table->integer('cruise_speed');
            $table->integer('minimum_runway');
-           $table->string('icao');
+           $table->string('icao', 4);
            $table->integer('range');
            $table->integer('price');
            $table->integer('number_of_engines');
            $table->integer('max_seats');
            $table->integer('production_rate');
-           $table->string('manufacturer');
+           $table->string('manufacturer', 50);
            $table->integer('fuel_burn');
            $table->integer('mtow');
            $table->integer('mlw');

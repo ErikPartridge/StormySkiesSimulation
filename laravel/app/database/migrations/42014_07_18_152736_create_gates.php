@@ -15,13 +15,13 @@ class CreateGates extends Migration {
 		Schema::create('gates', function($table){
             $table->increments('id');
             $table->integer('world_id')->unsigned();
-            $table->string('airport');
-            $table->string('owner');
+            $table->integer('airport')->unsigned();
+            $table->integer('owner')->unsigned();
             $table->integer('number');
             $table->timestamps();
 
-            $table->foreign('airport')->references('icao')->on('airports');
-            $table->foreign('owner')->references('iceo')->on('airlines');
+            $table->foreign('airport')->references('id')->on('airports');
+            $table->foreign('owner')->references('id')->on('airlines');
             $table->foreign('world_id')->references('id')->on('worlds');
 
         });

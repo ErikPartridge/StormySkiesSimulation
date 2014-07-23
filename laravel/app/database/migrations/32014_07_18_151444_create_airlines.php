@@ -16,14 +16,14 @@ class CreateAirlines extends Migration {
             $table->increments('id');
             $table->integer('world_id')->unsigned();
             $table->integer('reputation');
-            $table->string('icao');
-            $table->string('iata');
+            $table->string('icao', 3);
+            $table->string('iata', 2);
             $table->decimal('flight_attendant_pay');
             $table->decimal('mechanic_pay');
             $table->decimal('pilot_pay');
             $table->decimal('executive_pay');
-            $table->string('headquarters');
-            $table->string('country');
+            $table->integer('headquarters');
+            $table->integer('country');
             $table->decimal('costs');
             $table->decimal('earnings');
             $table->decimal('profits');
@@ -31,8 +31,8 @@ class CreateAirlines extends Migration {
 
             #foreign
             $table->foreign('world_id')->references('id')->on('worlds');
-            $table->foreign('headquarters')->references('icao')->on('airports');
-            $table->foreign('country')->references('iso')->on('countries');
+            $table->foreign('headquarters')->references('id')->on('airports');
+            $table->foreign('country')->references('id')->on('countries');
 
         });
 

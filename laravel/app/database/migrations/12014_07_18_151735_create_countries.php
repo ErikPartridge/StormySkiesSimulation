@@ -15,8 +15,8 @@ class CreateCountries extends Migration {
 		Schema::create('countries', function($table){
            $table->increments('id');
            $table->integer('world_id')->unsigned();
-           $table->string('iso');
-           $table->string('name');
+           $table->string('iso', 4);
+           $table->string('name', 255);
            $table->boolean('eu_member');
            $table->boolean('open_market');
            $table->timestamps();

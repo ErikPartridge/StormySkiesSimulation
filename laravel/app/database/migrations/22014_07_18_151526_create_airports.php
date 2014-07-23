@@ -15,9 +15,9 @@ class CreateAirports extends Migration {
 		Schema::create('airports', function($table){
             $table->increments('id');
             $table->integer('world_id')->unsigned();
-            $table->string('icao');
-            $table->string('iata');
-            $table->string('name');
+            $table->string('icao', 4);
+            $table->string('iata', 3);
+            $table->string('name', 255);
             $table->decimal('latitude');
             $table->decimal('longitude');
             $table->integer('altitude');
@@ -25,9 +25,11 @@ class CreateAirports extends Migration {
             $table->integer('country_id')->unsigned();
             $table->decimal('demand_bonus');
             $table->decimal('delay_factor');
-            $table->string('time_zone');
+            $table->string('time_zone', 255);
             $table->decimal('allocated_demand');
             $table->boolean('slot_controlled');
+            //the longest runway now, may be a separate table later
+            $table->integer('runways');
             $table->timestamps();
             #foreign
 

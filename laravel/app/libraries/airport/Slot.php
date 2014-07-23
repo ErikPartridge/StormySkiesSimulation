@@ -17,11 +17,14 @@ class Slot {
 
     private $airport;
 
-    function __construct($airport, $owner, $time)
+    private $worldId;
+
+    function __construct($airport, $owner, $time, $worldId)
     {
         $this->airport = $airport;
         $this->owner = $owner;
         $this->time = $time;
+        $this->worldId = $worldId;
     }
 
 
@@ -72,6 +75,23 @@ class Slot {
     {
         return $this->time;
     }
+
+    /**
+     * @param mixed $worldId
+     */
+    public function setWorldId($worldId)
+    {
+        $this->worldId = $worldId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWorldId()
+    {
+        return $this->worldId;
+    }
+
 
 
 

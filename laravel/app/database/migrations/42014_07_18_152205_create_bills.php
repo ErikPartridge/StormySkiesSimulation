@@ -14,15 +14,15 @@ class CreateBills extends Migration {
 	{
 		Schema::create('bills', function($table){
             $table->increments('id');
-            $table->integer('world_id');
-            $table->string('pays');
-            $table->string('to');
+            $table->integer('world_id')->unsigned();
+            $table->integer('pays')->unsigned();
+            $table->string('to')->unsigned();
             $table->decimal('amount');
             $table->date('when');
             $table->timestamps();
 
-            $table->foreign('pays')->references('icao')->on('airlines');
-            $table->foreign('to')->references('icao')->on('airlines');
+            $table->foreign('pays')->references('id')->on('airlines');
+            $table->foreign('to')->references('id')->on('airlines');
             $table->foreign('world_id')->references('id')->on('worlds');
 
         });

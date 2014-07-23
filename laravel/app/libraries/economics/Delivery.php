@@ -19,14 +19,32 @@ class Delivery {
 
     private $when;
 
-    function __construct($airline, $manufacturer, $type, $when)
+    private $worldId;
+
+    function __construct($airline, $manufacturer, $type, $when, $worldId)
     {
         $this->airline = $airline;
         $this->manufacturer = $manufacturer;
         $this->type = $type;
         $this->when = $when;
+        $this->worldId = $worldId;
     }
 
+    /**
+     * @param mixed $worldId
+     */
+    public function setWorldId($worldId)
+    {
+        $this->worldId = $worldId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWorldId()
+    {
+        return $this->worldId;
+    }
     /**
      * @param mixed $airline
      */
