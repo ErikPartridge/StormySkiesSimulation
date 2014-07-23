@@ -34,7 +34,9 @@ class Airplane {
 
     private $owner;
 
-    function __construct($aCheck, $age, $bCheck, $cCheck, $cycles, $engine, $fin, $flights, $hours, $leased, $location, $owner, $registration, $type)
+    private $worldId;
+
+    function __construct($aCheck, $age, $bCheck, $cCheck, $cycles, $engine, $fin, $flights, $hours, $leased, $location, $owner, $registration, $type, $worldId)
     {
         $this->aCheck = $aCheck;
         $this->age = $age;
@@ -50,6 +52,23 @@ class Airplane {
         $this->owner = $owner;
         $this->registration = $registration;
         $this->type = $type;
+        $this->worldId = $worldId;
+    }
+
+    /**
+     * @param mixed $worldId
+     */
+    public function setWorldId($worldId)
+    {
+        $this->worldId = $worldId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWorldId()
+    {
+        return $this->worldId;
     }
 
     /**

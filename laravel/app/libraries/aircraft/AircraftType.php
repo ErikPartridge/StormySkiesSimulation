@@ -53,7 +53,9 @@ class AircraftType {
 
     private $hoursC;
 
-    function __construct($cruiseSpeed, $hoursA, $fuelburn, $hoursB, $hoursC, $manufacturer, $icao, $maxSeats, $minimumRunway, $mlw, $mtow, $mzfw, $name, $numberOfEngines, $price, $oew, $priceA, $priceB, $priceC, $range, $productionRate)
+    private $worldId;
+
+    function __construct($cruiseSpeed, $hoursA, $fuelburn, $hoursB, $hoursC, $manufacturer, $icao, $maxSeats, $minimumRunway, $mlw, $mtow, $mzfw, $name, $numberOfEngines, $price, $oew, $priceA, $priceB, $priceC, $range, $productionRate, $worldId)
     {
         $this->cruiseSpeed = $cruiseSpeed;
         $this->hoursA = $hoursA;
@@ -76,6 +78,7 @@ class AircraftType {
         $this->priceC = $priceC;
         $this->range = $range;
         $this->productionRate = $productionRate;
+        $this->worldId = $worldId;
     }
 
     /**
@@ -413,6 +416,23 @@ class AircraftType {
     {
         return $this->range;
     }
+
+    /**
+     * @param mixed $worldId
+     */
+    public function setWorldId($worldId)
+    {
+        $this->worldId = $worldId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWorldId()
+    {
+        return $this->worldId;
+    }
+
 
 
 

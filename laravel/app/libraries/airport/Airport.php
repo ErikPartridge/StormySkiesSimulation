@@ -13,6 +13,8 @@ class Airport extends Eloquent{
 
     private $name;
 
+    private $worldId;
+
     private $latitude;
 
     private $longitude;
@@ -25,7 +27,7 @@ class Airport extends Eloquent{
 
     private $maxFlightsPerHour;
 
-    private $country;
+    private $countryId;
 
     private $delayFactor;
 
@@ -41,25 +43,57 @@ class Airport extends Eloquent{
 
     private $slotControlled;
 
-    function __construct($allocatedDemand, $country, $demandBonus, $elevation, $regions, $slotControlled, $timeZone, $runways, $name, $maxFlightsPerHour, $longitude, $latitude, $icao, $iata, $delayFactor)
+    function __construct($allocatedDemand, $countryId, $delayFactor, $demandBonus, $elevation, $icao, $iata, $latitude, $longitude, $maxFlightsPerHour, $name, $runways, $regions, $slotControlled, $worldId, $timeZone)
     {
         $this->allocatedDemand = $allocatedDemand;
-        $this->country = $country;
+        $this->countryId = $countryId;
+        $this->delayFactor = $delayFactor;
         $this->demandBonus = $demandBonus;
         $this->elevation = $elevation;
-        $this->regions = $regions;
-        $this->slotControlled = $slotControlled;
-        $this->timeZone = $timeZone;
-        $this->runways = $runways;
-        $this->name = $name;
-        $this->maxFlightsPerHour = $maxFlightsPerHour;
-        $this->longitude = $longitude;
-        $this->latitude = $latitude;
         $this->icao = $icao;
         $this->iata = $iata;
-        $this->delayFactor = $delayFactor;
+        $this->latitude = $latitude;
+        $this->longitude = $longitude;
+        $this->maxFlightsPerHour = $maxFlightsPerHour;
+        $this->name = $name;
+        $this->runways = $runways;
+        $this->regions = $regions;
+        $this->slotControlled = $slotControlled;
+        $this->worldId = $worldId;
+        $this->timeZone = $timeZone;
     }
 
+    /**
+     * @param mixed $countryId
+     */
+    public function setCountryId($countryId)
+    {
+        $this->countryId = $countryId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCountryId()
+    {
+        return $this->countryId;
+    }
+
+    /**
+     * @param mixed $worldId
+     */
+    public function setWorldId($worldId)
+    {
+        $this->worldId = $worldId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWorldId()
+    {
+        return $this->worldId;
+    }
 
     /**
      * @param mixed $slotControlled
@@ -110,23 +144,6 @@ class Airport extends Eloquent{
     {
         return $this->allocatedDemand;
     }
-
-    /**
-     * @param mixed $country
-     */
-    public function setCountry($country)
-    {
-        $this->country = $country;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCountry()
-    {
-        return $this->country;
-    }
-
     /**
      * @param mixed $delayFactor
      */

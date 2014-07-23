@@ -16,12 +16,15 @@ class Engine {
 
     private $manufacturer;
 
-    function __construct($bph, $name, $manufacturer, $sfc)
+    private $worldId;
+
+    function __construct($bph, $name, $manufacturer, $sfc, $worldId)
     {
         $this->bph = $bph;
         $this->name = $name;
         $this->manufacturer = $manufacturer;
         $this->sfc = $sfc;
+        $this->worldId = $worldId;
     }
 
     /**
@@ -86,6 +89,22 @@ class Engine {
     public function getSfc()
     {
         return $this->sfc;
+    }
+
+    /**
+     * @param mixed $worldId
+     */
+    public function setWorldId($worldId)
+    {
+        $this->worldId = $worldId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWorldId()
+    {
+        return $this->worldId;
     }
 
 

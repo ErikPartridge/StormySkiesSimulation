@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGates extends Migration {
+class CreateRegions extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,18 +12,14 @@ class CreateGates extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('gates', function($table){
+		Schema::create('regions', function($table){
             $table->increments('id');
             $table->integer('world_id')->unsigned();
-            $table->string('airport');
-            $table->string('owner');
-            $table->integer('number');
+            $table->string('name');
             $table->timestamps();
-
-            $table->foreign('airport')->references('icao')->on('airports');
-            $table->foreign('owner')->references('iceo')->on('airlines');
+        });
+        Schema::table('regions', function($table){
             $table->foreign('world_id')->references('id')->on('worlds');
-
         });
 	}
 
@@ -34,7 +30,7 @@ class CreateGates extends Migration {
 	 */
 	public function down()
 	{
-		Schema::connection('world_one')->drop('gates');
+		Schema::drop('regions');
 	}
 
 }

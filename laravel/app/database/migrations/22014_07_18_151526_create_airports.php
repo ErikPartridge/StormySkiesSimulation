@@ -22,7 +22,7 @@ class CreateAirports extends Migration {
             $table->decimal('longitude');
             $table->integer('altitude');
             $table->integer('max_flights_per_hour');
-            $table->string('country');
+            $table->integer('country_id')->unsigned();
             $table->decimal('demand_bonus');
             $table->decimal('delay_factor');
             $table->string('time_zone');
@@ -30,7 +30,12 @@ class CreateAirports extends Migration {
             $table->boolean('slot_controlled');
             $table->timestamps();
             #foreign
-            $table->foreign('country')->references('iso')->on('countries');
+
+        });
+
+        Schema::table('airports', function($table){
+
+            $table->foreign('country_id')->references('id')->on('countries');
             $table->foreign('world_id')->references('id')->on('worlds');
         });
 	}

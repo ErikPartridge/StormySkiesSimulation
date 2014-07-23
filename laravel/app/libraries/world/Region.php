@@ -13,49 +13,29 @@ class Region {
 
     private $name;
 
-    private $airportsInRegion;
+    private $worldId;
 
-    private $cities;
-
-    function __construct($airportsInRegion, $name, $cities)
+    function __construct($name, $worldId)
     {
-        $this->airportsInRegion = $airportsInRegion;
         $this->name = $name;
-        $this->cities = $cities;
+        $this->worldId = $worldId;
     }
 
     /**
-     * @param mixed $airportsInRegion
+     * @param mixed $worldId
      */
-    public function setAirportsInRegion($airportsInRegion)
+    public function setWorldId($worldId)
     {
-        $this->airportsInRegion = $airportsInRegion;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAirportsInRegion()
-    {
-        return $this->airportsInRegion;
-    }
-
-    /**
-     * @param mixed $cities
-     */
-    public function setCities($cities)
-    {
-        $this->cities = $cities;
+        $this->worldId = $worldId;
     }
 
     /**
      * @return mixed
      */
-    public function getCities()
+    public function getWorldId()
     {
-        return $this->cities;
+        return $this->worldId;
     }
-
     /**
      * @param mixed $name
      */

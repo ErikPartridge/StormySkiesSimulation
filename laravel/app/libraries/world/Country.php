@@ -23,7 +23,9 @@ class Country {
 
     private $banned;
 
-    function __construct($banned, $capital, $euMember, $name, $iso, $openMarket)
+    private $worldId;
+
+    function __construct($banned, $capital, $euMember, $name, $iso, $openMarket, $worldId)
     {
         $this->banned = $banned;
         $this->capital = $capital;
@@ -31,6 +33,23 @@ class Country {
         $this->name = $name;
         $this->iso = $iso;
         $this->openMarket = $openMarket;
+        $this->worldId = $worldId;
+    }
+
+    /**
+     * @param mixed $worldId
+     */
+    public function setWorldId($worldId)
+    {
+        $this->worldId = $worldId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWorldId()
+    {
+        return $this->worldId;
     }
 
     /**

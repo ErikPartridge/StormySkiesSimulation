@@ -19,15 +19,66 @@ class City {
 
     private $region;
 
-    private $country;
+    private $countryId;
 
-    function __construct($country, $latitude, $longitude, $population, $region)
+    private $worldId;
+
+    function __construct($countryId, $latitude, $longitude, $population, $worldId, $region)
     {
-        $this->country = $country;
+        $this->countryId = $countryId;
         $this->latitude = $latitude;
         $this->longitude = $longitude;
         $this->population = $population;
+        $this->worldId = $worldId;
         $this->region = $region;
+    }
+
+    /**
+     * @param mixed $countryId
+     */
+    public function setCountryId($countryId)
+    {
+        $this->countryId = $countryId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCountryId()
+    {
+        return $this->countryId;
+    }
+
+    /**
+     * @param mixed $worldId
+     */
+    public function setWorldId($worldId)
+    {
+        $this->worldId = $worldId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWorldId()
+    {
+        return $this->worldId;
+    }
+
+    /**
+     * @param mixed $population
+     */
+    public function setPopulation($population)
+    {
+        $this->population = $population;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPopulation()
+    {
+        return $this->population;
     }
 
     /**
@@ -44,23 +95,6 @@ class City {
     public function getRegion()
     {
         return $this->region;
-    }
-
-
-    /**
-     * @param mixed $country
-     */
-    public function setCountry($country)
-    {
-        $this->country = $country;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCountry()
-    {
-        return $this->country;
     }
 
     /**
@@ -95,21 +129,7 @@ class City {
         return $this->latitude;
     }
 
-    /**
-     * @param mixed $population
-     */
-    public function setPopulation($population)
-    {
-        $this->population = $population;
-    }
 
-    /**
-     * @return mixed
-     */
-    public function getPopulation()
-    {
-        return $this->population;
-    }
 
 
 } 

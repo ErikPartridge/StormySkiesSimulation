@@ -1,5 +1,5 @@
 {
-	"name": "erikpartridge/airline",
+	"name": "erikmp/takeoffsim",
 	"description": "An Airline Simulation",
 	"keywords": ["airline", "laravel"],
 	"license": "Copyright Erik Partridge",
@@ -7,7 +7,8 @@
         "php": ">= 5.4.0",
 		"laravel/framework": "4.2.*",
         "league/geotools": "@stable",
-        "fzaninotto/faker": "1.5.*@dev"
+        "fzaninotto/faker": "1.5.*@dev",
+        "laravel/cashier": "~2.0"
 	},
 	"autoload": {
 		"classmap": [
