@@ -18,12 +18,12 @@ class CreateCities extends Migration {
            $table->decimal('latitude');
            $table->decimal('longitude');
            $table->integer('country_id')->unsigned();
-           $table->string('region', 255);
+           $table->integer('region')->unsigned();
            $table->integer('population');
            $table->timestamps();
            #foreign
            $table->foreign('country_id')->references('id')->on('countries');
-           $table->foreign('region')->references('name')->on('regions');
+           $table->foreign('region')->references('id')->on('regions');
         });
 	}
 

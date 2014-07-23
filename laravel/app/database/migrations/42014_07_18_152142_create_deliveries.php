@@ -15,7 +15,7 @@ class CreateDeliveries extends Migration {
 		Schema::create('deliveries', function($table){
             $table->increments('id');
             $table->integer('world_id')->unsigned();
-            $table->integer('airline');
+            $table->integer('airline')->unsigned();
             $table->string('manufacturer');
             $table->integer('aircraft_type')->unsigned();
             $table->date('when');

@@ -16,7 +16,7 @@ class CreateBills extends Migration {
             $table->increments('id');
             $table->integer('world_id')->unsigned();
             $table->integer('pays')->unsigned();
-            $table->string('to')->unsigned();
+            $table->integer('to')->unsigned();
             $table->decimal('amount');
             $table->date('when');
             $table->timestamps();

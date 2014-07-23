@@ -22,8 +22,8 @@ class CreateAirlines extends Migration {
             $table->decimal('mechanic_pay');
             $table->decimal('pilot_pay');
             $table->decimal('executive_pay');
-            $table->integer('headquarters');
-            $table->integer('country');
+            $table->integer('headquarters')->unsigned();
+            $table->integer('country')->unsigned();
             $table->decimal('costs');
             $table->decimal('earnings');
             $table->decimal('profits');

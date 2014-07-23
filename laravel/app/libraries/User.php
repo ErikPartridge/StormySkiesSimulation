@@ -9,7 +9,7 @@
 namespace libraries;
 
 
-class User {
+class User extends Eloquent{
 
     private $username;
 
@@ -25,79 +25,24 @@ class User {
 
     private $credits;
 
-    function __construct($birthday, $email, $firstName, $lastName, $username, $location, $credits)
+    private $active;
+
+    private $password;
+
+    private $passwordTemp;
+
+    function __construct($active, $birthday, $email, $credits, $lastName, $firstName, $password, $passwordTemp, $username, $location)
     {
+        $this->active = $active;
         $this->birthday = $birthday;
         $this->email = $email;
-        $this->firstName = $firstName;
-        $this->lastName = $lastName;
-        $this->username = $username;
-        $this->location = $location;
         $this->credits = $credits;
-    }
-
-    /**
-     * @param mixed $location
-     */
-    public function setLocation($location)
-    {
-        $this->location = $location;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLocation()
-    {
-        return $this->location;
-    }
-
-    /**
-     * @param mixed $username
-     */
-    public function setUsername($username)
-    {
-        $this->username = $username;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUsername()
-    {
-        return $this->username;
-    }
-
-    /**
-     * @param mixed $firstName
-     */
-    public function setFirstName($firstName)
-    {
-        $this->firstName = $firstName;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstName()
-    {
-        return $this->firstName;
-    }
-
-    /**
-     * @param mixed $lastName
-     */
-    public function setLastName($lastName)
-    {
         $this->lastName = $lastName;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLastName()
-    {
-        return $this->lastName;
+        $this->firstName = $firstName;
+        $this->password = $password;
+        $this->passwordTemp = $passwordTemp;
+        $this->username = $username;
+        $this->location = $location;
     }
 
     /**
@@ -117,19 +62,99 @@ class User {
     }
 
     /**
-     * @param mixed $birthday
+     * @param mixed $lastName
      */
-    public function setBirthday($birthday)
+    public function setLastName($lastName)
     {
-        $this->birthday = $birthday;
+        $this->lastName = $lastName;
     }
 
     /**
      * @return mixed
      */
-    public function getBirthday()
+    public function getLastName()
     {
-        return $this->birthday;
+        return $this->lastName;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param mixed $passwordTemp
+     */
+    public function setPasswordTemp($passwordTemp)
+    {
+        $this->passwordTemp = $passwordTemp;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPasswordTemp()
+    {
+        return $this->passwordTemp;
+    }
+
+    /**
+     * @param mixed $username
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    /**
+     * @param mixed $location
+     */
+    public function setLocation($location)
+    {
+        $this->location = $location;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLocation()
+    {
+        return $this->location;
+    }
+
+    /**
+     * @param mixed $firstName
+     */
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
     }
 
     /**
@@ -148,6 +173,37 @@ class User {
         return $this->credits;
     }
 
+    /**
+     * @param mixed $birthday
+     */
+    public function setBirthday($birthday)
+    {
+        $this->birthday = $birthday;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBirthday()
+    {
+        return $this->birthday;
+    }
+
+    /**
+     * @param mixed $active
+     */
+    public function setActive($active)
+    {
+        $this->active = $active;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getActive()
+    {
+        return $this->active;
+    }
 
 
 

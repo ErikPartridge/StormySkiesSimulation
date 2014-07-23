@@ -21,6 +21,9 @@ class CreateUsers extends Migration {
            $table->string('location', 255);
            $table->date('birthday');
            $table->integer('credits');
+           $table->string('password', 60);
+           $table->string('password_temp', 60);
+           $table->boolean('active');
            $table->timestamps();
         });
 	}

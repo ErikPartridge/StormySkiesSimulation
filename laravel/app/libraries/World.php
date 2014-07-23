@@ -9,7 +9,7 @@
 namespace libraries;
 
 
-class World {
+class World extends Eloquent{
 
     private $name;
 
