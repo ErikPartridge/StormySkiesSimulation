@@ -12,14 +12,18 @@ class CreateCities extends Migration {
 	 */
 	public function up()
 	{
-		Schema::connection('world_one')->create('cities', function($table){
+		Schema::create('cities', function($table){
            $table->increments('id');
+           $table->integer('world_id')->unsigned();
            $table->decimal('latitude');
            $table->decimal('longitude');
-           $table->string('country')->references('iso')->on('countries');
-           $table->string('region')->references('name')->on('regions');
+           $table->string('country');
+           $table->string('region');
            $table->integer('population');
            $table->timestamps();
+           #foreign
+           $table->foreign('country')->references('iso')->on('countries');
+           $table->foreign('region')->references('name')->on('regions');
         });
 	}
 
@@ -30,7 +34,7 @@ class CreateCities extends Migration {
 	 */
 	public function down()
 	{
-		Schema::connection('world_one')->drop('cities');
+		Schema::drop('cities');
 	}
 
 }

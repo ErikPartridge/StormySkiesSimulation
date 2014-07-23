@@ -12,8 +12,9 @@ class CreateAirlines extends Migration {
 	 */
 	public function up()
 	{
-		Schema::connection('world_one')->create('airlines', function($table){
+		Schema::create('airlines', function($table){
             $table->increments('id');
+            $table->integer('world_id')->unsigned();
             $table->integer('reputation');
             $table->string('icao');
             $table->string('iata');
@@ -21,12 +22,18 @@ class CreateAirlines extends Migration {
             $table->decimal('mechanic_pay');
             $table->decimal('pilot_pay');
             $table->decimal('executive_pay');
-            $table->string('headquarters')->references('icao')->on('airports');
-            $table->string('country')->references('iso')->on('countries');
+            $table->string('headquarters');
+            $table->string('country');
             $table->decimal('costs');
             $table->decimal('earnings');
             $table->decimal('profits');
             $table->timestamps();
+
+            #foreign
+            $table->foreign('world_id')->references('id')->on('worlds');
+            $table->foreign('headquarters')->references('icao')->on('airports');
+            $table->foreign('country')->references('iso')->on('countries');
+
         });
 
 	}
@@ -38,7 +45,7 @@ class CreateAirlines extends Migration {
 	 */
 	public function down()
 	{
-		Schema::connection('world_one')->drop('airlines');
+		Schema::drop('airlines');
     }
 
 }

@@ -12,13 +12,19 @@ class CreateBills extends Migration {
 	 */
 	public function up()
 	{
-		Schema::connection('world_one')->create('bills', function($table){
+		Schema::create('bills', function($table){
             $table->increments('id');
-            $table->string('pays')->references('icao')->on('airlines');
-            $table->string('to')->references('icao')->on('airlines');
+            $table->integer('world_id');
+            $table->string('pays');
+            $table->string('to');
             $table->decimal('amount');
             $table->date('when');
             $table->timestamps();
+
+            $table->foreign('pays')->references('icao')->on('airlines');
+            $table->foreign('to')->references('icao')->on('airlines');
+            $table->foreign('world_id')->references('id')->on('worlds');
+
         });
 	}
 
@@ -29,7 +35,7 @@ class CreateBills extends Migration {
 	 */
 	public function down()
 	{
-		Schema::connection('world_one')->drop('bills');
+		Schema::drop('bills');
 	}
 
 }

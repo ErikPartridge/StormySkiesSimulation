@@ -12,13 +12,18 @@ class CreateCountries extends Migration {
 	 */
 	public function up()
 	{
-		Schema::connection('world_one')->create('countries', function($table){
+		Schema::create('countries', function($table){
            $table->increments('id');
+           $table->integer('world_id')->unsigned();
            $table->string('iso');
            $table->string('name');
            $table->boolean('eu_member');
            $table->boolean('open_market');
            $table->timestamps();
+
+           #foreign
+           $table->foreign('world_id')->references('id')->on('worlds');
+
         });
 	}
 
@@ -29,7 +34,7 @@ class CreateCountries extends Migration {
 	 */
 	public function down()
 	{
-		Schema::connection('world_one')->drop('countries');
+		Schema::drop('countries');
 	}
 
 }

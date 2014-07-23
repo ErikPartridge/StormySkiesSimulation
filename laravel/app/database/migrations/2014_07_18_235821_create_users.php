@@ -12,7 +12,7 @@ class CreateUsers extends Migration {
 	 */
 	public function up()
 	{
-		Schema::connection('main')->create('users', function($table){
+		Schema::create('users', function($table){
            $table->increments('id');
            $table->string('username');
            $table->string('first_name');
@@ -31,7 +31,7 @@ class CreateUsers extends Migration {
 	 */
 	public function down()
     {
-		Schema::connection('main')->drop('users');
+		Schema::drop('users');
 	}
 
 }

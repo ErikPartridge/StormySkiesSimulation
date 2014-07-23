@@ -12,8 +12,9 @@ class CreateFlights extends Migration {
 	 */
 	public function up()
 	{
-		Schema::connection('world_one')->create('flights', function($table){
+		Schema::create('flights', function($table){
             $table->increments('id');
+            $table->integer('world_id')->unsigned();
             $table->integer('departs_gmt');
             $table->integer('arrives_gmt');
             $table->boolean('cancelled');
@@ -24,8 +25,12 @@ class CreateFlights extends Migration {
             $table->date('date');
             $table->integer('fuel_burn');
             $table->integer('flying_time');
-            $table->string('route')->references('flight_number')->on('routes');
+            $table->string('route');
             $table->timestamps();
+
+            $table->foreign('route')->references('flight_number')->on('routes');
+            $table->foreign('world_id')->references('id')->on('worlds');
+
         });
 	}
 
@@ -36,7 +41,7 @@ class CreateFlights extends Migration {
 	 */
 	public function down()
 	{
-		Schema::connection('world_one')->drop('flights');
+		Schema::drop('flights');
 	}
 
 }

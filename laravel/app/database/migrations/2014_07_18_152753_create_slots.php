@@ -12,12 +12,18 @@ class CreateSlots extends Migration {
 	 */
 	public function up()
 	{
-		Schema::connection('world_one')->create('slots', function($table){
+		Schema::create('slots', function($table){
             $table->increments('id');
+            $table->integer('world_id')->unsigned();
             $table->integer('time');
-            $table->string('airport')->references('icao')->on('airports');
-            $table->string('owner')->references('icao')->on('airlines');
+            $table->string('airport');
+            $table->string('owner');
             $table->timestamps();
+
+            $table->foreign('airport')->references('icao')->on('airports');
+            $table->foreign('owner')->references('icao')->on('airlines');
+            $table->foreign('world_id')->references('id')->on('worlds');
+
         });
 	}
 
@@ -28,7 +34,7 @@ class CreateSlots extends Migration {
 	 */
 	public function down()
 	{
-		Schema::connection('world_one')->drop('slots');
+		Schema::drop('slots');
 	}
 
 }

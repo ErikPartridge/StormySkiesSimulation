@@ -12,7 +12,11 @@ class CreateWorlds extends Migration {
 	 */
 	public function up()
 	{
-		Schema::connection('worlds')->create('worlds', function($table){
+		Schema::create('worlds', function($table){
+            $table->increments('id');
+            $table->string('name');
+            $table->integer('users');
+            $table->integer('cap');
 
         });
 	}
@@ -24,7 +28,7 @@ class CreateWorlds extends Migration {
 	 */
 	public function down()
 	{
-		Schema::connection('worlds')->drop('worlds');
+		Schema::drop('worlds');
 	}
 
 }

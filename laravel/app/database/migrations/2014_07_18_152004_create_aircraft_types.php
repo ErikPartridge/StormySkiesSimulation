@@ -12,8 +12,9 @@ class CreateAircraftTypes extends Migration {
 	 */
 	public function up()
 	{
-		Schema::connection('world_one')->create('aircraft_types', function($table){
+		Schema::create('aircraft_types', function($table){
            $table->increments('id');
+           $table->integer('world_id')->unsigned();
            $table->string('name');
            $table->integer('cruise_speed');
            $table->integer('minimum_runway');
@@ -36,6 +37,9 @@ class CreateAircraftTypes extends Migration {
            $table->integer('hours_b');
            $table->integer('hours_c');
            $table->timestamps();
+
+           $table->foreign('world_id')->references('id')->on('worlds');
+
         });
 	}
 
@@ -46,7 +50,7 @@ class CreateAircraftTypes extends Migration {
 	 */
 	public function down()
 	{
-		Schema::connection('world_one')->drop('aircraft_types');
+		Schema::drop('aircraft_types');
 	}
 
 }

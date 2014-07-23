@@ -12,12 +12,18 @@ class CreateGates extends Migration {
 	 */
 	public function up()
 	{
-		Schema::connection('world_one')->create('gates', function($table){
+		Schema::create('gates', function($table){
             $table->increments('id');
-            $table->string('airport')->references('icao')->on('airports');
-            $table->string('owner')->references('iceo')->on('airlines');
+            $table->integer('world_id')->unsigned();
+            $table->string('airport');
+            $table->string('owner');
             $table->integer('number');
             $table->timestamps();
+
+            $table->foreign('airport')->references('icao')->on('airports');
+            $table->foreign('owner')->references('iceo')->on('airlines');
+            $table->foreign('world_id')->references('id')->on('worlds');
+
         });
 	}
 

@@ -12,10 +12,11 @@ class CreateAirplanes extends Migration {
 	 */
 	public function up()
 	{
-		Schema::connection('world_one')->create('airplanes', function($table){
+		Schema::create('airplanes', function($table){
             $table->increments('id');
+            $table->integer('world_id')->unsigned();
             $table->string('registration');
-            $table->string('engine')->references('name')->on('engines');
+            $table->string('engine');
             $table->integer('fin');
             $table->decimal('age');
             $table->boolean('leased');
@@ -23,11 +24,18 @@ class CreateAirplanes extends Migration {
             $table->decimal('b_check');
             $table->decimal('c_check');
             $table->decimal('hours');
-            $table->string('type')->references('icao')->on('aircraft_types');
-            $table->string('location')->references('icao')->on('airports');
+            $table->string('type');
+            $table->string('location');
             $table->integer('cycles');
-            $table->string('owner')->references('icao')->on('airlines');
+            $table->string('owner');
             $table->timestamps();
+
+            $table->foreign('type')->references('icao')->on('aircraft_types');
+            $table->foreign('location')->references('icao')->on('airports');
+            $table->foreign('owner')->references('icao')->on('airlines');
+            $table->foreign('world_id')->references('id')->on('worlds');
+            $table->foreign('engine')->references('name')->on('engines');
+
         });
 	}
 
@@ -38,7 +46,7 @@ class CreateAirplanes extends Migration {
 	 */
 	public function down()
 	{
-		Schema::connection('world_one')->drop('airplanes');
+		Schema::drop('airplanes');
 	}
 
 }

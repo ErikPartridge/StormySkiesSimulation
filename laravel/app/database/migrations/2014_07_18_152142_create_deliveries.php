@@ -12,12 +12,19 @@ class CreateDeliveries extends Migration {
 	 */
 	public function up()
 	{
-		Schema::connection('world_one')->create('deliveries', function($table){
+		Schema::create('deliveries', function($table){
             $table->increments('id');
-            $table->string('airline')->references('icao')->on('airlines');
+            $table->integer('world_id')->unsigned();
+            $table->string('airline');
             $table->string('manufacturer');
-            $table->string('aircraft_type')->references('icao')->on('aircraft_types');
+            $table->string('aircraft_type');
             $table->date('when');
+            $table->timestamps();
+
+            $table->foreign('airline')->references('icao')->on('airlines');
+            $table->foreign('aircraft_type')->references('icao')->on('aircraft_types');
+            $table->foreign('world_id')->references('id')->on('worlds');
+
         });
 	}
 
@@ -28,7 +35,7 @@ class CreateDeliveries extends Migration {
 	 */
 	public function down()
 	{
-		Schema::connection('world_one')->drop('deliveries');
+		Schema::drop('deliveries');
 	}
 
 }

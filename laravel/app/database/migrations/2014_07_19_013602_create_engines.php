@@ -12,12 +12,16 @@ class CreateEngines extends Migration {
 	 */
 	public function up()
 	{
-		Schema::connection('world_one')->create('engines', function($table){
+		Schema::create('engines', function($table){
            $table->increments('id');
+           $table->integer('world_id')->unsigned();
            $table->decimal('sfc');
            $table->decimal('bph');
            $table->string('name');
            $table->string('manufacturer');
+
+            $table->foreign('world_id')->references('id')->on('worlds');
+
         });
 	}
 
@@ -28,7 +32,7 @@ class CreateEngines extends Migration {
 	 */
 	public function down()
 	{
-		Schema::connection('world_one')->drop('engines');
+		Schema::drop('engines');
 	}
 
 }

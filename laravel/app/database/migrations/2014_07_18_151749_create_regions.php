@@ -14,8 +14,11 @@ class CreateRegions extends Migration {
 	{
 		Schema::connection('world_one')->create('regions', function($table){
             $table->increments('id');
+            $table->integer('world_id')->unsigned();
             $table->string('name');
             $table->timestamps();
+            #foreign
+            $table->foreign('world_id')->references('id')->on('worlds');
         });
 	}
 
@@ -26,7 +29,7 @@ class CreateRegions extends Migration {
 	 */
 	public function down()
 	{
-		Schema::connection('world_one')->drop('regions');
+		Schema::drop('regions');
 	}
 
 }

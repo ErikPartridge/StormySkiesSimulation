@@ -12,8 +12,9 @@ class CreateAirports extends Migration {
 	 */
 	public function up()
 	{
-		Schema::connection('world_one')->create('airports', function($table){
+		Schema::create('airports', function($table){
             $table->increments('id');
+            $table->integer('world_id')->unsigned();
             $table->string('icao');
             $table->string('iata');
             $table->string('name');
@@ -21,13 +22,16 @@ class CreateAirports extends Migration {
             $table->decimal('longitude');
             $table->integer('altitude');
             $table->integer('max_flights_per_hour');
-            $table->string('country')->refences('iso')->on('countries');
+            $table->string('country');
             $table->decimal('demand_bonus');
             $table->decimal('delay_factor');
             $table->string('time_zone');
             $table->decimal('allocated_demand');
             $table->boolean('slot_controlled');
             $table->timestamps();
+            #foreign
+            $table->foreign('country')->references('iso')->on('countries');
+            $table->foreign('world_id')->references('id')->on('worlds');
         });
 	}
 
@@ -38,7 +42,7 @@ class CreateAirports extends Migration {
 	 */
 	public function down()
 	{
-        Schema::connection('world_one')->drop('airports');
+        Schema::drop('airports');
 	}
 
 }
