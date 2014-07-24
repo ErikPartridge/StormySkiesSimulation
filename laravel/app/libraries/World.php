@@ -8,6 +8,9 @@
 
 namespace libraries;
 
+use Illuminate\Database\Eloquent\Model as Eloquent;
+
+
 
 class World extends Eloquent{
 
@@ -16,13 +19,6 @@ class World extends Eloquent{
     private $cap;
 
     private $numberUsers;
-
-    function __construct($cap, $name, $numberUsers)
-    {
-        $this->cap = $cap;
-        $this->name = $name;
-        $this->numberUsers = $numberUsers;
-    }
 
     /**
      * @param mixed $cap

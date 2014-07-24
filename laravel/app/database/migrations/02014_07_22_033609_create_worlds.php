@@ -17,6 +17,7 @@ class CreateWorlds extends Migration {
             $table->string('name', 35)->unique();
             $table->integer('number_users');
             $table->integer('cap');
+            $table->timestamps();
         });
 	}
 

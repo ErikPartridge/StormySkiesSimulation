@@ -188,7 +188,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-        'Cashier'         => 'Laravel\Cashier\CashierServiceProvider'
+        'Cashier'         => 'Laravel\Cashier\CashierServiceProvider',
+        'Airline'         => 'app\libraries'
 
 	),
 
