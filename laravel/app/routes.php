@@ -96,10 +96,18 @@ Route::post('/user/register', "UserController@postRegister");
 
 Route::get('/user/register', "UserController@getRegister");
 
+Route::post('/home/button', "HomeController@processButton");
+
+Route::get('/home/button', "HomeController@processButton");
+
 Route::get('/terms', function(){
     return View::make('terms');
 });
 
 Route::get('/prices', function(){
    return View::make('prices');
+});
+
+Route::get('/privacy', function(){
+	return View::make('privacy');
 });

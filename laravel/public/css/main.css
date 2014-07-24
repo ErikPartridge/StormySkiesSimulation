@@ -1,5 +1,5 @@
 html{
-    background-image: url("bg.png");
+    background: #FFFFFF;
 }
 h2{
     text-align: center;
@@ -8,22 +8,46 @@ h2{
 h4{
     text-align: center;
 }
-.head-right {
-    text-align: right;
+h3{
     color: deepskyblue;
+}
+.head-right {
+    color: deepskyblue;
+    margin-left: 50%;
+}
+.head-left{
+    color: deepskyblue;
+    font-size: 2em;
+    text-align: left;
+    padding-left: 4%;
+}
+.top{
+    padding-left: 0%;
+    padding-right: 2%;
+}
+#left-bottom{
+    float:left;
+    display: inline;
+    width: 48%;
+    padding-right: 2%
+}
+#right-bottom{
+    float:right;
+    display: inline;
+    width: 48%;
+    padding-left: 2%;
 }
 body{
     color:#000;
     font:normal 1em 'Avenir', arial, verdana, sans-serif;
     display: block;
-    background-color: #F3F3F3;
+    background-color: #FFFFFF;
     opacity: 1;
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: 0%;
+    margin-right: 0%;
     padding-left: 4%;
     padding-right: 4%;
-    border-radius: 10px;
-    padding-top: 0.4%;
+    padding-top: 0%;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: "Avenir", arial, verdana, sans-serif;
@@ -56,7 +80,7 @@ h1,h2,h3,h4,h5,h6{
     padding: 10px 20px 10px 20px;
     border: solid #256f9e 2px;
     text-decoration: none;
-    width: 100%;
+    width: 22%;
 }
 
 .main-button:hover {
@@ -67,4 +91,15 @@ h1,h2,h3,h4,h5,h6{
     background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
     background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
     text-decoration: none;
+}
+img{
+    border-radius: 15px;
+}
+footer{
+    text-align: center;
+}
+table,tr,td{
+    background-color: black;
+    color: #FFFFFF;
+    font-family: "Lucida Sans Typewriter", monospace;
 }

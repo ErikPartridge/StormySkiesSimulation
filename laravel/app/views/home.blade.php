@@ -10,15 +10,44 @@
 
 </head>
 <body>
-    <div class="head-right">{{HTML::link("/user/login", "Login", array())}}  {{HTML::link("/user/register", "Sign up", array())}}</div>
-    <h2 style="color: deepskyblue">Takeoff Simulation</h2>
-    <h4>Run the airline of your dreams</h4>
-    <img src={{asset('images/core/a380.jpg')}} alt="Plane ready for takeoff" width="100%" style="opacity: 1.0; border-radius: 6px;">
-    {{ Form::open(array('url' => '/user/login')) }}
-        <input type="submit" value="Takeoff  /  Board" class="main-button">
-    {{ Form::close() }}
-
-    <p>Please enjoy the simulation! Good luck, the airline industry isn't easy.</p>
+    <div class = "top">
+        <div class ="head-left">
+            <b>Takeoff Simulation</b>
+        </div>
+        <div class="head-right">
+            <form action ="/home/button">
+                <input type="submit" class="main-button" value="Join">
+                <input type="submit" class="main-button" value="Login">
+                <input type="submit" class="main-button" value="FAQ">
+                <input type="submit" class="main-button" value="Wiki">
+            </form>
+        </div>
+    </div>
+    
+    <HR COLOR="3498db"></HR>
+    <img src="{{asset('images/core/a380.jpg')}}" alt="A380 lining up" width="100%" height="15%">
+    
+    <div id="bottom">
+        <div id="left-bottom">
+            <h3>Latest News</h3>
+            <HR COLOR="#3498db"></HR>
+            Just launch world: O'Hare! Come check it out now!
+        </div>
+        <div id="right-bottom">
+            <h3>Worlds</h3>
+            <HR COLOR="#3498db"></HR>
+            <table>
+            
+            </table>
+        </div>
+    </div>
+    <footer>
+        <HR COLOR="black"></HR>
+        <p>&copy Erik Malmstrom-Partirdge 2014</p>
+        <p>The banner image is by Joao Carlos Medau and is released under the <a href="https://creativecommons.org/licenses/by/2.0/">CC2.0</a>.</p>
+        <p>{{HTML::link('/terms', 'Our Terms and Conditions')}}</p>
+        <p>{{HTML::link('/privacy', 'Privacy Policy')}}</p>
+    </footer>
 </body>
 
 </html>
