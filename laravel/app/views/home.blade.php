@@ -24,26 +24,34 @@
         </div>
     </div>
     
-    <HR COLOR="3498db"></HR>
+    <HR COLOR="#3498DB"></HR>
     <img src="{{asset('images/core/a380.jpg')}}" alt="A380 lining up" width="100%" height="15%">
     
     <div id="bottom">
         <div id="left-bottom">
             <h3>Latest News</h3>
-            <HR COLOR="#3498db"></HR>
-            Just launch world: O'Hare! Come check it out now!
+            <HR COLOR="#3498DB"></HR>
+            Just launched world: O'Hare! Come check it out now!
         </div>
         <div id="right-bottom">
             <h3>Worlds</h3>
-            <HR COLOR="#3498db"></HR>
-            <table>
-            
+            <HR COLOR="#3498DB"></HR>
+            <table style="width:100%">
+                <thead>
+                    <th>World Name</th>
+                    <th>Users</th>
+                    <th>Max</th>
+                    <th>Started</th>
+                </thead>
+                <tbody>
+                </tbody>
             </table>
         </div>
     </div>
     <footer>
-        <HR COLOR="black"></HR>
-        <p>&copy Erik Malmstrom-Partirdge 2014</p>
+        <p></p>
+        <HR COLOR="#3498DB"></HR>
+        <p>&copy Erik Malmstrom-Partridge 2014</p>
         <p>The banner image is by Joao Carlos Medau and is released under the <a href="https://creativecommons.org/licenses/by/2.0/">CC2.0</a>.</p>
         <p>{{HTML::link('/terms', 'Our Terms and Conditions')}}</p>
         <p>{{HTML::link('/privacy', 'Privacy Policy')}}</p>

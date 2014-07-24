@@ -3,8 +3,7 @@ html{
 }
 h2{
     text-align: center;
-    color: #080808;
-}
+    color: deepskyblue;}
 h4{
     text-align: center;
 }
@@ -98,8 +97,6 @@ img{
 footer{
     text-align: center;
 }
-table,tr,td{
-    background-color: black;
-    color: #FFFFFF;
-    font-family: "Lucida Sans Typewriter", monospace;
+table{
+    font-family: "Avenir", arial, verdana, sans-serif;
 }
