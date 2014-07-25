@@ -9,24 +9,24 @@
 namespace libraries\airport;
 
 
-class Gate {
+class Slot {
 
-
-    private $airport;
+    private $time;
 
     private $owner;
 
-    private $number;
+    private $airport;
 
     private $worldId;
 
-    function __construct($number, $airport, $owner, $worldId)
+    function __construct($airport, $owner, $time, $worldId)
     {
-        $this->number = $number;
         $this->airport = $airport;
         $this->owner = $owner;
+        $this->time = $time;
         $this->worldId = $worldId;
     }
+
 
     /**
      * @param mixed $airport
@@ -61,19 +61,49 @@ class Gate {
     }
 
     /**
-     * @param mixed $number
+     * @param mixed $time
      */
-    public function setNumber($number)
+    public function setTime($time)
     {
-        $this->number = $number;
+        $this->time = $time;
     }
 
     /**
      * @return mixed
      */
-    public function getNumber()
+    public function getTime()
     {
-        return $this->number;
+        return $this->time;
     }
+
+    /**
+     * @param mixed $worldId
+     */
+    public function setWorldId($worldId)
+    {
+        $this->worldId = $worldId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWorldId()
+    {
+        return $this->worldId;
+    }
+
+    public function owner(){
+        return $this->belongsTo('Airline', 'owner');
+    }
+
+    public function airport(){
+        return $this->belongsTo('Airport', 'airport');
+    }
+
+    public function world(){
+        return $this->belongsTo('World');
+    }
+
+
 
 } 

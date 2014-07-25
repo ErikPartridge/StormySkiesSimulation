@@ -16,8 +16,6 @@ class Airplane {
 
     private $age;
 
-    private $leased;
-
     private $aCheck;
 
     private $bCheck;
@@ -25,8 +23,6 @@ class Airplane {
     private $cCheck;
 
     private $hours;
-
-    private $flights;
 
     private $location;
 
@@ -36,7 +32,7 @@ class Airplane {
 
     private $worldId;
 
-    function __construct($aCheck, $age, $bCheck, $cCheck, $cycles, $engine, $fin, $flights, $hours, $leased, $location, $owner, $registration, $type, $worldId)
+    function __construct($aCheck, $age, $bCheck, $cCheck, $cycles, $engine, $fin, $hours, $location, $owner, $registration, $type, $worldId)
     {
         $this->aCheck = $aCheck;
         $this->age = $age;
@@ -45,9 +41,7 @@ class Airplane {
         $this->cycles = $cycles;
         $this->engine = $engine;
         $this->fin = $fin;
-        $this->flights = $flights;
         $this->hours = $hours;
-        $this->leased = $leased;
         $this->location = $location;
         $this->owner = $owner;
         $this->registration = $registration;
@@ -199,37 +193,6 @@ class Airplane {
         return $this->hours;
     }
 
-    /**
-     * @param mixed $flights
-     */
-    public function setFlights($flights)
-    {
-        $this->flights = $flights;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFlights()
-    {
-        return $this->flights;
-    }
-
-    /**
-     * @param mixed $leased
-     */
-    public function setLeased($leased)
-    {
-        $this->leased = $leased;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLeased()
-    {
-        return $this->leased;
-    }
 
     /**
      * @param mixed $location
@@ -298,16 +261,26 @@ class Airplane {
 
     public function isAirworthy(){
         $isAirworthy = true;
-        if($cCheck >= $type->getMaintenanceProfile()->getHoursC()){
-            $isAirworthy = false;
-        }
-        if($bCheck >= $type->getMaintenanceProfile()->getHoursB()){
-            $isAirworthy = false;
-        }
-        if($aCheck >= $type->getMaintenanceProfile()->getHoursA()){
-            $isAirworthy = false;
-        }
         return $isAirworthy;
     }
 
+    public function type(){
+        return $this->belongsTo('AircraftType', 'type');
+    }
+
+    public function owner(){
+        return $this->belongsTo('Airline', 'owner');
+    }
+
+    public function world(){
+        return $this->belongsTo('World');
+    }
+
+    public function flights(){
+        return $this->hasMany('Flight');
+    }
+
+    public function location(){
+        return $this->belongsTo('Airport', 'location');
+    }
 }

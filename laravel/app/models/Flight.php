@@ -6,10 +6,8 @@
  * Time: 2:52 PM
  */
 
-namespace libraries\airline;
 
-
-class Flight {
+class Flight extends \Eloquent{
 
     private $aircraft;
 
@@ -284,7 +282,16 @@ class Flight {
         return $this->route;
     }
 
+    public function airplane(){
+        return $this->belongsTo('Airplane', 'aircraft');
+    }
 
+    public function world(){
+        return $this->belongsTo('World');
+    }
 
+    public function route(){
+        return $this->belongsTo('Route', 'route');
+    }
 
 } 

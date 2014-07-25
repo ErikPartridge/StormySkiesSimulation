@@ -1,1 +1,2 @@
-/Users/Erik/TakeoffSim/laravel/app/views/user/payment.blade.php
+
+@extends('/templates/login.blade.php')

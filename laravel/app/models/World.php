@@ -6,8 +6,6 @@
  * Time: 3:22 PM
  */
 
-namespace libraries;
-
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 

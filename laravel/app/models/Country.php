@@ -6,10 +6,8 @@
  * Time: 11:22 AM
  */
 
-namespace libraries\world;
 
-
-class Country {
+class Country extends \Eloquent{
 
     private $name;
 
@@ -21,13 +19,10 @@ class Country {
 
     private $openMarket;
 
-    private $banned;
-
     private $worldId;
 
-    function __construct($banned, $capital, $euMember, $name, $iso, $openMarket, $worldId)
+    function __construct($capital, $euMember, $name, $iso, $openMarket, $worldId)
     {
-        $this->banned = $banned;
         $this->capital = $capital;
         $this->euMember = $euMember;
         $this->name = $name;
@@ -50,22 +45,6 @@ class Country {
     public function getWorldId()
     {
         return $this->worldId;
-    }
-
-    /**
-     * @param mixed $banned
-     */
-    public function setBanned($banned)
-    {
-        $this->banned = $banned;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getBanned()
-    {
-        return $this->banned;
     }
 
     /**
@@ -148,6 +127,8 @@ class Country {
         return $this->capital;
     }
 
-
+    public function world(){
+        return $this->belongsTo('World');
+    }
 
 } 

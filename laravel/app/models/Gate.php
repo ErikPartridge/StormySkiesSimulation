@@ -6,27 +6,25 @@
  * Time: 3:33 PM
  */
 
-namespace libraries\airport;
 
+class Gate extends \Eloquent {
 
-class Slot {
-
-    private $time;
-
-    private $owner;
 
     private $airport;
 
+    private $owner;
+
+    private $number;
+
     private $worldId;
 
-    function __construct($airport, $owner, $time, $worldId)
+    function __construct($number, $airport, $owner, $worldId)
     {
+        $this->number = $number;
         $this->airport = $airport;
         $this->owner = $owner;
-        $this->time = $time;
         $this->worldId = $worldId;
     }
-
 
     /**
      * @param mixed $airport
@@ -61,38 +59,31 @@ class Slot {
     }
 
     /**
-     * @param mixed $time
+     * @param mixed $number
      */
-    public function setTime($time)
+    public function setNumber($number)
     {
-        $this->time = $time;
+        $this->number = $number;
     }
 
     /**
      * @return mixed
      */
-    public function getTime()
+    public function getNumber()
     {
-        return $this->time;
+        return $this->number;
     }
 
-    /**
-     * @param mixed $worldId
-     */
-    public function setWorldId($worldId)
-    {
-        $this->worldId = $worldId;
+    public function world(){
+        return $this->belongsTo('World');
     }
 
-    /**
-     * @return mixed
-     */
-    public function getWorldId()
-    {
-        return $this->worldId;
+    public function owner(){
+        return $this->belongsTo('Airline', 'owner');
     }
 
-
-
+    public function airport(){
+        return $this->belongsTo('Airport', 'airport');
+    }
 
 } 

@@ -6,10 +6,9 @@
  * Time: 10:56 AM
  */
 
-namespace libraries\people;
 
 
-class Employee {
+class Employee extends \Eloquent{
 
     protected  $salary;
 
@@ -21,13 +20,16 @@ class Employee {
 
     protected  $employer;
 
-    function __construct($age, $firstName, $company, $lastName, $salary)
+    protected  $type;
+
+    function __construct($age, $firstName, $company, $lastName, $salary, $type)
     {
         $this->age = $age;
         $this->firstName = $firstName;
         $this->employer = $company;
         $this->lastName = $lastName;
         $this->salary = $salary;
+        $this->type = $type;
     }
 
     /**
@@ -108,6 +110,22 @@ class Employee {
     public function getEmployer()
     {
         return $this->employer;
+    }
+
+    public function getType(){
+        return $this->type;
+    }
+
+    public function setType($type){
+        $this->type = $type;
+    }
+
+    public function employer(){
+        return $this->belongsTo('Airline', 'employer');
+    }
+
+    public function world(){
+        return $this->belongsTo('World');
     }
 
 

@@ -6,10 +6,8 @@
  * Time: 11:25 AM
  */
 
-namespace libraries\world;
 
-
-class Region {
+class Region extends \Eloquent{
 
     private $name;
 
@@ -50,6 +48,14 @@ class Region {
     public function getName()
     {
         return $this->name;
+    }
+
+    public function world(){
+        return $this->belongsTo('World');
+    }
+
+    public function cities(){
+        return $this->hasMany('City');
     }
 
 } 

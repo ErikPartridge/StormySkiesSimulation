@@ -6,8 +6,6 @@
  * Time: 7:18 PM
  */
 
-namespace libraries\aircraft;
-
 
 class AircraftType {
 
@@ -433,7 +431,17 @@ class AircraftType {
         return $this->worldId;
     }
 
+    public function airplanes(){
+        return $this->hasMany('Airplane', 'type');
+    }
 
+    public function world(){
+        return $this->belongsTo('World');
+    }
 
+    public function engineOptions(){
+        return $this->belongsToMany('Engine', 'aircraft_type_engine');
+    }
+    
 
 } 

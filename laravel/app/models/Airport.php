@@ -6,14 +6,10 @@
  * Time: 3:16 PM
  */
 
-namespace libraries\airport;
-
 
 class Airport extends Eloquent{
 
     private $name;
-
-    private $worldId;
 
     private $latitude;
 
@@ -27,26 +23,19 @@ class Airport extends Eloquent{
 
     private $maxFlightsPerHour;
 
-    private $countryId;
-
     private $delayFactor;
 
     private $demandBonus;
 
     private $timeZone;
 
-    private $regions;
-
     private $runways;
 
     private $allocatedDemand;
 
-    private $slotControlled;
-
-    function __construct($allocatedDemand, $countryId, $delayFactor, $demandBonus, $elevation, $icao, $iata, $latitude, $longitude, $maxFlightsPerHour, $name, $runways, $regions, $slotControlled, $worldId, $timeZone)
+    function __construct($allocatedDemand, $delayFactor, $demandBonus, $elevation, $icao, $iata, $latitude, $longitude, $maxFlightsPerHour, $name, $runways, $timeZone)
     {
         $this->allocatedDemand = $allocatedDemand;
-        $this->countryId = $countryId;
         $this->delayFactor = $delayFactor;
         $this->demandBonus = $demandBonus;
         $this->elevation = $elevation;
@@ -57,42 +46,8 @@ class Airport extends Eloquent{
         $this->maxFlightsPerHour = $maxFlightsPerHour;
         $this->name = $name;
         $this->runways = $runways;
-        $this->regions = $regions;
         $this->slotControlled = $slotControlled;
-        $this->worldId = $worldId;
         $this->timeZone = $timeZone;
-    }
-
-    /**
-     * @param mixed $countryId
-     */
-    public function setCountryId($countryId)
-    {
-        $this->countryId = $countryId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCountryId()
-    {
-        return $this->countryId;
-    }
-
-    /**
-     * @param mixed $worldId
-     */
-    public function setWorldId($worldId)
-    {
-        $this->worldId = $worldId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getWorldId()
-    {
-        return $this->worldId;
     }
 
     /**
@@ -289,22 +244,6 @@ class Airport extends Eloquent{
     }
 
     /**
-     * @param mixed $regions
-     */
-    public function setRegions($regions)
-    {
-        $this->regions = $regions;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRegions()
-    {
-        return $this->regions;
-    }
-
-    /**
      * @param mixed $name
      */
     public function setName($name)
@@ -352,5 +291,32 @@ class Airport extends Eloquent{
         return $this->timeZone;
     }
 
+    public function regions(){
+        return $this->belongsToMany('Region');
+    }
+
+    public function world(){
+        return $this->belongsTo('World');
+    }
+
+    public function country(){
+        return $this->belongsTo('Country');
+    }
+
+    public function gates(){
+        return $this->hasMany('Gate');
+    }
+
+    public function slots(){
+        return $this->hasMany('Slot');
+    }
+
+    public function hubbed(){
+        return $this->belongsToMany('Airline');
+    }
+
+    public function routes(){
+        return $this->belongsToMany('Route');
+    }
 
 } 

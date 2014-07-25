@@ -372,7 +372,21 @@ class Route extends Eloquent{
         return $this->worldId;
     }
 
+    public function world(){
+        return $this->belongsTo('World');
+    }
 
+    public function airline(){
+        return $this->belongsTo('Airline', 'airline');
+    }
+
+    public function departs(){
+        return $this->hasOne('Airport', 'depart');
+    }
+
+    public function arrives(){
+        return $this->hasOne('Airport', 'arrive');
+    }
 
 
 } 

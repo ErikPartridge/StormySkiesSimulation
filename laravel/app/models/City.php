@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
  * Created by PhpStorm.
  * User: Erik
@@ -6,10 +6,8 @@
  * Time: 4:08 PM
  */
 
-namespace libraries\world;
 
-
-class City {
+class City extends \Eloquent {
 
     private $latitude;
 
@@ -17,20 +15,20 @@ class City {
 
     private $population;
 
-    private $region;
+    private $regionId;
 
     private $countryId;
 
     private $worldId;
 
-    function __construct($countryId, $latitude, $longitude, $population, $worldId, $region)
+    function __construct($countryId, $latitude, $longitude, $population, $worldId, $regionId)
     {
         $this->countryId = $countryId;
         $this->latitude = $latitude;
         $this->longitude = $longitude;
         $this->population = $population;
         $this->worldId = $worldId;
-        $this->region = $region;
+        $this->regionId = $regionId;
     }
 
     /**
@@ -84,7 +82,7 @@ class City {
     /**
      * @param mixed $region
      */
-    public function setRegion($region)
+    public function setRegionId($regionId)
     {
         $this->region = $region;
     }
@@ -92,9 +90,9 @@ class City {
     /**
      * @return mixed
      */
-    public function getRegion()
+    public function getRegionId()
     {
-        return $this->region;
+        return $this->regionId;
     }
 
     /**
@@ -129,7 +127,18 @@ class City {
         return $this->latitude;
     }
 
+    public function country()
+    {
+        return $this->belongsTo('Country');
+    }
 
+    public function world(){
+        return $this->belongsTo('World');
+    }
+
+    public function region(){
+        return $this->belongsTo('Region');
+    }
 
 
 } 

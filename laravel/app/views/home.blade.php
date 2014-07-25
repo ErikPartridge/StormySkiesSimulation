@@ -36,7 +36,6 @@
 
             {{$worlds}}
 
-
         </div>
     </div>
     <footer>

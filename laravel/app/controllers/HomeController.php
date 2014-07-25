@@ -17,7 +17,7 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		$worlds = libraries\World::all();
+		$worlds = World::all();
 		$worldList = '';
 		foreach($worlds as $key){
 			$obj = json_decode($key,true);
@@ -27,7 +27,7 @@ class HomeController extends BaseController {
 	}
 
 	public function processButton(){
-		return View::make('log_in');
+		return View::make('user.log_in');
 	}
 
 }

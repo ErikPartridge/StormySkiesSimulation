@@ -6,48 +6,46 @@
  * Time: 7:35 PM
  */
 
-namespace libraries\economics;
 
-
-class Bill {
+class Bill extends \Eloquent {
 
     private $description;
 
-    private $pays;
-
-    private $to;
-
     private $amount;
+
+    private $pays;
 
     private $when;
 
     private $worldId;
 
-    function __construct($amount, $to, $when, $description, $pays, $worldId)
+
+    function __construct($amount, $when, $description, $pays, $worldId)
     {
         $this->amount = $amount;
-        $this->to = $to;
         $this->when = $when;
         $this->description = $description;
         $this->pays = $pays;
         $this->worldId = $worldId;
     }
 
-    /**
-     * @param mixed $worldId
-     */
-    public function setWorldId($worldId)
-    {
-        $this->worldId = $worldId;
-    }
 
-    /**
-     * @return mixed
-     */
-    public function getWorldId()
-    {
+    public function getWorldId(){
         return $this->worldId;
     }
+
+    public function setWorldId($worldId){
+        return $this->worldId = $worldId;
+    }
+
+    public function setPays($pays){
+        $this->pays = $pays;
+    }
+
+    public function getPays(){
+        return $this->pays;
+    }
+   
     /**
      * @param mixed $amount
      */
@@ -81,38 +79,6 @@ class Bill {
     }
 
     /**
-     * @param mixed $to
-     */
-    public function setTo($to)
-    {
-        $this->to = $to;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTo()
-    {
-        return $this->to;
-    }
-
-    /**
-     * @param mixed $pays
-     */
-    public function setPays($pays)
-    {
-        $this->pays = $pays;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPays()
-    {
-        return $this->pays;
-    }
-
-    /**
      * @param mixed $description
      */
     public function setDescription($description)
@@ -128,6 +94,16 @@ class Bill {
         return $this->description;
     }
 
+    public function pays(){
+        return $this->belongsTo('Airline', 'pays');
+    }
 
+    public function to(){
+        return $this->belongsTo('Airline', 'to');
+    }
+
+    public function world(){
+        return $this->belongsTo('World');
+    }
 
 } 

@@ -22,7 +22,7 @@ class CreateAirlines extends Migration {
             $table->decimal('mechanic_pay');
             $table->decimal('pilot_pay');
             $table->decimal('executive_pay');
-            $table->integer('headquarters')->unsigned();
+            $table->string('headquarters');
             $table->integer('country')->unsigned();
             $table->decimal('costs');
             $table->decimal('earnings');
@@ -31,7 +31,6 @@ class CreateAirlines extends Migration {
 
             #foreign
             $table->foreign('world_id')->references('id')->on('worlds');
-            $table->foreign('headquarters')->references('id')->on('airports');
             $table->foreign('country')->references('id')->on('countries');
 
         });

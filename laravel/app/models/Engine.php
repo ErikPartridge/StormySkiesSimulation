@@ -6,7 +6,7 @@
  * Time: 10:36 AM
  */
 
-class Engine {
+class Engine extends \Eloquent {
 
     private $sfc;
 
@@ -107,7 +107,13 @@ class Engine {
         return $this->worldId;
     }
 
+    public function world(){
+        return $this->belongsTo('World');
+    }
 
+    public function aircraftTypes(){
+        return $this->belongsToMany('AircraftType', 'aircraft_type_engine');
+    }
 
 
 } 

@@ -6,10 +6,8 @@
  * Time: 8:18 PM
  */
 
-namespace libraries\economics;
 
-
-class Delivery {
+class Delivery extends \Eloquent {
 
     private $type;
 
@@ -109,6 +107,13 @@ class Delivery {
         return $this->when;
     }
 
+    public function world(){
+        return $this->belongsTo('World');
+    }
+
+    public function airline(){
+        return $this->belongsTo('Airline');
+    }
 
 
 

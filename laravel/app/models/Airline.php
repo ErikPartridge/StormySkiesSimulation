@@ -6,17 +6,10 @@
  * Time: 2:45 PM
  */
 
-namespace libraries\airline;
-
-use \libraries\economics as economics;
 
 class Airline extends Eloquent{
 
     private $hubs;
-
-    private $fleet;
-
-    private $flights;
 
     private $reputation;
 
@@ -34,7 +27,7 @@ class Airline extends Eloquent{
 
     private $headquarters;
 
-    private $country;
+    private $countryId;
 
     private $earnings;
 
@@ -44,15 +37,14 @@ class Airline extends Eloquent{
 
     private $worldId;
 
-    function __construct($ceo, $costs, $country, $earnings, $flightAttendantPay, $fleet, $flights, $headquarters, $hubs, $iata, $icao, $mechanicPay, $pilotPay, $profits, $reputation, $worldId)
+    function __construct($ceo, $costs, $countryId, $earnings, $flightAttendantPay, $fleet, $headquarters, $hubs, $iata, $icao, $mechanicPay, $pilotPay, $profits, $reputation, $worldId)
     {
         $this->ceo = $ceo;
         $this->costs = $costs;
-        $this->country = $country;
+        $this->countryId = $countryId;
         $this->earnings = $earnings;
         $this->flightAttendantPay = $flightAttendantPay;
         $this->fleet = $fleet;
-        $this->flights = $flights;
         $this->headquarters = $headquarters;
         $this->hubs = $hubs;
         $this->iata = $iata;
@@ -83,7 +75,7 @@ class Airline extends Eloquent{
     /**
      * @param mixed $country
      */
-    public function setCountry($country)
+    public function setCountryId($countryId)
     {
         $this->country = $country;
     }
@@ -91,7 +83,7 @@ class Airline extends Eloquent{
     /**
      * @return mixed
      */
-    public function getCountry()
+    public function getCountryId()
     {
         return $this->country;
     }
@@ -110,22 +102,6 @@ class Airline extends Eloquent{
     public function getCosts()
     {
         return $this->costs;
-    }
-
-    /**
-     * @param mixed $flights
-     */
-    public function setFlights($flights)
-    {
-        $this->flights = $flights;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFlights()
-    {
-        return $this->flights;
     }
 
     /**
@@ -303,13 +279,6 @@ class Airline extends Eloquent{
     {
         return $this->reputation;
     }
-
-
-    public function hubs(){
-
-        return $this->belongsToMany('\libraries\airports\Airport');
-    }
-
     /**
      * @param mixed $worldId
      */
@@ -326,7 +295,44 @@ class Airline extends Eloquent{
         return $this->worldId;
     }
 
+    public function world(){
+        return $this->belongsTo('World');
+    }
 
+    public function flights(){
+        return $this->hasMany('Route');
+    }
 
+    public function hubs(){
+        return $this->belongsToMany('Airport');
+    }
+
+    public function fleet(){
+        return $this->hasMany('Airplane', 'owner');
+    }
+
+    public function country(){
+        return $this->belongsTo('Country');
+    }
+
+    public function owner(){
+        return $this->belongsTo('User', 'ceo');
+    }
+
+    public function bills(){
+        return $this->hasMany('Bill');
+    }
+
+    public function deliveries(){
+        return $this->hasMany('Delivery');
+    }
+
+    public function slots(){
+        return $this->hasMany('Slot');
+    }
+
+    public function gates(){
+        return $this->hasMany('Gate');
+    }
 
 } 
