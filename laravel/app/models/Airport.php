@@ -315,8 +315,12 @@ class Airport extends Eloquent{
         return $this->belongsToMany('Airline');
     }
 
-    public function routes(){
-        return $this->belongsToMany('Route');
+    public function departures(){
+        return $this->belongsToMany('Route', 'airport_depart');
+    }
+
+    public function arrivals(){
+        return $this->belongsToMany('Route', 'airport_arrive');
     }
 
 } 

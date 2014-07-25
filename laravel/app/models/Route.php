@@ -1,4 +1,4 @@
-<?php
+,<?php
 /**
  * Created by PhpStorm.
  * User: Erik
@@ -381,11 +381,11 @@ class Route extends Eloquent{
     }
 
     public function departs(){
-        return $this->hasOne('Airport', 'depart');
+        return $this->hasOne('Airport', 'depart', 'airport_depart');
     }
 
     public function arrives(){
-        return $this->hasOne('Airport', 'arrive');
+        return $this->hasOne('Airport', 'arrive', 'airport_arrive');
     }
 
 
