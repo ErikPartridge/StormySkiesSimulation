@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Erik Partridge">
-    <meta name="description" content="A Simulation of the Airline Industry">
+    <meta name="description" content="A multi-player simulation of the airline industry. Compete against your friends, and try to succeed in a cut-throat industry.">
     {{ HTML::style("css/main.css") }}
     <title>Takeoff Simulation</title>
 </head>
@@ -13,12 +13,12 @@
             <b>Takeoff Simulation</b>
         </div>
         <div class="head-right">
-            <form action ="/home/button">
+            {{ Form::open(array('url' => '/home/button')) }}
                 <input type="submit" class="main-button" value="Join">
                 <input type="submit" class="main-button" value="Login">
                 <input type="submit" class="main-button" value="FAQ">
                 <input type="submit" class="main-button" value="Wiki">
-            </form>
+            {{ Form::close() }}
         </div>
     </div>
     
@@ -34,7 +34,7 @@
             <h3>Worlds</h3>
             <HR color="#3498DB"></HR>
 
-            {{libraries\World::all()}}
+            {{$worlds}}
 
 
         </div>

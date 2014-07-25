@@ -60,6 +60,12 @@ $framework = $app['path.base'].
 require $framework.'/Illuminate/Foundation/start.php';
 
 /*
+|
+| My stripe trial key, allows for demo billing
+|
+*/
+User::setStripeKey('pk_test_4StvqvbFayejBfSiW4Ime8U7');
+/*
 |--------------------------------------------------------------------------
 | Return The Application
 |--------------------------------------------------------------------------

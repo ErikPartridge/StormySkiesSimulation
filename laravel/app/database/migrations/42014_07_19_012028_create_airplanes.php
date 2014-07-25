@@ -28,8 +28,11 @@ class CreateAirplanes extends Migration {
             $table->integer('location')->unsigned();
             $table->integer('cycles');
             $table->integer('owner')->unsigned();
+            $table->integer('leased_from')->unsigned()->nullable();
+            $table->date('leased_until')->nullable();
             $table->timestamps();
 
+            $table->foreign('leased_from')->references('id')->on('airlines');
             $table->foreign('type')->references('id')->on('aircraft_types');
             $table->foreign('location')->references('id')->on('airports');
             $table->foreign('owner')->references('id')->on('airlines');

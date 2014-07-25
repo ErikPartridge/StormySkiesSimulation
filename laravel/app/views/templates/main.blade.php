@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Erik Malmstrom-Partridge">
-    {{ HTML::style("css/framework/style.css") }}
+    {{ HTML::style("css/backend.css") }}
     <title>Takeoff Sim</title>
 
     @yield('head-details')

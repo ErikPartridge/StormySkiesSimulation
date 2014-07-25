@@ -1,0 +1,1 @@
+/Users/Erik/TakeoffSim/laravel/app/views/privacy.blade.php

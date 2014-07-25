@@ -11,90 +11,87 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('home');
-});
+Route::get('/', 'HomeController@showWelcome');
 
-Route::get('/backend/corporate', "CorporateController@get");
+Route::get('/backend/corporate', "BackendController@corporate");
 
-Route::post('/backend/corporate', "CorporateController@post");
+Route::post('/backend/corporate', "BackendController@corporateUpdate");
 
-Route::get('/backend/overview', "OverviewController@get");
+Route::get('/backend/overview', "BackendController@overview");
 
-Route::post('/backend/overview', "OverviewController@post");
+Route::post('/backend/overview', "BackendController@overviewUpdate");
 
-Route::get('/backend/aircraft', "AircraftController@mainGet");
+Route::get('/backend/aircraft', "BackendController@aircraft");
 
-Route::post('/backend/aircraft', "AircraftController@mainPost");
+Route::post('/backend/aircraft', "BackendController@aircraftUpdate");
 
-Route::get('/backend/my_fleet', "FleetController@get");
+Route::get('/backend/my_fleet', "BackendController@myFleet");
 
-Route::post('/backend/my_fleet', "FleetController@post");
+Route::post('/backend/my_fleet', "BackendController@myFleetUpdate");
 
-Route::get('/backend/lease_aircraft', "AircraftController@leasingGet");
+Route::get('/backend/lease_aircraft', "BackendController@leaseAircraft");
 
-Route::post('/backend/lease_aircraft', "AircraftController@leasingPost");
+Route::post('/backend/lease_aircraft', "BackendController@leaseAircraftUpdate");
 
-Route::get('/backend/used_aircraft', "AircraftController@usedGet");
+Route::get('/backend/used_aircraft', "BackendController@usedAircraft");
 
-Route::post('/backend/used_aircraft', "AircraftController@usedPost");
+Route::post('/backend/used_aircraft', "BackendController@usedAircraftUpdate");
 
-Route::get('/backend/new_aircraft', "AircraftController@newGet");
+Route::get('/backend/new_aircraft', "BackendController@newAircraft");
 
-Route::post('/backend/new_aircraft', "AircraftController@newPost");
+Route::post('/backend/new_aircraft', "BackendController@newAircraftUpdate");
 
-Route::get('/backend/routes', "RoutesController@mainGet");
+Route::get('/backend/routes', "BackendController@routes");
 
-Route::post('/backend/routes', "RoutesController@mainPost");
+Route::post('/backend/routes', "BackendController@routesUpdate");
 
-Route::get('/backend/create_route', "RoutesController@createGet");
+Route::get('/backend/create_route', "BackendController@createRoute");
 
-Route::post('/backend/create_route', "RoutesController@createPost");
+Route::post('/backend/create_route', "BackendController@createRouteUpdate");
 
-Route::get('/backend/edit_routes', "RoutesController@editGet");
+Route::get('/backend/edit_routes', "BackendController@editRoutes");
 
-Route::post('/backend/edit_routes', "RoutesController@editPost");
+Route::post('/backend/edit_routes', "BackendController@editRoutesUpdate");
 
-Route::get('/backend/research_route', "RoutesController@researchGet");
+Route::get('/backend/research_route', "BackendController@researchRoute");
 
-Route::post('/backend/research_route', "RoutesController@researchPost");
+Route::post('/backend/research_route', "BackendController@researchRouteUpdate");
 
-Route::get('/backend/airports', "AirportsController@mainGet");
+Route::get('/backend/airports', "BackendController@airports");
 
-Route::post('/backend/airports', "AirportsController@mainPost");
+Route::post('/backend/airports', "BackendController@airportsUpdate");
 
-Route::get('/backend/gates', "AirportsController@gatesGet");
+Route::get('/backend/gates', "BackendController@gates");
 
-Route::post('/backend/gates', "AirportsController@gatesPost");
+Route::post('/backend/gates', "BackendController@gatesUpdate");
 
-Route::get('/backend/slots', "AirportsController@slotsGet");
+Route::get('/backend/slots', "BackendController@slots");
 
-Route::post('/backend/slots', "AirportsController@slotsPost");
+Route::post('/backend/slots', "BackendController@slotsUpdate");
 
-Route::get('/backend/global', "BackendController@overviewGet");
+Route::get('/backend/global', "BackendController@global");
 
-Route::post('/backend/global', "BackendController@overviewPost");
+Route::post('/backend/global', "BackendController@globalUpdate");
 
-Route::get('/user/login', "UserController@getLogin");
+Route::get('/user/login', "UserController@login");
 
-Route::post('/user/login', "UserController@postLogin");
+Route::post('/user/login', "UserController@loginSubmit");
 
-Route::get('/user/logoff', "UserController@getLogoff");
+Route::get('/user/logoff', "UserController@logoff");
 
-Route::post('/user/logoff', "UserController@postLogoff");
+Route::post('/user/logoff', "UserController@logoffSubmit");
 
-Route::get('/user/settings', "UserController@getSettings");
+Route::get('/user/settings', "UserController@settings");
 
-Route::post('/user/settings', "UserController@postSettings");
+Route::post('/user/settings', "UserController@settingsUpdate");
 
-Route::get('/user/payment', "UserController@getPayment");
+Route::get('/user/payment', "UserController@payment");
 
-Route::post('/user/payment', "UserController@postPayment");
+Route::post('/user/payment', "UserController@paymentUpdate");
 
-Route::post('/user/register', "UserController@postRegister");
+Route::post('/user/register', "UserController@register");
 
-Route::get('/user/register', "UserController@getRegister");
+Route::get('/user/register', "UserController@registerUpdate");
 
 Route::post('/home/button', "HomeController@processButton");
 
@@ -110,4 +107,8 @@ Route::get('/prices', function(){
 
 Route::get('/privacy', function(){
 	return View::make('privacy');
+});
+
+Route::get('/faq', function(){
+	return View::make('faq');
 });

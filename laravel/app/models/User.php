@@ -4,11 +4,16 @@ use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
+use Laravel\Cashier\BillableInterface;
+use Laravel\Cashier\BillableTrait;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class User extends Eloquent implements UserInterface, RemindableInterface, BillableInterface {
 
 	use UserTrait, RemindableTrait;
 
+	use BillableTrait;
+    
+    protected $dates = ['trial_ends_at', 'subscription_ends_at'];
 	/**
 	 * The database table used by the model.
 	 *

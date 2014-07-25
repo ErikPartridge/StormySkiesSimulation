@@ -17,11 +17,17 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		return View::make('hello');
+		$worlds = libraries\World::all();
+		$worldList = '';
+		foreach($worlds as $key){
+			$obj = json_decode($key,true);
+			$worldList = $worldList.$obj['name'].' '.$obj['number_users'].' '. $obj['cap'];
+		}
+		return View::make('home')->with('worlds', $worldList);
 	}
 
 	public function processButton(){
-		return "hello";
+		return View::make('log_in');
 	}
 
 }
