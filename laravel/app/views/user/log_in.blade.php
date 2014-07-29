@@ -5,6 +5,11 @@
 @stop
 
 @section('content')
+	@if(Session::has('failed'))
+		<div class = "failed">
+			Sorry, that username/password was not found.
+		</div>
+	@endif
 	{{Form::open(array('url' => '/user/login'))}}
     	<div class = "login">
 			{{Form::label('register', 'Log In', array('style' => 'color:deepskyblue'))}}<br>
@@ -12,8 +17,15 @@
 			{{Form::text('email')}} <br>
 			{{Form::label('password', 'Password:')}}
 			{{Form::password('password')}} <br>
+			{{Form::label('remember', 'Remember Me?')}}
+			{{Form::checkbox('remember', 'remember', true)}}
 		</div>
 		<br><br>
 			{{Form::submit('Log In', array('id' => 'button-submit'))}}
+			<div class = "forgotten_password">
+				{{HTML::link('/user/forgot', 'Forgot your password?')}}
+				<br><br>
+				{{HTML::link('/user/register', 'Register')}}
+			</div>
 	{{Form::close()}}
 @stop

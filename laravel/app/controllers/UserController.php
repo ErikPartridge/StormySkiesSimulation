@@ -7,11 +7,43 @@ class UserController extends \BaseController {
     }
 
     public function postLogin(){
+        $email = Input::get('email');
+        $password = Input::get('password');
+        $remember = Input::get('remember');
+        if (Auth::attempt(array('email' => $email, 'password' => $password)))
+        {
+            return Redirect::to('/');
+        }else{
+            Session::flash('failed', 'true');
+            return View::make('user.log_in');
+        }   
+    }
+
+    private function login($email, $password){
+        $users = User::all();
+        $user = '';
+        $user = $this->match($users, $email);
+        if($user == null){
+            return false;
+        }
+        if (Hash::check($password, trim($user->getPassword()))){
+            return true;
+        }
+        return false;
 
     }
 
+    private function match($users, $email){
+        foreach($users as $user){
+            print($user);
+            if($user->getEmail() == $email){
+                return $user;
+            }
+        }
+    }
     public function getLogoff(){
-
+        Auth::logout();
+        Redirect::to('/');
     }
 
     public function postLogoff(){
@@ -36,7 +68,7 @@ class UserController extends \BaseController {
 
     public function getSuccess(){
         $first = Session::get('name');
-        return View::make('user.success')->with('name', $first);
+        return View::make('user.register_success')->with('name', $first);
     }
 
     public function getRegister(){
@@ -48,19 +80,8 @@ class UserController extends \BaseController {
         $last = Input::get('last_name');
         $email = Input::get('email');
         $password = Hash::make(Input::get('password'));
-
-        $user = new User;
-
-        $user->setFirstName($first);
-        $user->setLastName($last);
-        $user->setEmail($email);
-        $user->setPassword($password);
-        $user->setUsername($email);
-
-        $u = User::create(array('email' => $email, 'password' => $password));
+        $u = User::create(array('email' => $email, 'password' => $password, 'first_name' => $first, 'last_name' => $last));
         return Redirect::to('user/success')->with('name', $first);
     }
-
-
 
 }

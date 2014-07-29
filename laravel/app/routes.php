@@ -75,11 +75,11 @@ Route::post('/backend/global', "BackendController@globalUpdate");
 
 Route::get('/user/login', "UserController@getLogin");
 
-Route::post('/user/login', "UserController@loginSubmit");
+Route::post('/user/login', "UserController@postLogin");
 
 Route::get('/user/logoff', "UserController@logoff");
 
-Route::post('/user/logoff', "UserController@logoffSubmit");
+Route::post('/user/logoff', "UserController@postLogoff");
 
 Route::get('/user/settings', "UserController@settings");
 
@@ -98,6 +98,10 @@ Route::post('/home/button', "HomeController@processButton");
 Route::get('/home/button', "HomeController@processButton");
 
 Route::get('/user/success', "UserController@getSuccess");
+
+Route::get('/user/forgot', "UserController@getForgot");
+
+Route::post('/user/forgot', "UserController@postForgot");
 
 Route::get('/terms', function(){
     return View::make('terms');

@@ -71,3 +71,15 @@
     text-align: left;
     margin-top: 10%;
 }
+.forgotten_password{
+    font-family: "Avenir", sans-serif;
+    font-size: .9em;
+    margin-left: 42%;
+    text-align: left;
+}
+.failed{
+    font-family: "Avenir", sans-serif;
+    font-size: 1.3em;
+    margin-left: 31%;
+    color: RED;
+}
