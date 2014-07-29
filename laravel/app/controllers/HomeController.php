@@ -27,7 +27,20 @@ class HomeController extends BaseController {
 	}
 
 	public function processButton(){
-		return View::make('user.log_in');
+		if(Input::get('join') == 'Join'){
+			return Redirect::to('user/register');
+		}
+		if(Input::get('login') == 'Login'){
+			return Redirect::to('user/login');
+		}
+		if(Input::get('faq') == 'FAQ'){
+			return Redirect::to('faq');
+		}
+		if(Input::get('wiki') == 'Wiki'){
+			return Redirect::to('getting_started');
+		}else{
+			return View::make('home');
+		}
 	}
 
 }

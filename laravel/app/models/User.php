@@ -36,10 +36,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface, Billa
 
 	private $email;
 
-	private $location;
-
-	private $birthday;
-
 	private $password;
 
 	private $passwordTemp;
@@ -48,20 +44,16 @@ class User extends Eloquent implements UserInterface, RemindableInterface, Billa
 
 	private $admin;
 
-	function __construct($active, $birthday, $email, $credits, $lastName, $firstName, $password, $passwordTemp, $username, $location)
-    {
-        $this->active = $active;
-        $this->birthday = $birthday;
-        $this->email = $email;
-        $this->credits = $credits;
-        $this->lastName = $lastName;
-        $this->firstName = $firstName;
-        $this->password = $password;
-        $this->passwordTemp = $passwordTemp;
-        $this->username = $username;
-        $this->location = $location;
-    }
+    protected $guarded = array('id', 'account_id');
 
+
+	function __const($firstName, $lastName, $email, $password, $admin){
+        $this->setFirstName($firstName);
+        $this->setUsername($email);
+        $this->setLastName($lastName);
+        $this->setPassword($password);
+        $this->setAdmin($admin);
+    }
     /**
      * @param mixed $email
      */
@@ -142,21 +134,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface, Billa
         return $this->username;
     }
 
-    /**
-     * @param mixed $location
-     */
-    public function setLocation($location)
-    {
-        $this->location = $location;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLocation()
-    {
-        return $this->location;
-    }
 
     /**
      * @param mixed $firstName
@@ -188,22 +165,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface, Billa
     public function getCredits()
     {
         return $this->credits;
-    }
-
-    /**
-     * @param mixed $birthday
-     */
-    public function setBirthday($birthday)
-    {
-        $this->birthday = $birthday;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getBirthday()
-    {
-        return $this->birthday;
     }
 
     /**

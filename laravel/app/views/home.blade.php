@@ -13,11 +13,11 @@
             <b>Takeoff Simulation</b>
         </div>
         <div class="head-right">
-            {{ Form::open(array('url' => '/home/button')) }}
-                <input type="submit" class="main-button" value="Join">
-                <input type="submit" class="main-button" value="Login">
-                <input type="submit" class="main-button" value="FAQ">
-                <input type="submit" class="main-button" value="Wiki">
+            {{ Form::open(array('url' => '/home/button', 'method' => 'POST'))}}
+                <input type="submit" class="main-button" value="Join" name = "join">
+                <input type="submit" class="main-button" value="Login" name = "login">
+                <input type="submit" class="main-button" value="FAQ" name = "faq">
+                <input type="submit" class="main-button" value="Wiki" name = "wiki">
             {{ Form::close() }}
         </div>
     </div>

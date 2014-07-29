@@ -73,7 +73,7 @@ Route::get('/backend/global', "BackendController@global");
 
 Route::post('/backend/global', "BackendController@globalUpdate");
 
-Route::get('/user/login', "UserController@login");
+Route::get('/user/login', "UserController@getLogin");
 
 Route::post('/user/login', "UserController@loginSubmit");
 
@@ -89,13 +89,15 @@ Route::get('/user/payment', "UserController@payment");
 
 Route::post('/user/payment', "UserController@paymentUpdate");
 
-Route::post('/user/register', "UserController@register");
+Route::post('/user/register', "UserController@postRegister");
 
-Route::get('/user/register', "UserController@registerUpdate");
+Route::get('/user/register', "UserController@getRegister");
 
 Route::post('/home/button', "HomeController@processButton");
 
 Route::get('/home/button', "HomeController@processButton");
+
+Route::get('/user/success', "UserController@getSuccess");
 
 Route::get('/terms', function(){
     return View::make('terms');

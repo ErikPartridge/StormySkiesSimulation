@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-	{{Form::open(array('url' => '/user/login'))}}
+	{{Form::open(array('url' => '/user/register', 'method' => 'POST'))}}
     	<div class = "login">
 			{{Form::label('register', 'Register for Takeoff Sim', array('style' => 'color:deepskyblue'))}}<br>
 			{{Form::label('firstname', 'First Name:')}}
