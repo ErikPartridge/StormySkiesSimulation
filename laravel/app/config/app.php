@@ -124,6 +124,7 @@ return array(
 		'Barryvdh\Debugbar\ServiceProvider',
 		'Laravel\Cashier\CashierServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
+		'Cartalyst\Sentry\SentryServiceProvider',
 	),
 
 	/*
@@ -190,7 +191,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-        'Cashier'         => 'Laravel\Cashier\CashierServiceProvider'
+        'Cashier'         => 'Laravel\Cashier\CashierServiceProvider',
+        'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry'
 	),
 
 );

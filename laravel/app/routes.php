@@ -103,6 +103,10 @@ Route::get('/user/forgot', "UserController@getForgot");
 
 Route::post('/user/forgot', "UserController@postForgot");
 
+Route::get('/user/activate', "UserController@getActivate");
+
+Route::post('/user/activate', "UserController@postActivate");
+
 Route::get('/terms', function(){
     return View::make('terms');
 });

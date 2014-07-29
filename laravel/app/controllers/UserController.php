@@ -10,37 +10,15 @@ class UserController extends \BaseController {
         $email = Input::get('email');
         $password = Input::get('password');
         $remember = Input::get('remember');
-        if (Auth::attempt(array('email' => $email, 'password' => $password)))
-        {
-            return Redirect::to('/');
-        }else{
+        if(Sentry::authenticate(array('email'=>$email, 'password' => $password), $remember)){
+            return Redirect::to('user/login_success');
+        } 
+        else{
             Session::flash('failed', 'true');
-            return View::make('user.log_in');
-        }   
+            return View::make('user.log_in')->withInput();
+        } 
     }
 
-    private function login($email, $password){
-        $users = User::all();
-        $user = '';
-        $user = $this->match($users, $email);
-        if($user == null){
-            return false;
-        }
-        if (Hash::check($password, trim($user->getPassword()))){
-            return true;
-        }
-        return false;
-
-    }
-
-    private function match($users, $email){
-        foreach($users as $user){
-            print($user);
-            if($user->getEmail() == $email){
-                return $user;
-            }
-        }
-    }
     public function getLogoff(){
         Auth::logout();
         Redirect::to('/');
@@ -79,8 +57,10 @@ class UserController extends \BaseController {
         $first = Input::get('first_name');
         $last = Input::get('last_name');
         $email = Input::get('email');
-        $password = Hash::make(Input::get('password'));
-        $u = User::create(array('email' => $email, 'password' => $password, 'first_name' => $first, 'last_name' => $last));
+        $password = Input::get('password');
+
+        $user = Sentry::createUser(array('email' => $email, 'password' => $password, 'first_name' => $first, 'last_name' => $last));
+        $code = $user->getActivationCode();
         return Redirect::to('user/success')->with('name', $first);
     }
 
