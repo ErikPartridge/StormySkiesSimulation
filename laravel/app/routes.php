@@ -19,7 +19,7 @@ Route::post('/backend/corporate', "BackendController@corporateUpdate");
 
 Route::get('/backend/overview', "BackendController@overview");
 
-Route::post('/backend/overview', "BackendController@overviewUpdate");
+Route::post('/backend/overview', "BackendController@postOverview");
 
 Route::get('/backend/aircraft', "BackendController@aircraft");
 
@@ -72,6 +72,8 @@ Route::post('/backend/slots', "BackendController@slotsUpdate");
 Route::get('/backend/global', "BackendController@global");
 
 Route::post('/backend/global', "BackendController@globalUpdate");
+
+Route::get('/user/login_success', "UserController@loginSuccess");
 
 Route::get('/user/login', "UserController@getLogin");
 

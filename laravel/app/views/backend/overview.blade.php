@@ -1,1 +1,5 @@
-/Users/Erik/TakeoffSim/laravel/app/views/backend/overview.blade.php
+@extends('/templates/main')
+
+@section('content')
+This is some random content
+@stop

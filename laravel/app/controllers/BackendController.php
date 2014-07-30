@@ -6,6 +6,9 @@ class BackendController extends BaseController{
 		$this->beforeFilter('auth', array());
 	}
 
+	public function overview(){
+		return View::make('backend.overview');
+	}
 }
 
 ?>

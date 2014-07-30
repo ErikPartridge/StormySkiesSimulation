@@ -3,7 +3,11 @@
 class UserController extends \BaseController {
 
     public function getLogin(){
-    	return View::make('user.log_in');
+        if(Sentry::check()){
+            return Redirect::to('/backend/overview');
+        }else{
+    	    return View::make('user.log_in');
+        }   
     }
 
     public function postLogin(){
@@ -50,7 +54,14 @@ class UserController extends \BaseController {
     }
 
     public function getRegister(){
+        if(Sentry::check()){
+            return Redirect::to('user/login_success');
+        } 
         return View::make('user.register');
+    }
+
+    public function loginSuccess(){
+        return Redirect::to('backend/overview');
     }
 
     public function postRegister(){

@@ -15,7 +15,7 @@ return array(
 	|
 	*/
 
-	'driver' => 'smtp',
+	'driver' => 'mailgun',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'mail.stathack.com',
+	'host' => 'smtp.mailgun.org',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => "admin@takeoffsim.com", 'name' => "Erik"),
+	'from' => array('address' => "postmaster@sandbox0360a0dd689a43dfb263a1ef830b9135.mailgun.org", 'name' => "Takeoff Sim"),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => null,
+	'username' => 'postmaster@sandbox0360a0dd689a43dfb263a1ef830b9135.mailgun.org',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => null,
+	'password' => '2bd295248ddfd07713aac13e03e3c8e2',
 
 	/*
 	|--------------------------------------------------------------------------

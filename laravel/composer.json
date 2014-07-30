@@ -10,8 +10,10 @@
         "fzaninotto/faker": "1.5.*@dev",
         "laravel/cashier": "~2.0",
         "barryvdh/laravel-debugbar": "1.*",
-        "nette/forms": "2.2.*",
-        "cartalyst/sentry": "2.1.*"
+        "cartalyst/sentry": "2.1.*",
+        "guzzlehttp/guzzle": "~4.0",
+		"tlr/menu": "2.*",
+		"tlr/l4-support": "1.*"
 	},
 	"require-dev": {
     "way/generators": "2.*"

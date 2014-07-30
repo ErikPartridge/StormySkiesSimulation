@@ -10,14 +10,15 @@
 </head>
 <body>
     <div class="main-menu">
-        <ul class="menu vertical">
-            <li>{{HTML::link("backend/corporate", "Corporate", array())}}</li>
+        <ul class="menu">
             <li>{{HTML::link("backend/overview", "Overview", array())}}</li>
+            <li>{{HTML::link("backend/corporate", "Corporate", array())}}</li>
             <li>{{HTML::link("backend/aircraft", "Aircraft", array())}}
-                <li>{{HTML::link('backend/my_fleet', "Fleet", array())}}</li>
-                <li>{{HTML::link('backend/lease_aircraft', "Lease", array())}}</li>
-                <li>{{HTML::link('backend/used_aircraft', "Used Aircraft", array())}}</li>
-                <li>{{HTML::link('backend/new_aircraft', "New Aircraft", array())}}</li>
+               <ul>
+                    <li>{{HTML::link('backend/my_fleet', "Fleet", array())}}</li>
+                    <li>{{HTML::link('backend/used_aircraft', "Used Aircraft", array())}}</li>
+                    <li>{{HTML::link('backend/new_aircraft', "New Aircraft", array())}}</li>
+                </ul>
             </li>
             <li>{{HTML::link("backend/routes", "Routes", array())}}
                 <ul>
@@ -33,7 +34,7 @@
                 </ul>
             </li>
             <li>{{HTML::link("backend/global", "World", array())}}</li>
-            <li>{{HTML::link("/", "Back", array())}}</li>
+            <li>{{HTML::link("/", "Home", array())}}</li>
         </ul>
     </div>
     @yield('content')
