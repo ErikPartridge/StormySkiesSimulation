@@ -27,9 +27,11 @@ class CreateAirlines extends Migration {
             $table->decimal('costs');
             $table->decimal('earnings');
             $table->decimal('profits');
+            $table->integer('ceo')->unsigned();
             $table->timestamps();
 
             #foreign
+            $table->foreign('ceo')->references('id')->on('users');
             $table->foreign('world_id')->references('id')->on('worlds');
             $table->foreign('country')->references('id')->on('countries');
 

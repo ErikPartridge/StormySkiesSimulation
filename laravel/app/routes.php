@@ -113,6 +113,8 @@ Route::get('/user/activate', "UserController@getActivate");
 
 Route::post('/user/activate', "UserController@postActivate");
 
+Route::get('/login', "UserController@getLogin");
+
 Route::get('/terms', function(){
     return View::make('terms');
 });

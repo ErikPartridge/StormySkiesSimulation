@@ -19,9 +19,7 @@ class Country extends \Eloquent{
 
     private $openMarket;
 
-    private $worldId;
-
-    function __construct($capital, $euMember, $name, $iso, $openMarket, $worldId)
+    function __construct($capital, $euMember, $name, $iso, $openMarket)
     {
         $this->capital = $capital;
         $this->euMember = $euMember;
@@ -31,21 +29,6 @@ class Country extends \Eloquent{
         $this->worldId = $worldId;
     }
 
-    /**
-     * @param mixed $worldId
-     */
-    public function setWorldId($worldId)
-    {
-        $this->worldId = $worldId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getWorldId()
-    {
-        return $this->worldId;
-    }
 
     /**
      * @param mixed $openMarket

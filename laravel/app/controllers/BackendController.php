@@ -23,6 +23,20 @@ class BackendController extends BaseController{
 		return View::make('backend.overview')->with('participated', $participated)->with('count', $count)->with('worlds', $worlds)->with('full', $full);
 	}
 
+	private function ownsAirline($user){
+		$active = $user->active_airline;
+		$airlines = $user->hasMany('Airline', 'ceo');
+		if($airlines == null){
+			return Redirect::to('backend/overview');
+		}
+		foreach($airlines as $a){
+			if($a->id == $active){
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public function aircraft(){
 		return Redirect::to('/backend/aircraft/1');
     }

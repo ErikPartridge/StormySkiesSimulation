@@ -50,7 +50,6 @@ class AircraftType extends Eloquent{
     private $hoursB;
 
     private $hoursC;
-    protected $guarded = array();
 
 
     function __construct()
