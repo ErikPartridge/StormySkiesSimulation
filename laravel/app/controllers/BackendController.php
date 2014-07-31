@@ -56,6 +56,11 @@ class BackendController extends BaseController{
 
     	$aircraft = AircraftType::find($id);
     	return View::make('backend.aircraft')->with('aircraft', $aircraft);
+    }
+
+    public function myFleet(){
+    	$airline = Airline::find(Sentry::getUser()->active_airline);
+    	return View::make('backend.my_fleet')->with('airline', $airline);
     }	
 }
 

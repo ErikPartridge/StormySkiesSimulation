@@ -3,7 +3,7 @@
  * (c) Erik Malmstrom-Partridge 2014
  */
 
-class Airplane {
+class Airplane extends Eloquent{
 
 
     private $registration;
@@ -32,21 +32,9 @@ class Airplane {
 
     private $worldId;
 
-    function __construct($aCheck, $age, $bCheck, $cCheck, $cycles, $engine, $fin, $hours, $location, $owner, $registration, $type, $worldId)
+    function __construct()
     {
-        $this->aCheck = $aCheck;
-        $this->age = $age;
-        $this->bCheck = $bCheck;
-        $this->cCheck = $cCheck;
-        $this->cycles = $cycles;
-        $this->engine = $engine;
-        $this->fin = $fin;
-        $this->hours = $hours;
-        $this->location = $location;
-        $this->owner = $owner;
-        $this->registration = $registration;
-        $this->type = $type;
-        $this->worldId = $worldId;
+    
     }
 
     /**

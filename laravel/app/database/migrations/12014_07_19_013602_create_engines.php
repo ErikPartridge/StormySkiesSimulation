@@ -14,14 +14,10 @@ class CreateEngines extends Migration {
 	{
 		Schema::create('engines', function($table){
            $table->increments('id');
-           $table->integer('world_id')->unsigned();
            $table->decimal('sfc');
            $table->decimal('bph');
            $table->string('name', 50);
            $table->string('manufacturer', 50);
-
-            $table->foreign('world_id')->references('id')->on('worlds');
-
         });
 	}
 
