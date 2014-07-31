@@ -17,7 +17,7 @@ class CreateAircraftTypes extends Migration {
            $table->string('name', 50);
            $table->integer('cruise_speed');
            $table->integer('minimum_runway');
-           $table->string('icao', 4);
+           $table->string('icao', 4)->unique();
            $table->integer('range');
            $table->integer('price');
            $table->integer('number_of_engines');

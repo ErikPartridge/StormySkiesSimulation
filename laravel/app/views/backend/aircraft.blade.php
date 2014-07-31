@@ -4,7 +4,7 @@
 <br>
 	<div id="container">
 		<h3>{{$aircraft->name}}</h3>
-		{{HTML::image('images/aircraft/'.$aircraft->icao.'.jpg', "A320", array('id' => 'mid-image'))}}
+		{{HTML::image('images/aircraft/'.$aircraft->icao.'.jpg', $aircraft->icao, array('id' => 'mid-image'))}}
 	</div>
 </>
 @stop
