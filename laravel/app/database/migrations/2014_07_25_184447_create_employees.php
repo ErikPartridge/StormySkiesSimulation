@@ -12,7 +12,7 @@ class CreateEmployees extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('employees', function(Blueprint $t)){
+		Schema::create('employees', function(Blueprint $t){
 			$t->increments('id');
 			$t->integer('salary');
 			$t->string('first_name');
@@ -22,7 +22,7 @@ class CreateEmployees extends Migration {
 			$t->string('type');
 
 			$t->foreign('employer')->references('id')->on('airlines');
-		}
+		});
 
 	}
 

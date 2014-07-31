@@ -37,23 +37,8 @@ class Airline extends Eloquent{
 
     private $worldId;
 
-    function __construct($ceo, $costs, $countryId, $earnings, $flightAttendantPay, $fleet, $headquarters, $hubs, $iata, $icao, $mechanicPay, $pilotPay, $profits, $reputation, $worldId)
+    function __construct()
     {
-        $this->ceo = $ceo;
-        $this->costs = $costs;
-        $this->countryId = $countryId;
-        $this->earnings = $earnings;
-        $this->flightAttendantPay = $flightAttendantPay;
-        $this->fleet = $fleet;
-        $this->headquarters = $headquarters;
-        $this->hubs = $hubs;
-        $this->iata = $iata;
-        $this->icao = $icao;
-        $this->mechanicPay = $mechanicPay;
-        $this->pilotPay = $pilotPay;
-        $this->profits = $profits;
-        $this->reputation = $reputation;
-        $this->worldId = $worldId;
     }
 
     /**

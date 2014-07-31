@@ -29,6 +29,10 @@ Route::get('/backend/my_fleet', "BackendController@myFleet");
 
 Route::post('/backend/my_fleet', "BackendController@myFleetUpdate");
 
+Route::get('/backend/aircrafttype/{id}', "BackendController@aircraftType");
+
+Route::get('/backend/aircraft/{id}', "BackendController@aircraftDetails");
+
 Route::get('/backend/lease_aircraft', "BackendController@leaseAircraft");
 
 Route::post('/backend/lease_aircraft', "BackendController@leaseAircraftUpdate");

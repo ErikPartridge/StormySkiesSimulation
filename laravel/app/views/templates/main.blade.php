@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="author" content="Erik Malmstrom-Partridge">
     {{ HTML::style("css/backend.css") }}
-    <title>Takeoff Sim</title>
+    <title>Takeoff Simulation</title>
 
     @yield('head-details')
 </head>
 <body>
+    {{HTML::link('/', "Takeoff Simulation", array("id" => 'headlink'))}}
     <div class="main-menu">
         <ul class="menu">
             <li>{{HTML::link("backend/overview", "Overview", array())}}</li>
@@ -34,7 +35,6 @@
                 </ul>
             </li>
             <li>{{HTML::link("backend/global", "World", array())}}</li>
-            <li>{{HTML::link("/", "Home", array())}}</li>
         </ul>
     </div>
     @yield('content')

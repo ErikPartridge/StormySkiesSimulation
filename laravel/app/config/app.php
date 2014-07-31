@@ -125,6 +125,8 @@ return array(
 		'Laravel\Cashier\CashierServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'Cartalyst\Sentry\SentryServiceProvider',
+		'Liebig\Cron\CronServiceProvider',
+		'Bogardo\Mailgun\MailgunServiceProvider'
 	),
 
 	/*

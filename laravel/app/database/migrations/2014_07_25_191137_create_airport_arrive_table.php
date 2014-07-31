@@ -16,9 +16,9 @@ class CreateAirportArriveTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('airport_id')->unsigned()->index();
-			$table->foreign('airport_id')->references('id')->on('airports')->onDelete('cascade');
+			$table->foreign('airport_id')->references('id')->on('airports');
 			$table->integer('arrive_id')->unsigned()->index();
-			$table->foreign('arrive_id')->references('id')->on('arrives')->onDelete('cascade');
+			$table->foreign('arrive_id')->references('id')->on('routes');
 			$table->timestamps();
 		});
 	}

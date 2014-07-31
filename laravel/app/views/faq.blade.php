@@ -1,1 +1,0 @@
-/Users/Erik/TakeoffSim/laravel/app/views/faq.blade.php
