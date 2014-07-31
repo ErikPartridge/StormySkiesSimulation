@@ -24,7 +24,7 @@ class BackendController extends BaseController{
 	}
 
 	public function aircraft(){
-		return View::make('backend.aircraft');
+		return Redirect::to('/backend/aircraft/1');
     }
 
     public function aircraftUpdate(){
@@ -34,6 +34,15 @@ class BackendController extends BaseController{
     public function aircraftList(){
     	return View::make('backend.aircraft_list');
     }
+
+    public function aircraftDetails($id){
+    	if($id==null){
+    		return Redirect::to('/backend/aircraft/1');
+    	}
+
+    	$aircraft = AircraftType::find($id);
+    	return View::make('backend.aircraft')->with('aircraft', $aircraft);
+    }	
 }
 
 ?>

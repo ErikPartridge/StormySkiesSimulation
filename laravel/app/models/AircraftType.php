@@ -7,7 +7,7 @@
  */
 
 
-class AircraftType {
+class AircraftType extends Eloquent{
 
     private $name;
 
@@ -51,32 +51,9 @@ class AircraftType {
 
     private $hoursC;
 
-    private $worldId;
-
-    function __construct($cruiseSpeed, $hoursA, $fuelburn, $hoursB, $hoursC, $manufacturer, $icao, $maxSeats, $minimumRunway, $mlw, $mtow, $mzfw, $name, $numberOfEngines, $price, $oew, $priceA, $priceB, $priceC, $range, $productionRate, $worldId)
+    function __construct()
     {
-        $this->cruiseSpeed = $cruiseSpeed;
-        $this->hoursA = $hoursA;
-        $this->fuelburn = $fuelburn;
-        $this->hoursB = $hoursB;
-        $this->hoursC = $hoursC;
-        $this->manufacturer = $manufacturer;
-        $this->icao = $icao;
-        $this->maxSeats = $maxSeats;
-        $this->minimumRunway = $minimumRunway;
-        $this->mlw = $mlw;
-        $this->mtow = $mtow;
-        $this->mzfw = $mzfw;
-        $this->name = $name;
-        $this->numberOfEngines = $numberOfEngines;
-        $this->price = $price;
-        $this->oew = $oew;
-        $this->priceA = $priceA;
-        $this->priceB = $priceB;
-        $this->priceC = $priceC;
-        $this->range = $range;
-        $this->productionRate = $productionRate;
-        $this->worldId = $worldId;
+        
     }
 
     /**

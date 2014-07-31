@@ -67,3 +67,11 @@
 	text-decoration: none;
 	text-align: center;
 }
+#container{
+    text-align: center;
+    font-family: "Avenir", sans-serif;
+}
+#mid-image{
+	border-radius: 15px;
+	width: 40%;
+}
