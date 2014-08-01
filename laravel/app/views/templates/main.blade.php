@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Erik Malmstrom-Partridge">
     {{ HTML::style("css/backend.css") }}
+    {{ HTML::script('js/jquery-2.1.1.min.js') }}
     <title>Takeoff Simulation</title>
 
     @yield('head-details')

@@ -10,6 +10,9 @@
 		@endforeach
 	@endif
 	<h2>Worlds Available:</h2>
+	<table>
+		<tr>
+			<th>Name</th><th>Users</th><th>Max Users</th><th>In-Game Time</th>
 	@foreach($worlds as $p)
 		@if($p->numberUsers < $p->cap)
 			{{$p}}
