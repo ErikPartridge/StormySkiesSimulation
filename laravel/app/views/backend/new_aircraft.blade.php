@@ -1,1 +1,4 @@
-/Users/Erik/TakeoffSim/laravel/app/views/backend/new_aircraft.blade.php
+@extends('templates/main')
+@section('content')
+	{{Form::select('type', $types)}}
+@stop

@@ -58,6 +58,8 @@ class BackendController extends BaseController{
     	return View::make('backend.aircraft')->with('aircraft', $aircraft);
     }
 
+
+
     public function myFleet(){
     	$airline = Airline::find(Sentry::getUser()->active_airline);
     	$fleet = array();
@@ -80,6 +82,15 @@ class BackendController extends BaseController{
 
     public function airplaneRedirect(){
     	return Redirect::to('/backend/airplane/1');
+    }
+
+    public function newAircraft(){
+    	$types = AircraftType::all();
+    	$list = array();
+    	foreach($types as $t){
+    		array_push($list, $t->name);
+    	}
+    	return View::make('backend.new_aircraft')->with('types', $list);
     }
 }
 
