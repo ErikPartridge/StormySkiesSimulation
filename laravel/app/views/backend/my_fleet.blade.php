@@ -14,14 +14,14 @@
 				<col id="col-one">
 			</colgroup>
 			<tr>
-				<th>Registration</th><th>Type</th><th>Age</th><th>Value</th><th>Hours Available</th><th>Sell</th>
+				<th>Registration</th><th>Type</th><th>Age</th><th>Value</th><th>Hours Available</th>
 			</tr>
-			@foreach(Airplane::all() as $a)
-				{{$a}}
-			@endforeach
-			@foreach($airline->hasMany('Airplane', 'owner') as $plane)
-				<tr>
-					<td>{{$plane->registration}}</td><td>{{HTML::link('backend/aircraft/$plane->type', $plane->type->icao, array())}}</td>
+			@foreach($fleet as $plane)
+				<tr>	
+					<?PHP $path = 'backend/aircraft/'.$plane['type'];
+						  $planePath = 'backend/airplane/'.$plane['id']; ?>
+					<td>{{HTML::link($planePath,$plane['registration'], array())}}</td><td>{{HTML::link($path, AircraftType::find($plane['type'])->icao, array())}}</td><td>{{$plane['age']}} years</td><td>${{$plane->value($types)}}</td><td>140 hours</td>
+				</tr>
 			@endforeach
 		</table>
 	</div>

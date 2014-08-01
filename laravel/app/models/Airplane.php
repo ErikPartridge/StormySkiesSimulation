@@ -252,15 +252,15 @@ class Airplane extends Eloquent{
         return $isAirworthy;
     }
 
-    public function type(){
+    public function theType(){
         return $this->belongsTo('AircraftType', 'type');
     }
 
-    public function owner(){
+    public function theOwner(){
         return $this->belongsTo('Airline', 'owner');
     }
 
-    public function world(){
+    public function thisWorld(){
         return $this->belongsTo('World');
     }
 
@@ -270,5 +270,15 @@ class Airplane extends Eloquent{
 
     public function location(){
         return $this->belongsTo('Airport', 'location');
+    }
+
+    public function value($types){
+        $t = null;
+        foreach($types as $ty){
+            if($ty->id == $this->id){
+                $t = $ty;
+            }
+        }
+        return $t->price * .75 * ((50000 - $this->cycles) /50000);
     }
 }
