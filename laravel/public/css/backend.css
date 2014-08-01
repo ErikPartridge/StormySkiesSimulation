@@ -86,6 +86,7 @@
 td{
 	border: solid deepskyblue;
 	border-radius: 6px;
+	text-align: center;
 }
 table{
 	font-family: "Avenir", sans-serif;

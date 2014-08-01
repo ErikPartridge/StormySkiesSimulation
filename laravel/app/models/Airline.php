@@ -37,10 +37,16 @@ class Airline extends Eloquent{
 
     private $worldId;
 
+    private $name;
+
     function __construct()
     {
     }
 
+
+    public function getName(){
+        return $this->name;
+    }
     /**
      * @param mixed $ceo
      */

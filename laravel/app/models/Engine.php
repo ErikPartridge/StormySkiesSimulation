@@ -18,13 +18,8 @@ class Engine extends \Eloquent {
 
     private $worldId;
 
-    function __construct($bph, $name, $manufacturer, $sfc, $worldId)
+    function __construct()
     {
-        $this->bph = $bph;
-        $this->name = $name;
-        $this->manufacturer = $manufacturer;
-        $this->sfc = $sfc;
-        $this->worldId = $worldId;
     }
 
     /**
@@ -113,6 +108,10 @@ class Engine extends \Eloquent {
 
     public function aircraftTypes(){
         return $this->belongsToMany('AircraftType', 'aircraft_type_engine');
+    }
+
+    public function engines(){
+        return $this->hasMany('Airplane');
     }
 
 

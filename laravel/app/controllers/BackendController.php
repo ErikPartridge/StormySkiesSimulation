@@ -70,7 +70,17 @@ class BackendController extends BaseController{
     		}
     	}
     	return View::make('backend.my_fleet')->with('airline', $airline)->with('fleet', $fleet)->with('types', $types);
+    }
+
+    public function airplaneDetails($id){
+    	$airplane = Airplane::find($id);
+
+    	return View::make('backend.airplane')->with('airplane', $airplane);
     }	
+
+    public function airplaneRedirect(){
+    	return Redirect::to('/backend/airplane/1');
+    }
 }
 
 ?>

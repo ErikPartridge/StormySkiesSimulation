@@ -13,6 +13,10 @@
 
 Route::get('/', 'HomeController@showWelcome');
 
+Route::get('/backend/airplane/{id}', "BackendController@airplaneDetails");
+
+Route::post('/backend/airplane/{id}', "BackendController@airplaneUpdate");
+
 Route::get('/backend/corporate', "BackendController@corporate");
 
 Route::post('/backend/corporate', "BackendController@corporateUpdate");
@@ -114,6 +118,8 @@ Route::get('/user/activate', "UserController@getActivate");
 Route::post('/user/activate', "UserController@postActivate");
 
 Route::get('/login', "UserController@getLogin");
+
+Route::get('/backend/airplane', "BackendController@airplaneRedirect");
 
 Route::get('/terms', function(){
     return View::make('terms');

@@ -33,21 +33,8 @@ class Airport extends Eloquent{
 
     private $allocatedDemand;
 
-    function __construct($allocatedDemand, $delayFactor, $demandBonus, $elevation, $icao, $iata, $latitude, $longitude, $maxFlightsPerHour, $name, $runways, $timeZone)
+    function __construct()
     {
-        $this->allocatedDemand = $allocatedDemand;
-        $this->delayFactor = $delayFactor;
-        $this->demandBonus = $demandBonus;
-        $this->elevation = $elevation;
-        $this->icao = $icao;
-        $this->iata = $iata;
-        $this->latitude = $latitude;
-        $this->longitude = $longitude;
-        $this->maxFlightsPerHour = $maxFlightsPerHour;
-        $this->name = $name;
-        $this->runways = $runways;
-        $this->slotControlled = $slotControlled;
-        $this->timeZone = $timeZone;
     }
 
     /**
