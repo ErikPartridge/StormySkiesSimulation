@@ -103,6 +103,10 @@ th{
 #col-one{
 	width: 10%;
 }
+#center-block{
+	text-align: center;
+	font-family: "Avenir", sans-serif;
+}
 .main-button {
     background: #3498db;
     -webkit-border-radius: 21;

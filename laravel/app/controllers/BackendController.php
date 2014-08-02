@@ -127,13 +127,21 @@ class BackendController extends BaseController{
     	return Redirect::to('/backend/airplane/1');
     }
 
-    public function newAircraft(){
+    public function newAircraftRedirect(){
+        return Redirect::to('/backend/new_aircraft/1');
+    }
+    public function newAircraft($id){
     	$types = AircraftType::all();
+        $type = AircraftType::find($id);
     	$list = array();
     	foreach($types as $t){
     		array_push($list, $t->name);
     	}
-    	return View::make('backend.new_aircraft')->with('types', $list);
+    	return View::make('backend.new_aircraft')->with('types', $list)->with('aircraft', $type);
+    }
+
+    public function newAircraftUpdateRedirect(){
+        return Redirect::to('/backend/airplane/1');
     }
 }
 

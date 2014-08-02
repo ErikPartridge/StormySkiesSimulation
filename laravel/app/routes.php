@@ -45,9 +45,9 @@ Route::get('/backend/used_aircraft', "BackendController@usedAircraft");
 
 Route::post('/backend/used_aircraft', "BackendController@usedAircraftUpdate");
 
-Route::get('/backend/new_aircraft', "BackendController@newAircraft");
+Route::get('/backend/new_aircraft', "BackendController@newAircraftRedirect");
 
-Route::post('/backend/new_aircraft', "BackendController@newAircraftUpdate");
+Route::post('/backend/new_aircraft', "BackendController@newAircraftUpdateRedirect");
 
 Route::get('/backend/routes', "BackendController@routes");
 
@@ -124,6 +124,10 @@ Route::get('/backend/airplane', "BackendController@airplaneRedirect");
 Route::get('/backend/home', "BackendController@home");
 
 Route::post('/backend/home', "BackendController@postHome");
+
+Route::get('/backend/new_aircraft/{id}', "BackendController@newAircraft");
+
+Route::post('/backend/new_aircraft/{id}', "BackendController@newAircraftUpdate");
 
 Route::get('/terms', function(){
     return View::make('terms');
