@@ -37,7 +37,7 @@
 				<td>Maximum Seating</td><td>{{$aircraft->max_seats}}</td>
 			</tr>
 			<tr>
-				<td>New Price</td><td>${{number_format($aircraft->price)}}</td>
+				<td>Price</td><td>${{number_format($aircraft->price)}}</td>
 			</tr>
 		</table>
 		{{Form::open(array('url' => '#', 'method' => 'POST'))}}

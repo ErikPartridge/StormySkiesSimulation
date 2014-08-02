@@ -1,10 +1,13 @@
+body{
+	background-color: #e6e6e6;
+}
 .menu{
 	list-style-type: none;
 	margin: 0px;
 	padding-top: 6px;
 	padding-bottom: 1px;
 	height: 22px;
-	background-color: #3498db;
+	background-color: #002CA1;
 	font-family: 'Avenir', sans-serif;
 	font-size: 1.02em;
 	text-align: center;
@@ -82,19 +85,24 @@
 }
 #column{
 	width: 50%;
+
 }
 td{
-	border: solid deepskyblue;
-	border-radius: 9px;
 	text-align: center;
-	padding: 2px;
+	background-color: #e6e6e6;
 }
 table{
 	font-family: "Avenir", sans-serif;
+	border-collapse: collapse;
+	border-color: #002CA1;
+	width: 100%;
+	border-radius: 10px;
 }
 th{
-	border: solid deepskyblue;
-	border-radius: 9px;
+	background-color: #002CA1;
+	color: white;
+	font-weight: normal;
+	font-style: italic;
 }
 #unbounded-table{
 	margin-left: auto;
@@ -108,19 +116,22 @@ th{
 	font-family: "Avenir", sans-serif;
 }
 .main-button {
-    background: #3498db;
-    -webkit-border-radius: 21;
-    -moz-border-radius: 21;
-    border-radius: 21px;
+    background: #002CA1;
     font-family: Arial;
     color: #ffffff;
     font-size: 1em;
-    padding: 5px 10px 5px 10px;
-    border: solid #3498db 2px;
+    padding: 0px 0px 0px 0px;
     text-decoration: none;
+    width: 100%;
+    border-style: none;
+    height: 100%;
 }
 
 .main-button:hover {
     background: #3cb0fd;
     text-decoration: none;
+}
+
+#headlink{
+	color: #002CA1;
 }

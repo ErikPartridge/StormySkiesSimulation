@@ -143,6 +143,10 @@ class BackendController extends BaseController{
     public function newAircraftUpdateRedirect(){
         return Redirect::to('/backend/airplane/1');
     }
+
+    public function newAircraftUpdate($id){
+        
+    }
 }
 
 ?>

@@ -10,6 +10,7 @@
     @yield('head-details')
 </head>
 <body>
+
     {{HTML::link('/', "Takeoff Simulation", array("id" => 'headlink'))}}
     <div class="main-menu">
         <ul class="menu">
