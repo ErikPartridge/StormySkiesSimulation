@@ -1,1 +1,7 @@
-/Users/Erik/TakeoffSim/laravel/app/views/backend/airports.blade.php
+@extends('/templates/main')
+
+@section('content')
+	@foreach($airports as $a)
+		{{$a}}<br>
+	@endforeach
+@stop

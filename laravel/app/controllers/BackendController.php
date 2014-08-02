@@ -164,10 +164,12 @@ class BackendController extends BaseController{
         return $this->newAircraft($id);
     }   
 
-    public function corporate(){
-
+    public function corporateRedirect(){
+        return Redirect::to('/backend/corporate/'.Sentry::getUser()->active_airline);
     }
-
+    public function corporate($id){
+        return View::make('backend.corporate')->with('airline', Airline::find(Sentry::getUser()->active_airline));
+    }
     public function joinWorld($id){
 
     }
@@ -193,7 +195,15 @@ class BackendController extends BaseController{
     }
 
     public function airports(){
-
+        $airports = Airport::all();
+        $worldId = Sentry::getUser()->active_airline;
+        $list = array();
+        foreach($airports as $a){
+            if($a->world_id == $worldId){
+                array_push($list, $a);
+            }
+        }
+        return View::make('backend.airports')->with('airports', $list);
     }
 
     public function gates(){
@@ -201,7 +211,7 @@ class BackendController extends BaseController{
     }
 
     public function slots(){
-        
+
     }
 }
 

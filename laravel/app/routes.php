@@ -17,9 +17,11 @@ Route::get('/backend/airplane/{id}', "BackendController@airplaneDetails");
 
 Route::post('/backend/airplane/{id}', "BackendController@airplaneUpdate");
 
-Route::get('/backend/corporate', "BackendController@corporate");
+Route::get('/backend/corporate', "BackendController@corporateRedirect");
 
-Route::post('/backend/corporate', "BackendController@corporateUpdate");
+Route::post('/backend/corporate/{id}', "BackendController@corporateUpdate");
+
+Route::get('/backend/corporate/{id}', "BackendController@corporate");
 
 Route::get('/backend/overview', "BackendController@overview");
 
