@@ -121,6 +121,10 @@ Route::get('/login', "UserController@getLogin");
 
 Route::get('/backend/airplane', "BackendController@airplaneRedirect");
 
+Route::get('/backend/home', "BackendController@home");
+
+Route::post('/backend/home', "BackendController@postHome");
+
 Route::get('/terms', function(){
     return View::make('terms');
 });

@@ -28,14 +28,26 @@
         <div id="left-bottom">
             <h3>Latest News</h3>
             <HR color="#3498DB"></HR>
-            Just launched world: O'Hare! Come check it out now!
+            <uL>
+                <li>Just launched world: O'Hare! Come check it out now!</li>
+                <li>Just launched world: De Gaulle! Check it out!</li>
+                <li>Founded takeoffsim.com, with world Logan! Try today!</li>
+            </uL>
         </div>
         <div id="right-bottom">
             <h3>Worlds</h3>
             <HR color="#3498DB"></HR>
-
-            {{$worlds}}
-
+            <table>
+            <tr>
+                <th>Name</th><th>Users</th><th>Max Users</th><th>In-Game Time</th>
+            </tr>
+            @foreach($worlds as $p)
+            <tr>
+                <?PHP $carbon = new Carbon\Carbon($p->current_time,'UTC') ?>
+                <td>{{$p->name}}</td><td>{{$p->number_users}}</td><td>{{$p->cap}}</td><td>{{$carbon->toFormattedDateString()}}</td> 
+            </tr>
+            @endforeach
+            </table>
         </div>
     </div>
     <footer>

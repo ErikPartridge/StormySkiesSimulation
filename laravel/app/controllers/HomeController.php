@@ -18,12 +18,7 @@ class HomeController extends BaseController {
 	public function showWelcome()
 	{
 		$worlds = World::all();
-		$worldList = '';
-		foreach($worlds as $key){
-			$obj = json_decode($key,true);
-			$worldList = $worldList.$obj['name'].' '.$obj['number_users'].' '. $obj['cap'];
-		}
-		return View::make('home')->with('worlds', $worldList);
+		return View::make('home')->with('worlds', $worlds);
 	}
 
 	public function processButton(){

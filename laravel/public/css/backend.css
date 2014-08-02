@@ -85,15 +85,16 @@
 }
 td{
 	border: solid deepskyblue;
-	border-radius: 6px;
+	border-radius: 9px;
 	text-align: center;
+	padding: 2px;
 }
 table{
 	font-family: "Avenir", sans-serif;
 }
 th{
 	border: solid deepskyblue;
-	border-radius: 6px;
+	border-radius: 9px;
 }
 #unbounded-table{
 	margin-left: auto;
@@ -101,4 +102,21 @@ th{
 }
 #col-one{
 	width: 10%;
+}
+.main-button {
+    background: #3498db;
+    -webkit-border-radius: 21;
+    -moz-border-radius: 21;
+    border-radius: 21px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 5px 10px 5px 10px;
+    border: solid #3498db 2px;
+    text-decoration: none;
+}
+
+.main-button:hover {
+    background: #3cb0fd;
+    text-decoration: none;
 }

@@ -20,7 +20,7 @@
 				<tr>	
 					<?PHP $path = 'backend/aircraft/'.$plane['type'];
 						  $planePath = 'backend/airplane/'.$plane['id']; ?>
-					<td>{{HTML::link($planePath,$plane['registration'], array())}}</td><td>{{HTML::link($path, AircraftType::find($plane['type'])->icao, array())}}</td><td>{{$plane['age']}} years</td><td>$number_format({{$plane->value($types)}})</td><td>140 hours</td>
+					<td>{{HTML::link($planePath,$plane['registration'], array())}}</td><td>{{HTML::link($path, AircraftType::find($plane['type'])->name, array())}}</td><td>{{$plane['age']}} years</td><td>${{number_format($plane->value($types))}}</td><td>140 hours</td>
 				</tr>
 			@endforeach
 		</table>

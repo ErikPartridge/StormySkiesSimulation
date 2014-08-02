@@ -8,26 +8,57 @@ class BackendController extends BaseController{
 
 	public function overview(){
 		$user = Sentry::getUser();
-		$participated = $user->hasMany('Airline', 'ceo');
+        $airlines = Airline::all();
+        $participated = array();
 		$count = 0;
 		$worlds = World::all();
-		foreach($participated as $p){
-			$count++;
-		}
+        foreach($airlines as $a){
+            if($a->ceo == $user->id){
+                array_push($participated, $a->world_id);
+            }
+        }
+        foreach($participated as $p){
+            $count++;
+        }
 		$full = 0;
 		foreach($worlds as $w){
-			if($w->numberUsers == $w->cap){
+			if($w->number_users == $w->cap){
 				$full++;
 			}
 		}
-		return View::make('backend.overview')->with('participated', $participated)->with('count', $count)->with('worlds', $worlds)->with('full', $full);
+
+        return View::make('backend.overview')->with('participated', $participated)->with('count', $count)->with('worlds', $worlds)->with('full', $full);
 	}
+
+    public function home(){
+        $user = Sentry::getUser();
+        $airlines = Airline::all();
+        $participated = array();
+        $count = 0;
+        $worlds = World::all();
+        foreach($airlines as $a){
+            if($a->ceo == $user->id){
+                array_push($participated, $a->world_id);
+            }
+        }
+        foreach($participated as $p){
+            $count++;
+        }
+        $full = 0;
+        foreach($worlds as $w){
+            if($w->number_users == $w->cap){
+                $full++;
+            }
+        }
+
+        return View::make('backend.home')->with('participated', $participated)->with('count', $count)->with('worlds', $worlds)->with('full', $full);
+    }
 
 	private function ownsAirline($user){
 		$active = $user->active_airline;
 		$airlines = $user->hasMany('Airline', 'ceo');
 		if($airlines == null){
-			return Redirect::to('backend/overview');
+			return Redirect::to('backend/home');
 		}
 		foreach($airlines as $a){
 			if($a->id == $active){
@@ -79,6 +110,18 @@ class BackendController extends BaseController{
 
     	return View::make('backend.airplane')->with('airplane', $airplane);
     }	
+
+    public function usedAircraft(){
+        $all = Airplane::all();
+        $planes = array();
+        foreach($all as $a){
+            if($a->for_sale){
+                array_push($planes, $a);
+            }
+        }
+        $types = AircraftType::all();
+        return View::make('backend.used_aircraft')->with('planes', $planes)->with('types', $types);
+    }
 
     public function airplaneRedirect(){
     	return Redirect::to('/backend/airplane/1');
