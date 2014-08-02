@@ -61,9 +61,9 @@ Route::get('/backend/edit_routes', "BackendController@editRoutes");
 
 Route::post('/backend/edit_routes', "BackendController@editRoutesUpdate");
 
-Route::get('/backend/research_route', "BackendController@researchRoute");
+Route::get('/backend/research_routes', "BackendController@researchRoute");
 
-Route::post('/backend/research_route', "BackendController@researchRouteUpdate");
+Route::post('/backend/research_routes', "BackendController@researchRouteUpdate");
 
 Route::get('/backend/airports', "BackendController@airports");
 
@@ -77,7 +77,7 @@ Route::get('/backend/slots', "BackendController@slots");
 
 Route::post('/backend/slots', "BackendController@slotsUpdate");
 
-Route::get('/backend/global', "BackendController@global");
+Route::get('/backend/global', "BackendController@world");
 
 Route::post('/backend/global', "BackendController@globalUpdate");
 
@@ -128,6 +128,10 @@ Route::post('/backend/home', "BackendController@postHome");
 Route::get('/backend/new_aircraft/{id}', "BackendController@newAircraft");
 
 Route::post('/backend/new_aircraft/{id}', "BackendController@newAircraftUpdate");
+
+Route::get('/backend/join_world/{id}', "BackendController@joinWorld");
+
+Route::post('/backend/join_world/{id}', "BackendController@joinWorld");
 
 Route::get('/terms', function(){
     return View::make('terms');

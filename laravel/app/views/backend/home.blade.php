@@ -27,7 +27,7 @@
 		@if($p->number_users < $p->cap)
 			<tr>
 				<?PHP $carbon = new Carbon\Carbon($p->current_time,'UTC') ?>
-				<td>{{$p->name}}</td><td>{{$p->number_users}}</td><td>{{$p->cap}}</td><td>{{$carbon->toFormattedDateString()}}</td><td>{{HTML::link('backend/join_world/$p->id', "Join", array())}}</td>	
+				<td>{{$p->name}}</td><td>{{$p->number_users}}</td><td>{{$p->cap}}</td><td>{{$carbon->toFormattedDateString()}}</td><td>{{HTML::link('backend/join_world/'.$p->id, "Join", array())}}</td>	
 			</tr>
 		@endif
 	@endforeach

@@ -133,10 +133,7 @@ class BackendController extends BaseController{
     public function newAircraft($id){
     	$types = AircraftType::all();
         $type = AircraftType::find($id);
-    	$list = array();
-    	foreach($types as $t){
-    		array_push($list, $t->name);
-    	}
+    	$list = $this->allTypes();
     	return View::make('backend.new_aircraft')->with('types', $list)->with('aircraft', $type);
     }
 
@@ -144,7 +141,66 @@ class BackendController extends BaseController{
         return Redirect::to('/backend/airplane/1');
     }
 
+    private function allTypes(){
+        $types = AircraftType::all();
+        $list = array();
+        foreach($types as $t){
+            array_push($list, $t->name);
+        }
+        return $list; 
+    }
+
     public function newAircraftUpdate($id){
+        if(Input::has('submit')){
+            $type = Input::get('type');
+            $aircraft = AircraftType::find($type + 1);
+            $list = $this->allTypes();
+            return View::make('backend.new_aircraft')->with('aircraft', $aircraft)->with('types', $list);
+        }
+        if(Input::has('buy')){
+
+        }
+
+        return $this->newAircraft($id);
+    }   
+
+    public function corporate(){
+
+    }
+
+    public function joinWorld($id){
+
+    }
+
+    public function usedAircraftUpdate(){
+
+    }
+
+    public function world(){
+
+    }
+
+    public function routes(){
+
+    }
+
+    public function createRoute(){
+
+    }
+
+    public function researchRoute(){
+
+    }
+
+    public function airports(){
+
+    }
+
+    public function gates(){
+
+    }
+
+    public function slots(){
         
     }
 }
