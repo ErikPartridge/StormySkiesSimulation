@@ -19,8 +19,9 @@
 			@foreach($fleet as $plane)
 				<tr>	
 					<?PHP $path = 'backend/aircraft/'.$plane['type'];
-						  $planePath = 'backend/airplane/'.$plane['id']; ?>
-					<td>{{HTML::link($planePath,$plane['registration'], array())}}</td><td>{{HTML::link($path, AircraftType::find($plane['type'])->name, array())}}</td><td>{{$plane['age']}} years</td><td>${{number_format($plane->value($types))}}</td><td>140 hours</td>
+						  $planePath = 'backend/airplane/'.$plane['id'];
+						  $type = AircraftType::find($plane['type']) ?>
+					<td>{{HTML::link($planePath,$plane['registration'], array())}}</td><td>{{HTML::link($path, $type->name, array())}}</td><td>{{$plane['age']}} years</td><td>${{number_format($plane->value($type, $plane['cycles']))}}</td><td>{{number_format($plane['hours_available'])}} hours</td>
 				</tr>
 			@endforeach
 		</table>

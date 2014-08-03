@@ -272,13 +272,7 @@ class Airplane extends Eloquent{
         return $this->belongsTo('Airport', 'location');
     }
 
-    public function value($types){
-        $t = null;
-        foreach($types as $ty){
-            if($ty->id == $this->id){
-                $t = $ty;
-            }
-        }
-        return $t->price * .75 * ((50000 - $this->cycles) /50000);
+    public function value($t, $cycles){
+        return $t->price * .75 * ((50000 - $cycles) /50000);
     }
 }

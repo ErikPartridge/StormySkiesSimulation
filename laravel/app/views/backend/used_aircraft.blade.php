@@ -11,8 +11,9 @@
 				<tr>
 				<?PHP $path = 'backend/aircraft/'.$p->type;
 						  $planePath = 'backend/airplane/'.$p->id;
+						  $type = AircraftType::find($p->type);
 						   ?>
-					<td>{{HTML::link($planePath,$p->registration, array())}}</td><td>{{HTML::link($path, AircraftType::find($p->type)->name, array())}}</td><td>{{Airline::find($p->owner)->name}}</td><td>${{number_format($p->value($types))}}</td><td>{{ Form::open(array('url' => '#','method' => 'POST'))}} {{Form::submit('Buy', array('url' => '/backend/used_aircraft/'.$p->id,'name' => $p->id, 'class' => 'main-button'))}} {{Form::close()}}</td>
+					<td>{{HTML::link($planePath,$p->registration, array())}}</td><td>{{HTML::link($path, $type->name, array())}}</td><td>{{Airline::find($p->owner)->name}}</td><td>${{number_format($p->value($type, $p->cycles))}}</td><td>{{ Form::open(array('url' => '#','method' => 'POST'))}} {{Form::submit('Buy', array('url' => '/backend/used_aircraft/'.$p->id,'name' => $p->id, 'class' => 'main-button'))}} {{Form::close()}}</td>
 				</tr>
 			@endforeach
 		</table>

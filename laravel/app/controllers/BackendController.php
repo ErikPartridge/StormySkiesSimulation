@@ -153,9 +153,7 @@ class BackendController extends BaseController{
     public function newAircraftUpdate($id){
         if(Input::has('submit')){
             $type = Input::get('type');
-            $aircraft = AircraftType::find($type + 1);
-            $list = $this->allTypes();
-            return View::make('backend.new_aircraft')->with('aircraft', $aircraft)->with('types', $list);
+            return Redirect::to('/backend/new_aircraft/'.AircraftType::find($type + 1)->id);
         }
         if(Input::has('buy')){
 
@@ -192,6 +190,10 @@ class BackendController extends BaseController{
 
     public function researchRoute(){
 
+    }
+
+    public function editRoutes(){
+        
     }
 
     public function airports(){

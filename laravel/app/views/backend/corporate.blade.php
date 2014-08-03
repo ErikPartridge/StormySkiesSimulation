@@ -30,7 +30,7 @@
 				<td>Reputation</td><td>{{$airline->reputation}}</td>
 			</tr>
 			<tr>
-				<td>Earnings</td><td>${{number_format($airline->earings)}}</td>
+				<td>Earnings</td><td>${{number_format($airline->earnings)}}</td>
 			</tr>
 			<tr>
 				<td>Costs</td><td>${{number_format($airline->costs)}}</td>
