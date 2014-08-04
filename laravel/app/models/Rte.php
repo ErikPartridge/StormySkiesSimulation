@@ -6,10 +6,8 @@
  * Time: 3:04 PM
  */
 
-namespace libraries\airline;
 
-
-class Route extends Eloquent{
+class Rte extends Eloquent{
 
     private $flightNumber;
 
@@ -45,27 +43,9 @@ class Route extends Eloquent{
 
     private $worldId;
 
-    function __construct($worldId, $aircraftType, $airline, $arrive, $cancelled, $bizPrice, $departGmt, $delayed, $ePlusPrice, $depart, $firstPrice, $ecoPrice, $flightTime, $flightNumber, $onTime, $flights, $operates, $revenue, $started)
+    function __construct()
     {
-        $this->worldId = $worldId;
-        $this->aircraftType = $aircraftType;
-        $this->airline = $airline;
-        $this->arrive = $arrive;
-        $this->cancelled = $cancelled;
-        $this->bizPrice = $bizPrice;
-        $this->departGmt = $departGmt;
-        $this->delayed = $delayed;
-        $this->ePlusPrice = $ePlusPrice;
-        $this->depart = $depart;
-        $this->firstPrice = $firstPrice;
-        $this->ecoPrice = $ecoPrice;
-        $this->flightTime = $flightTime;
-        $this->flightNumber = $flightNumber;
-        $this->onTime = $onTime;
-        $this->flights = $flights;
-        $this->operates = $operates;
-        $this->revenue = $revenue;
-        $this->started = $started;
+
     }
 
     /**
@@ -389,4 +369,5 @@ class Route extends Eloquent{
     }
 
 
-} 
+
+}

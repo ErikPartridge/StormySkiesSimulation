@@ -181,7 +181,10 @@ class BackendController extends BaseController{
     }
 
     public function routes(){
-
+        $airline = Sentry::getUser()->active_airline;
+        $rts = Rte::where('airline', $airline)->get();
+        $airports = Airport::all();
+        return View::make('backend.routes')->with('routes', $rts)->with('airports', $airports)->with('airline', Airline::find($airline));
     }
 
     public function createRoute(){

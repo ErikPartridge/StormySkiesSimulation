@@ -23,6 +23,10 @@ Route::post('/backend/corporate/{id}', "BackendController@corporateUpdate");
 
 Route::get('/backend/corporate/{id}', "BackendController@corporate");
 
+Route::get('/backend/airport/{id}', "BackendController@getAirport");
+
+Route::post('/backend/airport/{id}', "BackendController@postAirport");
+
 Route::get('/backend/overview', "BackendController@overview");
 
 Route::post('/backend/overview', "BackendController@postOverview");
