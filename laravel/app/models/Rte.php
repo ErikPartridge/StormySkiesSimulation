@@ -45,7 +45,6 @@ class Rte extends Eloquent{
 
     function __construct()
     {
-
     }
 
     /**

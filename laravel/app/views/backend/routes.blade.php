@@ -8,7 +8,8 @@
 	$lat = $hq->latitude;
 	$lon = $hq->longitude;
  ?>
-  <div class="map" id="map"style="height:375px"></div>
+  <br><br><br>
+  <div class="map" id="map"style="height:100%"></div>
  <script>
 	var map = L.map('map', {
     	center: [{{$lat}}, {{$lon}}],
@@ -18,8 +19,6 @@
     attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
     maxZoom: 9
 	}).addTo(map);
- </script>
- <script>
 @foreach($routes as $r)
 	<?PHP $depart = null;
 		$arrive = null;

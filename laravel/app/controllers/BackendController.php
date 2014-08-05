@@ -169,7 +169,7 @@ class BackendController extends BaseController{
         return View::make('backend.corporate')->with('airline', Airline::find(Sentry::getUser()->active_airline));
     }
     public function joinWorld($id){
-
+        return View::make('backend.join_world')->with('world', World::find($id));
     }
 
     public function usedAircraftUpdate(){
@@ -196,6 +196,14 @@ class BackendController extends BaseController{
     }
 
     public function editRoutes(){
+        
+    }
+
+    public function editRoute($id){
+        
+    }
+
+    public function editRouteUpdate($id){
         
     }
 

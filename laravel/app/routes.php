@@ -67,6 +67,10 @@ Route::get('/backend/edit_routes', "BackendController@editRoutes");
 
 Route::post('/backend/edit_routes', "BackendController@editRoutesUpdate");
 
+Route::get('/backend/edit_routes/{id}', "BackendController@editRoute");
+
+Route::post('/backend/edit_routes/{id}', "BackendController@editRouteUpdate");
+
 Route::get('/backend/research_routes', "BackendController@researchRoute");
 
 Route::post('/backend/research_routes', "BackendController@researchRouteUpdate");
