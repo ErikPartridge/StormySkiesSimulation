@@ -19,14 +19,9 @@ class Country extends \Eloquent{
 
     private $openMarket;
 
-    function __construct($capital, $euMember, $name, $iso, $openMarket)
+    function __construct()
     {
-        $this->capital = $capital;
-        $this->euMember = $euMember;
-        $this->name = $name;
-        $this->iso = $iso;
-        $this->openMarket = $openMarket;
-        $this->worldId = $worldId;
+
     }
 
 

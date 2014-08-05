@@ -179,6 +179,7 @@ class BackendController extends BaseController{
         $a->hours = 0;
         $a->location = $owner->headquarters;
         $a->cycles = 0;
+        $a->hours_available = 140;
         $a->save();
         $a->fin = $a->id;
         $registration = 'N'.rand(0,9).rand(0,9).rand(0,9).chr(rand(0,25) + 65).chr(rand(0,25) + 65);
@@ -315,6 +316,13 @@ class BackendController extends BaseController{
             }
         }
         return Redirect::to('backend/corporate/'.$k);
+    }
+
+    public function getAirport($id){
+        $a = Airport::find($id);
+
+        return View::make('backend.airport')->with('airport', $a);
+
     }
 }
 

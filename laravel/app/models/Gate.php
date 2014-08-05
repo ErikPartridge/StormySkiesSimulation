@@ -18,12 +18,9 @@ class Gate extends \Eloquent {
 
     private $worldId;
 
-    function __construct($number, $airport, $owner, $worldId)
+    function __construct()
     {
-        $this->number = $number;
-        $this->airport = $airport;
-        $this->owner = $owner;
-        $this->worldId = $worldId;
+
     }
 
     /**

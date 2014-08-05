@@ -26,19 +26,19 @@
 				<td>Engine</td><td>{{$airplane->belongsTo('Engine', 'engine')->get()->first()['name']}}</td>
 			</tr>
 			<tr>
-				<td>Age</td><td>{{$airplane->age}} years</td>
+				<td>Age</td><td>{{number_format($airplane->age, 2)}} years</td>
 			</tr>
 			<tr>
-				<td>Cycles</td><td>{{$airplane->cycles}}</td>
+				<td>Cycles</td><td>{{number_format($airplane->cycles)}}</td>
 			</tr>
 			<tr>
-				<td>Hours</td><td>{{$airplane->hours}}</td>
+				<td>Hours</td><td>{{number_format($airplane->hours, 2)}}</td>
 			</tr>
 			<tr>
 				<td>Location</td><td>{{$airplane->belongsTo('Airport', 'location')->get()->first()['icao']}}</td>
 			</tr>
 			<tr>
-				<td>Hours Available</td><td>{{$airplane->hours_available}}</td>
+				<td>Hours Available</td><td>{{number_format($airplane->hours_available, 1)}}</td>
 			</tr>
 		</table>
 @stop

@@ -145,6 +145,10 @@ Route::get('/backend/join_world/{id}', "BackendController@joinWorld");
 
 Route::post('/backend/join_world/{id}', "BackendController@joinWorld");
 
+Route::post('/user/code/{id}', "UserController@checkCode");
+
+Route::get('/user/code/{id}', "UserController@checkCode");
+
 Route::get('/terms', function(){
     return View::make('terms');
 });

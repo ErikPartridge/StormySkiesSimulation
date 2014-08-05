@@ -21,13 +21,13 @@
 				<td>Manufacturer</td><td>{{$aircraft->manufacturer}}</td>
 			</tr>
 			<tr>
-				<td>Range</td><td>{{$aircraft->range}} mi</td>
+				<td>Range</td><td>{{number_format($aircraft->range)}} mi</td>
 			</tr>
 			<tr>
-				<td>Minimum Runway</td><td>{{$aircraft->minimum_runway}} feet</td>
+				<td>Minimum Runway</td><td>{{number_format($aircraft->minimum_runway)}} feet</td>
 			</tr>
 			<tr>
-				<td>Average Fuel Burn</td><td>~{{$aircraft->fuel_burn}} pph</td>
+				<td>Average Fuel Burn</td><td>~{{number_format($aircraft->fuel_burn)}} pph</td>
 			</tr>
 			<tr>
 				<td>Cruise Speed</td><td>{{$aircraft->cruise_speed}} mph</td>

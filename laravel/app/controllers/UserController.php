@@ -94,7 +94,7 @@ class UserController extends \BaseController {
 
         $user = Sentry::createUser(array('email' => $email, 'password' => $password, 'first_name' => $first, 'last_name' => $last));
         $code = $user->getActivationCode();
-        
+
         Mailgun::send('emails.code', array('code' => $code, 'name' => $first), function($message) use($user)
         {   
             $string = $user->first_name.' '.$user->last_name;
@@ -102,6 +102,23 @@ class UserController extends \BaseController {
         });
 
         return Redirect::to('user/success')->with('name', $first);
+    }
+
+    public function checkCode($id){
+        $user = null;
+        try{
+            $user = Sentry::findUserByActivationCode($id);
+            if($user != null){
+                if($user->attemptActivation($id)){
+                    return Redirect::to('user/login');
+                }else{
+                    return Redirect::to('/user/register');
+                }
+            }
+        }catch(Exception $e){
+            return Redirect::to('/user/register');
+        }
+
     }
 
 }
