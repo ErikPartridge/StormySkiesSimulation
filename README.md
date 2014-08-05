@@ -3,7 +3,7 @@
 A highly detailed, authentic simulation of the airline industry (P4 for DWA15). Check out our wiki (that still needs to have stuff put in it)!
 
 ## takeoffsim.com
-Check it out as soon as it goes live August 1st!
+Release has been delayed due to an unfortunately successful attack on the server.
 
 ### Uses
 
