@@ -31,7 +31,7 @@ class DemandCreator {
         for($i = 0; $i < count($inRegion); $i++){
             $apt = $inRegion[$i];
             $add = ($scores[$i] / $sumOfScores) * $city->getPopulation() * 1.7 / 365.0;
-            $apt->setAllocatedDemand($apt->getAllocatedDemand() + $add);
+            $apt->allocated_demand = ($apt->allocated_demand + $add);
         }
     }
 } 

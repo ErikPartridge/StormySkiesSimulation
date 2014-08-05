@@ -12,11 +12,9 @@
         "barryvdh/laravel-debugbar": "1.*",
         "cartalyst/sentry": "2.1.*",
         "guzzlehttp/guzzle": "~4.0",
-		"liebig/cron": "dev-master",
 		"bogardo/mailgun": "3.0.*"
 	},
 	"require-dev": {
-    	"way/generators": "2.*"
 	},
 	"autoload": {
 		"classmap": [
