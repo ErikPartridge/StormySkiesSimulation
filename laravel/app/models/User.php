@@ -192,7 +192,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface, Billa
     }
 
     public function airlines(){
-        return $this->hasMany('airlines', 'ceo');
+        return $this->hasMany('Airline', 'ceo');
     }
 
 }

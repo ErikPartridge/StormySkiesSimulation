@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomeController@showWelcome');
 
+Route::get('/backend/enter_world/{id}', "BackendController@enterWorld");
+
 Route::get('/backend/airplane/{id}', "BackendController@airplaneDetails");
 
 Route::post('/backend/airplane/{id}', "BackendController@airplaneUpdate");

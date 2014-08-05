@@ -7,27 +7,7 @@ class BackendController extends BaseController{
 	}
 
 	public function overview(){
-		$user = Sentry::getUser();
-        $airlines = Airline::all();
-        $participated = array();
-		$count = 0;
-		$worlds = World::all();
-        foreach($airlines as $a){
-            if($a->ceo == $user->id){
-                array_push($participated, $a->world_id);
-            }
-        }
-        foreach($participated as $p){
-            $count++;
-        }
-		$full = 0;
-		foreach($worlds as $w){
-			if($w->number_users == $w->cap){
-				$full++;
-			}
-		}
-
-        return View::make('backend.overview')->with('participated', $participated)->with('count', $count)->with('worlds', $worlds)->with('full', $full);
+        return Redirect::to('backend/home');
 	}
 
     public function home(){
@@ -115,7 +95,7 @@ class BackendController extends BaseController{
         $all = Airplane::all();
         $planes = array();
         foreach($all as $a){
-            if($a->for_sale){
+            if($a->for_sale && $a->world_id == Sentry::getUser()->active_airline){
                 array_push($planes, $a);
             }
         }
@@ -187,12 +167,18 @@ class BackendController extends BaseController{
         if($airline->profits >= $cost && count($toBuy) > 0){
             $airline->costs += $cost;
             $airline->profits -= $cost;
+            $flights = Flight::all();
             foreach($toBuy as $plane){
                 $t = AircraftType::find($plane->type);
                 $original = Airline::find($plane->owner);
                 $original->profits += $plane->value($t, $plane->cycles);
                 $original->earnings += $plane->value($t, $plane->cycles);
                 $original->save(); 
+                foreach($flights as $f){
+                    if($f->airplane_id == $plane->id){
+                        $f->forceDelete();
+                    }
+                }
                 $plane->for_sale = 0;
                 $plane->owner = $airline->id;
                 $plane->save();
@@ -254,6 +240,20 @@ class BackendController extends BaseController{
 
     public function slots(){
 
+    }
+
+    public function enterWorld($id){
+        $user = Sentry::getUser();
+        $airlines = Airline::where('ceo', '=', $user->id)->get();
+        $k = 1;
+        foreach($airlines as $a){
+            if($a->world_id == $id){
+                $user->active_airline = $a->id;
+                $k = $a->id;
+                $user->save();
+            }
+        }
+        return Redirect::to('backend/corporate/'.$k);
     }
 }
 

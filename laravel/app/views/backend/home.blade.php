@@ -7,13 +7,13 @@
 		<h2>Worlds You Participate In:</h2>
 		<table border="1">
 		<tr>
-			<th>Name</th><th>Users</th><th>Max Users</th><th>In-Game Time</th>
+			<th>Name</th><th>Users</th><th>Max Users</th><th>In-Game Time</th><th>Enter</th>
 		</tr>
 	@foreach($participated as $q)
 			<?PHP $p = DB::table('worlds')->where('id', $q)->first(); ?>
 			<tr>
 				<?PHP $carbon = new Carbon\Carbon($p->current_time,'UTC') ?>
-				<td>{{$p->name}}</td><td>{{$p->number_users}}</td><td>{{$p->cap}}</td><td>{{$carbon->toFormattedDateString()}}</td>	
+				<td>{{$p->name}}</td><td>{{$p->number_users}}</td><td>{{$p->cap}}</td><td>{{$carbon->toFormattedDateString()}}</td><td>{{HTML::link('backend/enter_world/'.$p->id, "Enter", array())}}</td>
 			</tr>
 	@endforeach
 	</table>
