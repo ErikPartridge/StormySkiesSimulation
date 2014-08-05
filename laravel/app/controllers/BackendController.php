@@ -143,10 +143,12 @@ class BackendController extends BaseController{
         //Update the new aircraft view, usually involves a purchase
         $user = Sentry::getUser();
         $airline = Airline::find($user->active_airline);
+        //Update the view
         if(Input::has('submit')){
             $type = Input::get('type');
             return Redirect::to('/backend/new_aircraft/'.AircraftType::find($type + 1)->id);
         }
+        //
         if(Input::has('buy')){
             $amount = Input::get('number');
             $type = AircraftType::find($id);
@@ -158,9 +160,10 @@ class BackendController extends BaseController{
                 $airline->profits -= $type->price;
                 $airline->costs += $type->price;
             }
+        $airline->save();
         }
 
-        return Redirect::to('/backend/my_fleet/'.$user->active_airline);
+        return Redirect::to('/backend/my_fleet/');
     }   
 
     public function makeAirplane($type, Airline $owner){
@@ -287,8 +290,12 @@ class BackendController extends BaseController{
         return View::make('backend.airports')->with('airports', $list);
     }
 
-    public function gates(){
+    public function gates($id){
 
+    }
+
+    public function gateRedirect(){
+        return Redirect::to('/backend/gates/1');
     }
 
     public function slots(){

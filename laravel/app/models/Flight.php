@@ -37,22 +37,8 @@ class Flight extends \Eloquent{
 
     private $worldId;
 
-    function __construct($aircraft, $arrivesGmt, $cancelled, $business, $delayed, $date, $departsGmt, $ecoPlus, $economy, $first, $flyingTime, $fuelBurn, $route, $worldId)
+    function __construct()
     {
-        $this->aircraft = $aircraft;
-        $this->arrivesGmt = $arrivesGmt;
-        $this->cancelled = $cancelled;
-        $this->business = $business;
-        $this->delayed = $delayed;
-        $this->date = $date;
-        $this->departsGmt = $departsGmt;
-        $this->ecoPlus = $ecoPlus;
-        $this->economy = $economy;
-        $this->first = $first;
-        $this->flyingTime = $flyingTime;
-        $this->fuelBurn = $fuelBurn;
-        $this->route = $route;
-        $this->worldId = $worldId;
     }
 
     /**
