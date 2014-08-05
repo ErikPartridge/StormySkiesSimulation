@@ -173,7 +173,36 @@ class BackendController extends BaseController{
     }
 
     public function usedAircraftUpdate(){
+        $list = Input::except('_token');
+        $toBuy = array();
+        $cost = 0;
+        foreach($list as $i){
+                $airplane = Airplane::find($i);
+                if($airplane->for_sale){
+                    array_push($toBuy, $airplane);
+                    $cost += $airplane->value(AircraftType::find($airplane->type), $airplane->cycles);
+                }
+        }
+        $airline = Airline::find(Sentry::getUser()->active_airline);
+        if($airline->profits >= $cost && count($toBuy) > 0){
+            $airline->costs += $cost;
+            $airline->profits -= $cost;
+            foreach($toBuy as $plane){
+                $t = AircraftType::find($plane->type);
+                $original = Airline::find($plane->owner);
+                $original->profits += $plane->value($t, $plane->cycles);
+                $original->earnings += $plane->value($t, $plane->cycles);
+                $original->save(); 
+                $plane->for_sale = 0;
+                $plane->owner = $airline->id;
+                $plane->save();
+            }
+            $airline->save();
 
+            return Redirect::to('/backend/my_fleet');
+        }else{
+            return Redirect::to('/backend/used_aircraft');
+        }
     }
 
     public function world(){

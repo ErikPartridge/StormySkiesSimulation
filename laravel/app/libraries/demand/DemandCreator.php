@@ -24,13 +24,13 @@ class DemandCreator {
             $coordB = new Coordinate\Coordinate(array($apt->getLatitude(), $apt->getLongitude()));
             $distance = $geoTools->distance()->setFrom($coordA)->setTo($coordB)->greatCircle();
             $distance = pow($distance, 2);
-            $score = \libraries\database\AirportDatabase()->getNumFlights($apt) / $distance;
+            $score = $apt->belongsToMany('Route', 'airport_depart')->sizeof() / $distance;
             $sumOfScores += $score;
             $scores[] = $score;
         }
         for($i = 0; $i < count($inRegion); $i++){
             $apt = $inRegion[$i];
-            $add = ($scores[$i] / $sumOfScores) * $city->getPopulation() * 1.7 / 365.0;
+            $add = ($scores[$i] / $sumOfScores) * $city->population * 1.7 / 365.0;
             $apt->allocated_demand = ($apt->allocated_demand + $add);
         }
     }
