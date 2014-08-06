@@ -354,8 +354,29 @@ class BackendController extends BaseController{
         return Redirect::to('/backend/gates/1');
     }
 
-    public function slots(){
+    public function gatesUpdate($id){
+        
+    }
 
+    public function slots($id){
+        $apt = Airport::find($id);
+        if($apt->slot_controlled){
+            $slots = $apt->hasMany('Slot', 'airport')->get();
+            $user = Sentry::getUser()->active_airline;
+            $owned = array();
+            foreach($slots as $s){
+                if($s->owner == $user){
+                    array_push($owned, $s);
+                }
+            }
+            return View::make('backend.slots')->with('controlled', $apt->slot_controlled)->with('apt', $apt)->with('owned', $owned);
+        }else{
+            return View::make('backend.slots')->with('controlled', false)->with('apt', $apt);
+        }
+    }
+
+    public function slotsRedirect(){
+        return Redirect::to('/backend/slots/1');
     }
     private function hasAirline(){
         $airline = Sentry::getUser()->active_airline;
@@ -395,6 +416,52 @@ class BackendController extends BaseController{
         $airline = Airline::find(Sentry::getUser()->active_airline);
         $gates = $airline->gates();
         return View::make('backend.gates')->with('gates', $gates);
+    }
+
+    public function slotsUpdate($id){
+        //Get the input, the variables required to run the method
+        $input = Input::except('_token');
+        $airport = Airport::find($id);
+        $slots = $airport->hasMany('Slot', 'airport')->get();
+        $user = Sentry::getUser()->active_airline;
+        $airline = Airline::find($user);
+        $owned = array();
+        //array of slots that the airline owns
+        foreach($slots as $s){
+            if($s->owner == $user){
+                    array_push($owned, $s);
+            }
+        }
+        //Delete/sell the required slots
+        for($i = 0; $i < $input['sell_amount']; $i++){
+            if(count($owned) > 0){
+                $owned[0]->forceDelete();
+                $airline->costs -= 8000;
+                $airline->profits += 8000;
+                $airline->save();
+            }else{
+                break;
+            }
+        }
+        //If the airline has money, create a slot
+        for($i = 0; $i < $input['buy_amount']; $i++){
+            if($this->hasSlots($airport))
+            $airline->costs += 8000;
+            $airline->profits -= 8000;
+            $s = new Slot();
+            $s->airport = $airport->id;
+            $s->owner = $airline->id;
+            $s->world_id = $airline->world_id;
+            $s->save();
+            $airline->save();
+        }
+
+        return Redirect::to('/backend/slots/'.$id);
+
+    }
+
+    public function hasSlots($airport){
+        return (($airport->max_flights_per_hour * 24) - count($airport->hasMany('Slot', 'airport')->get())) > 0;
     }
 }
 

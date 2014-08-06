@@ -6,10 +6,8 @@
  * Time: 3:33 PM
  */
 
-namespace libraries\airport;
 
-
-class Slot {
+class Slot extends Eloquent {
 
     private $time;
 
@@ -19,12 +17,9 @@ class Slot {
 
     private $worldId;
 
-    function __construct($airport, $owner, $time, $worldId)
+    function __construct()
     {
-        $this->airport = $airport;
-        $this->owner = $owner;
-        $this->time = $time;
-        $this->worldId = $worldId;
+
     }
 
 

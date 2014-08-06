@@ -279,35 +279,35 @@ class Airport extends Eloquent{
     }
 
     public function regions(){
-        return $this->belongsToMany('Region');
+        return $this->belongsToMany('Region')->get();
     }
 
     public function world(){
-        return $this->belongsTo('World');
+        return $this->belongsTo('World')->get();
     }
 
     public function country(){
-        return $this->belongsTo('Country');
+        return $this->belongsTo('Country')->get();
     }
 
     public function gates(){
-        return $this->hasMany('Gate');
+        return $this->hasMany('Gate')->get();
     }
 
     public function slots(){
-        return $this->hasMany('Slot');
+        return $this->hasMany('Slot', 'airport')->get();
     }
 
     public function hubbed(){
-        return $this->belongsToMany('Airline');
+        return $this->belongsToMany('Airline')->get();
     }
 
     public function departures(){
-        return $this->belongsToMany('Route', 'airport_depart');
+        return $this->belongsToMany('Route', 'airport_depart')->get();
     }
 
     public function arrivals(){
-        return $this->belongsToMany('Route', 'airport_arrive');
+        return $this->belongsToMany('Route', 'airport_arrive')->get();
     }
 
 } 

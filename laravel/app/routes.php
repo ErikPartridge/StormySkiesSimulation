@@ -87,9 +87,17 @@ Route::get('/backend/gates', "BackendController@listGates");
 
 Route::post('/backend/gates', "BackendController@listGates");
 
-Route::get('/backend/slots', "BackendController@slots");
+Route::get('/backend/gates/{id}', "BackendController@gates");
 
-Route::post('/backend/slots', "BackendController@slotsUpdate");
+Route::post('/backend/gates/{id}', "BackendController@gatesUpdate");
+
+Route::get('/backend/slots', "BackendController@slotsRedirect");
+
+Route::post('/backend/slots', "BackendController@slotsRedirect");
+
+Route::get('/backend/slots/{id}', "BackendController@slots");
+
+Route::post('/backend/slots/{id}', "BackendController@slotsUpdate");
 
 Route::get('/backend/global', "BackendController@world");
 

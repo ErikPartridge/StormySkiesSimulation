@@ -37,4 +37,9 @@
 				<td>Gates</td><td>{{count($airport->hasMany('Gate', 'airport')->get())}}</td>
 			</tr>
 		</table>
+		<div id="container">
+		@if($airport->slot_controlled)
+			{{HTML::link('/backend/slots/'.$airport->id, "Slots", array())}}
+		@endif
+		</div>
 @stop
