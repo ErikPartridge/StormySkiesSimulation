@@ -4,6 +4,10 @@
 <br>
 	<div id="container">
 		<h3>{{$aircraft->name}}</h3>
+		{{Form::open(array('url' => '#', 'method' => 'POST'))}}
+		{{Form::select('type', $types)}}
+		{{Form::submit('Submit', array('id' => 'submit', 'name' => 'submit'))}}
+		{{Form::close()}}
 		{{HTML::image('images/aircraft/'.$aircraft->icao.'.jpg', $aircraft->icao, array('id' => 'mid-image'))}}
 		<br>
 		<table id ="center-table">

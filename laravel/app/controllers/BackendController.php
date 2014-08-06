@@ -77,7 +77,25 @@ class BackendController extends BaseController{
     	}
 
     	$aircraft = AircraftType::find($id);
-    	return View::make('backend.aircraft')->with('aircraft', $aircraft);
+        $list = $this->allTypes();
+    	return View::make('backend.aircraft')->with('aircraft', $aircraft)->with('types', $list);
+    }
+
+    public function aircraftDetailsUpdate($id){
+        if(!$this->hasAirline()){
+            return Redirect::to('/backend/home');
+        }
+        if($id==null){
+            return Redirect::to('/backend/aircraft/1');
+        }
+        if(Input::has('submit')){
+            $type = Input::get('type');
+            return Redirect::to('/backend/new_aircraft/'.AircraftType::find($type + 1)->id);
+        }
+
+        $aircraft = AircraftType::find($id);
+        $list = $this->allTypes();
+        return View::make('backend.aircraft')->with('aircraft', $aircraft)->with('types', $list);
     }
 
 
@@ -280,7 +298,7 @@ class BackendController extends BaseController{
     }
 
     public function world(){
-        
+
     }
 
     public function routes(){
