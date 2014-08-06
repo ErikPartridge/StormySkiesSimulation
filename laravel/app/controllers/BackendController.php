@@ -280,7 +280,7 @@ class BackendController extends BaseController{
     }
 
     public function world(){
-
+        
     }
 
     public function routes(){
@@ -295,7 +295,8 @@ class BackendController extends BaseController{
     }
 
     public function createRoute(){
-
+        $apts = Airport::where('world_id', '=', Airline::find(Sentry::getUser()->active_airline)->world_id)->get();
+        return View::make('backend.create_route')->with('airports', $apts);
     }
 
     public function researchRoute(){

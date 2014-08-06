@@ -1,1 +1,5 @@
-/Users/Erik/TakeoffSim/laravel/app/views/backend/slots.blade.php
+@extends('templates/main')
+
+@section('content')
+
+@stop
