@@ -12,7 +12,9 @@ class InsertGatesAirports extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::table('airports', function(Blueprint $table){
+			$table->integer('gates');
+		});
 	}
 
 	/**

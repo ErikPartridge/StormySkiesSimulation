@@ -24,11 +24,6 @@
                 </ul>
             </li>
             <li>{{HTML::link("backend/routes", "Routes", array())}}
-                <ul>
-                    <li>{{HTML::link('backend/create_route', "Create Route", array())}}</li>
-                    <li>{{HTML::link('backend/edit_routes', "Edit Routes", array())}}</li>
-                    <li>{{HTML::link('backend/research_routes', "Research Route", array())}}</li>
-                </ul>
             </li>
             <li>{{HTML::link("backend/airports", "Airports", array())}}
                 <ul>
@@ -36,7 +31,6 @@
                     <li>{{HTML::link('backend/slots', "Slots", array())}}</li>
                 </ul>
             </li>
-            <li>{{HTML::link("backend/global", "World", array())}}</li>
             <li>{{HTML::link("user/logoff", "Log Out", array())}}</li>
         </ul>
     </div>

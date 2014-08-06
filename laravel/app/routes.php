@@ -153,7 +153,7 @@ Route::post('/backend/new_aircraft/{id}', "BackendController@newAircraftUpdate")
 
 Route::get('/backend/join_world/{id}', "BackendController@joinWorld");
 
-Route::post('/backend/join_world/{id}', "BackendController@joinWorld");
+Route::post('/backend/join_world/{id}', "BackendController@joinWorldSubmit");
 
 Route::post('/user/code/{id}', "UserController@checkCode");
 

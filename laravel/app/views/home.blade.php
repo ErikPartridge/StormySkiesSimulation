@@ -17,7 +17,6 @@
                 <input type="submit" class="main-button" value="Join" name = "join">
                 <input type="submit" class="main-button" value="Login" name = "login">
                 <input type="submit" class="main-button" value="FAQ" name = "faq">
-                <input type="submit" class="main-button" value="Wiki" name = "wiki">
             {{ Form::close() }}
         </div>
     </div>
@@ -44,7 +43,7 @@
             @foreach($worlds as $p)
             <tr>
                 <?PHP $carbon = new Carbon\Carbon($p->current_time,'UTC') ?>
-                <td>{{$p->name}}</td><td>{{$p->number_users}}</td><td>{{$p->cap}}</td><td>{{$carbon->toFormattedDateString()}}</td> 
+                <td>{{$p->name}}</td><td>{{count($p->hasMany('Airline'))}}</td><td>{{$p->cap}}</td><td>{{$carbon->toFormattedDateString()}}</td> 
             </tr>
             @endforeach
             </table>

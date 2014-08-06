@@ -135,7 +135,7 @@ class BackendController extends BaseController{
         $all = Airplane::all();
         $planes = array();
         foreach($all as $a){
-            if($a->for_sale && $a->world_id == Sentry::getUser()->active_airline){
+            if($a->for_sale && $a->world_id == Airline::find(Sentry::getUser()->active_airline)->world_id){
                 array_push($planes, $a);
             }
         }
@@ -245,7 +245,55 @@ class BackendController extends BaseController{
 
     public function joinWorld($id){
         $user = Sentry::getUser();
-        return View::make('backend.join_world')->with('world', World::find($id));
+        $apts = World::find($id)->hasMany('Airport')->get();
+        $airports = array();
+        foreach($apts as $a){
+            $str = $a->icao.":".$a->name;
+            array_push($airports, $str);
+        }
+        return View::make('backend.join_world')->with('world', World::find($id))->with('user', $user)->with('airports', $airports);
+    }
+
+    public function joinWorldSubmit($id){
+        $input = Input::except('_token');
+        $validator = Validator::make(
+            array(
+                'name' => $input['name'],
+                'iata' => $input['iata'],
+                'icao' => $input['icao'] 
+            ),
+            array(
+                'name' => 'required|unique:airlines',
+                'icao' => 'required|unique:airlines|min:3|max:3',
+                'iata' => 'required|unique:airlines|min:2|max:2'
+            )
+        );
+        if($validator->fails()){
+            return Redirect::to('backend/join_world/'.$id);
+        }
+        print_r($input['headquarters']);
+        $airline = new Airline();
+        $airline->name = $input['name'];
+        $airline->iata = $input['iata'];
+        $airline->icao = $input['icao'];
+        $airline->ceo = Sentry::getUser()->id;
+        $airline->country = 1;
+        $airline->costs = 0;
+        $airline->earnings = 100000000;
+        $airline->profits = 100000000;
+        $airline->flight_attendant_pay = 50000;
+        $airline->pilot_pay = 50000;
+        $airline->mechanic_pay = 50000;
+        $airline->reputation = 0;
+        $airline->headquarters = $input['headquarters'] +1;
+        $airline->world_id = $id;
+        $airline->save();
+        $airline->hubs()->attach(Airport::find($input['headquarters']+1)->id);
+        $airline->save();
+        $user = Sentry::getUser();
+        $user->active_airline = $airline->id;
+        $user->save();
+        return Redirect::to('/backend/corporate');
     }
 
     public function usedAircraftUpdate(){
@@ -298,7 +346,7 @@ class BackendController extends BaseController{
     }
 
     public function world(){
-
+        return Redirect::to('/backend/corporate');
     }
 
     public function routes(){
@@ -318,25 +366,25 @@ class BackendController extends BaseController{
     }
 
     public function researchRoute(){
-
+        return Redirect::to('/backend/routes');
     }
 
     public function editRoutes(){
-        
+        return Redirect::to('/backend/routes');
     }
 
     public function editRoute($id){
-        
+        return Redirect::to('/backend/routes');        
     }
 
     public function editRouteUpdate($id){
-        
+        return Redirect::to('/backend/routes');    
     }
 
     public function airports(){
         //Render a list of all the airports
         $airports = Airport::all();
-        $worldId = Sentry::getUser()->active_airline;
+        $worldId = Airline::find(Sentry::getUser()->active_airline)->world_id;
         $list = array();
         foreach($airports as $a){
             if($a->world_id == $worldId){
@@ -347,7 +395,16 @@ class BackendController extends BaseController{
     }
 
     public function gates($id){
-
+        $apt = Airport::find($id);
+        $gates = $apt->hasMany('Gate', 'airport')->get();
+        $user = Sentry::getUser()->active_airline;
+        $owned = array();
+        foreach($gates as $g){
+            if($g->owner == $user){
+                array_push($owned, $g);
+            }
+        }
+        return View::make('backend.gate')->with('apt', $apt)->with('owned', $owned);
     }
 
     public function gateRedirect(){
@@ -355,7 +412,46 @@ class BackendController extends BaseController{
     }
 
     public function gatesUpdate($id){
-        
+        //Get the input, the variables required to run the method
+        $input = Input::except('_token');
+        $airport = Airport::find($id);
+        $gates = $airport->hasMany('Gate', 'airport')->get();
+        $user = Sentry::getUser()->active_airline;
+        $airline = Airline::find($user);
+        $owned = array();
+        //array of slots that the airline owns
+        foreach($gates as $s){
+            if($s->owner == $user){
+                array_push($owned, $s);
+            }
+        }
+        //Delete/sell the required slots
+        for($i = 0; $i < $input['sell_amount']; $i++){
+            if(count($owned) > 0){
+                $owned[0]->forceDelete();
+                $airline->costs -= 8000;
+                $airline->profits += 8000;
+                $airline->save();
+            }else{
+                break;
+            }
+        }
+        //If the airline has money, create a slot
+        for($i = 0; $i < $input['buy_amount']; $i++){
+            if($this->hasGates($airport))
+            $airline->costs += 8000;
+            $airline->profits -= 8000;
+            $s = new Gate();
+            $s->airport = $airport->id;
+            $s->owner = $airline->id;
+            $s->world_id = $airline->world_id;
+            $s->number = chr(65+ rand(0,25)).rand(0,9);
+            $s->save();
+            $airline->save();
+        }
+
+        return Redirect::to('/backend/gates/'.$id);
+
     }
 
     public function slots($id){
@@ -462,6 +558,10 @@ class BackendController extends BaseController{
 
     public function hasSlots($airport){
         return (($airport->max_flights_per_hour * 24) - count($airport->hasMany('Slot', 'airport')->get())) > 0;
+    }
+
+    public function hasGates($airport){
+        return (($airport->gates) - count($airport->hasMany('Gate', 'airport')->get())) > 0;
     }
 }
 

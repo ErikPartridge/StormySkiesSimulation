@@ -273,6 +273,7 @@ class Airplane extends Eloquent{
     }
 
     public function value($t, $cycles){
-        return $t->price * .75 * ((50000 - $cycles) /50000);
+        $price = $t->price * .75 * ((50000 - $cycles) /50000);
+        return abs($price);
     }
 }
