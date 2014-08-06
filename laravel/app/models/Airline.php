@@ -323,7 +323,7 @@ class Airline extends Eloquent{
     }
 
     public function gates(){
-        return $this->hasMany('Gate');
+        return $this->hasMany('Gate', 'owner')->get();
     }
 
 } 

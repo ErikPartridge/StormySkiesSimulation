@@ -26,13 +26,14 @@ class UserController extends \BaseController {
         return View::make('user.log_in');
     }
 
-    public function getLogoff(){
-        Auth::logout();
-        Redirect::to('/');
+    public function logoff(){
+        Sentry::logout();
+        return Redirect::to('/');
     }
 
     public function postLogoff(){
-
+        Sentry::logout();
+        return Redirect::to('/');
     }
 
     public function getSettings(){

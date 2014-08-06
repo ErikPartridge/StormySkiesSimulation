@@ -39,6 +39,9 @@ class BackendController extends BaseController{
     }
 
 	private function ownsAirline($user){
+        if(!$this->hasAirline()){
+            return Redirect::to('/backend/home');
+        }
         //Check if the user owns the airline-- authentication method
 		$active = $user->active_airline;
 		$airlines = $user->hasMany('Airline', 'ceo');
@@ -66,6 +69,9 @@ class BackendController extends BaseController{
     }
 
     public function aircraftDetails($id){
+        if(!$this->hasAirline()){
+            return Redirect::to('/backend/home');
+        }
     	if($id==null){
     		return Redirect::to('/backend/aircraft/1');
     	}
@@ -77,6 +83,9 @@ class BackendController extends BaseController{
 
 
     public function myFleet(){
+        if(!$this->hasAirline()){
+            return Redirect::to('/backend/home');
+        }
         //List all the planes in the fleet
     	$airline = Airline::find(Sentry::getUser()->active_airline);
     	$fleet = array();
@@ -92,12 +101,18 @@ class BackendController extends BaseController{
     }
 
     public function airplaneDetails($id){
+        if(!$this->hasAirline()){
+            return Redirect::to('/backend/home');
+        }
     	$airplane = Airplane::find($id);
 
     	return View::make('backend.airplane')->with('airplane', $airplane);
     }	
 
     public function usedAircraft(){
+        if(!$this->hasAirline()){
+            return Redirect::to('/backend/home');
+        }
         //Render list of used aircraft
         $all = Airplane::all();
         $planes = array();
@@ -118,6 +133,9 @@ class BackendController extends BaseController{
         return Redirect::to('/backend/new_aircraft/1');
     }
     public function newAircraft($id){
+        if(!$this->hasAirline()){
+            return Redirect::to('/backend/home');
+        }
         //Render new aircraft view
     	$types = AircraftType::all();
         $type = AircraftType::find($id);
@@ -130,6 +148,9 @@ class BackendController extends BaseController{
     }
 
     private function allTypes(){
+        if(!$this->hasAirline()){
+            return Redirect::to('/backend/home');
+        }
         //returns array of all types
         $types = AircraftType::all();
         $list = array();
@@ -140,6 +161,9 @@ class BackendController extends BaseController{
     }
 
     public function newAircraftUpdate($id){
+        if(!$this->hasAirline()){
+            return Redirect::to('/backend/home');
+        }
         //Update the new aircraft view, usually involves a purchase
         $user = Sentry::getUser();
         $airline = Airline::find($user->active_airline);
@@ -188,10 +212,16 @@ class BackendController extends BaseController{
     }
 
     public function corporateRedirect(){
+        if(!$this->hasAirline()){
+            return Redirect::to('/backend/home');
+        }
         return Redirect::to('/backend/corporate/'.Sentry::getUser()->active_airline);
     }
 
     public function corporate($id){
+        if(!$this->hasAirline()){
+            return Redirect::to('/backend/home');
+        }
         return View::make('backend.corporate')->with('airline', Airline::find(Sentry::getUser()->active_airline));
     }
 
@@ -201,6 +231,9 @@ class BackendController extends BaseController{
     }
 
     public function usedAircraftUpdate(){
+        if(!$this->hasAirline()){
+            return Redirect::to('/backend/home');
+        }
         //Get all the input
         $list = Input::except('_token');
         $toBuy = array();
@@ -252,6 +285,9 @@ class BackendController extends BaseController{
 
     public function routes(){
         //Generate a route map
+        if(!$this->hasAirline()){
+            return Redirect::to('/backend/home');
+        }
         $airline = Sentry::getUser()->active_airline;
         $rts = Rte::where('airline', $airline)->get();
         $airports = Airport::all();
@@ -302,8 +338,16 @@ class BackendController extends BaseController{
     public function slots(){
 
     }
-
+    private function hasAirline(){
+        $airline = Sentry::getUser()->active_airline;
+        if($airline != 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public function enterWorld($id){
+
         //Set the active airline to the one the user owns in this world
         $user = Sentry::getUser();
         $airlines = Airline::where('ceo', '=', $user->id)->get();
@@ -323,6 +367,15 @@ class BackendController extends BaseController{
 
         return View::make('backend.airport')->with('airport', $a);
 
+    }
+
+    public function listGates(){
+        if(!$this->hasAirline()){
+            return Redirect::to('/backend/home');
+        }
+        $airline = Airline::find(Sentry::getUser()->active_airline);
+        $gates = $airline->gates();
+        return View::make('backend.gates')->with('gates', $gates);
     }
 }
 

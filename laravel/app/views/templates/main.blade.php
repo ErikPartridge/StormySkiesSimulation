@@ -37,6 +37,7 @@
                 </ul>
             </li>
             <li>{{HTML::link("backend/global", "World", array())}}</li>
+            <li>{{HTML::link("user/logoff", "Log Out", array())}}</li>
         </ul>
     </div>
     @yield('content')

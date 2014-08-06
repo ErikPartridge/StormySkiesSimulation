@@ -81,9 +81,9 @@ Route::get('/backend/airports', "BackendController@airports");
 
 Route::post('/backend/airports', "BackendController@airportsUpdate");
 
-Route::get('/backend/gates', "BackendController@gates");
+Route::get('/backend/gates', "BackendController@listGates");
 
-Route::post('/backend/gates', "BackendController@gatesUpdate");
+Route::post('/backend/gates', "BackendController@listGates");
 
 Route::get('/backend/slots', "BackendController@slots");
 
