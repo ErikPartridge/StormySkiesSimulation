@@ -15,3 +15,8 @@ Header image by flickr user Joao Carlos Medau, that image is titled main.jpg, an
 
 #####JavaScript:
 Leaflet.js for maps, and JQuery (isn't actually being used for anything yet, will eventually)
+
+####Credentials:
+I have created an account for class, and added some stuff to it:
+Username: emalmstrompartridge@g.harvard.edu
+Password: HarvardDWA15
