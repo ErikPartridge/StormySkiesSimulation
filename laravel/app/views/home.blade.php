@@ -21,12 +21,12 @@
         </div>
     </div>
     
-    <hr></hr>
+    <hr>
     <img src="{{asset('images/core/a380.jpg')}}" alt="A380 lining up" width="100%" height="15%">
     <div id="bottom">
         <div id="left-bottom">
             <h3>Latest News</h3>
-            <hr></hr>
+            <hr>
             <uL>
                 <li>Just launched world: O'Hare! Come check it out now!</li>
                 <li>Just launched world: De Gaulle! Check it out!</li>
@@ -35,7 +35,7 @@
         </div>
         <div id="right-bottom">
             <h3>Worlds</h3>
-            <hr></hr>
+            <hr>
             <table>
             <tr>
                 <th>Name</th><th>Users</th><th>Max Users</th><th>In-Game Time</th>
@@ -51,7 +51,7 @@
     </div>
     <footer>
         <p></p>
-        <hr></hr>
+        <hr>
         <p>&copy; Erik Malmstrom-Partridge 2014</p>
         <p>The banner image is by Joao Carlos Medau and is released under the <a href="https://creativecommons.org/licenses/by/2.0/">CC2.0</a>.</p>
         <p>{{HTML::link('/terms', 'Our Terms and Conditions')}}</p>
