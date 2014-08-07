@@ -9,7 +9,7 @@
 	$lon = $hq->longitude;
  ?>
   <br><br><br>
-  <div class="map" id="map"style="height:80%"></div>
+  <div class="map" id="map" style="height:80%"></div>
  <script>
 	var map = L.map('map', {
     	center: [{{$lat}}, {{$lon}}],
