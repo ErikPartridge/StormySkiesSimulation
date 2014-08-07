@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://takeoffsim.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'pyK3Ubg2qjvSOnzzEVbVeaLOpXSsbpB8',
+	'key' => 'PCxUIyxxdblLXMXzEHgZTkxUjatMCxFM',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
