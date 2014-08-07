@@ -24,7 +24,9 @@ class InsertForSaleAirplanes extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::table('airplanes', function(Blueprint $table){
+			$table->dropColumn('for_sale');
+		});
 	}
 
 }

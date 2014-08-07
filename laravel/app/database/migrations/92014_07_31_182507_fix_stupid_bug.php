@@ -25,7 +25,9 @@ class FixStupidBug extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::table('airlines', function(Blueprint $table){
+			$table->dropColumn('ceo');
+		});
 	}
 
 }

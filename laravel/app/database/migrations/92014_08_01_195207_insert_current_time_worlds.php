@@ -24,7 +24,9 @@ class InsertCurrentTimeWorlds extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::table('worlds', function($table){
+			$table->dropColumn('current_time');
+		});
 	}
 
 }

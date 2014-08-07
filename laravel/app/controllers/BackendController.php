@@ -69,6 +69,7 @@ class BackendController extends BaseController{
     }
 
     public function aircraftDetails($id){
+        //Get details for given aircraft type
         if(!$this->hasAirline()){
             return Redirect::to('/backend/home');
         }
@@ -82,6 +83,7 @@ class BackendController extends BaseController{
     }
 
     public function aircraftDetailsUpdate($id){
+        //Update the aircraft type
         if(!$this->hasAirline()){
             return Redirect::to('/backend/home');
         }
@@ -166,6 +168,7 @@ class BackendController extends BaseController{
     }
 
     private function allTypes(){
+        //List all aircraft types
         if(!$this->hasAirline()){
             return Redirect::to('/backend/home');
         }
@@ -209,6 +212,7 @@ class BackendController extends BaseController{
     }   
 
     public function makeAirplane($type, Airline $owner){
+        //Generate an airplane from parameters and save
         $a = new Airplane();
         $a->type = $type;
         $a->world_id = $owner->world_id;
@@ -230,6 +234,7 @@ class BackendController extends BaseController{
     }
 
     public function corporateRedirect(){
+        //if not ID is passed, redirect to constant
         if(!$this->hasAirline()){
             return Redirect::to('/backend/home');
         }
@@ -237,6 +242,7 @@ class BackendController extends BaseController{
     }
 
     public function corporate($id){
+        //Make the view with that airline
         if(!$this->hasAirline()){
             return Redirect::to('/backend/home');
         }
@@ -244,6 +250,7 @@ class BackendController extends BaseController{
     }
 
     public function joinWorld($id){
+        //join that world
         $user = Sentry::getUser();
         $apts = World::find($id)->hasMany('Airport')->get();
         $airports = array();
@@ -255,6 +262,8 @@ class BackendController extends BaseController{
     }
 
     public function joinWorldSubmit($id){
+
+        //process that input to join a world
         $input = Input::except('_token');
         $validator = Validator::make(
             array(
@@ -506,6 +515,7 @@ class BackendController extends BaseController{
     }
 
     public function listGates(){
+        //list all the owned gates
         if(!$this->hasAirline()){
             return Redirect::to('/backend/home');
         }

@@ -10,6 +10,6 @@
 <body>
 	<h3>FAQ</h3>
 	<p></p>
-	&copy Erik Malmstrom-Partridge 2014
+	&copy; Erik Malmstrom-Partridge 2014
 </body>
 </html>

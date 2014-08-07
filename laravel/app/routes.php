@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomeController@showWelcome');
 
+// Update = post, otherwise is get, {id} is a generic variable, specifying the database id for the item
+
 Route::get('/backend/enter_world/{id}', "BackendController@enterWorld");
 
 Route::get('/backend/airplane/{id}', "BackendController@airplaneDetails");
@@ -152,7 +154,7 @@ Route::get('/backend/new_aircraft/{id}', "BackendController@newAircraft");
 Route::post('/backend/new_aircraft/{id}', "BackendController@newAircraftUpdate");
 
 Route::get('/backend/join_world/{id}', "BackendController@joinWorld");
-
+//the link to join a world
 Route::post('/backend/join_world/{id}', "BackendController@joinWorldSubmit");
 
 Route::post('/user/code/{id}', "UserController@checkCode");

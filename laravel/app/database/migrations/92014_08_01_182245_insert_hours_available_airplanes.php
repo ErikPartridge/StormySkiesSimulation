@@ -24,7 +24,9 @@ class InsertHoursAvailableAirplanes extends Migration {
 	 */
 	public function down()
 	{
-		
+		Schema::table('airplanes', function(Blueprint $table){
+			$table->dropColumn('hours_available');
+		});
 	}
 
 }

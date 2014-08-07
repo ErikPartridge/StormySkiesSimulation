@@ -24,7 +24,9 @@ class InsertGatesAirports extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::table('airports', function(Blueprint $table){
+			$table->dropColumn('gates');
+		});
 	}
 
 }
