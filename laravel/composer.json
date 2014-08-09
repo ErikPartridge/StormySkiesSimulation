@@ -3,6 +3,20 @@
 	"description": "An Airline Simulation",
 	"keywords": ["airline", "laravel"],
 	"license": "Copyright Erik Partridge",
+	"repositories": [
+    {
+        "type":"package",
+        "package": {
+          "name": "erikmp/vanilla",
+          "version":"dev-master",
+          "source": {
+              "url": "https://github.com/erikmp/laravel-vanilla-integration",
+              "type": "git",
+              "reference":"master"
+            }
+        }
+    }
+	],
 	"require": {
         "php": ">= 5.4.0",
 		"laravel/framework": "4.2.*",
@@ -11,7 +25,8 @@
         "laravel/cashier": "~2.0",
         "cartalyst/sentry": "2.1.*",
         "guzzlehttp/guzzle": "~4.0",
-		"bogardo/mailgun": "3.0.*"
+		"bogardo/mailgun": "3.0.*",
+		"erikmp/vanilla": "dev-master"
 	},
 	"require-dev": {
 	},
