@@ -1,0 +1,40 @@
+body{
+	background-image: url('/img/bg.png');
+}
+#box{
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 55%;
+	background-color: white;
+	border-radius: 10px;
+}
+#content{
+	font-family: 'Avenir Next', 'Avenir', sans-serif;
+	text-align: center;
+}
+#form{
+	text-align: right;
+	padding-left: auto;
+	padding-right: 35%;
+}
+#button{
+	text-align: center;
+	padding-left: 68%;
+}
+#sub{
+	background-color: #1475b8;
+	border-style: solid;
+	border-color: white;
+	border-width: 5px;
+	border-radius: 10px;
+	color: white;
+	font-family: 'Avenir', sans-serif;
+	font-size: 1.5em;
+}
+#sub:hover{
+	background-color: #2e9fff;
+}
+input{
+
+}

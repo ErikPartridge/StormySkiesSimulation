@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => true,
+	'debug' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://takeoffsim.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return array(
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'USA/Eastern',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'PCxUIyxxdblLXMXzEHgZTkxUjatMCxFM',
+	'key' => 'v8LU9EGn2k7Ej0XQ6f3giJC7wbD9nIjd',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -121,10 +121,7 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'Laravel\Cashier\CashierServiceProvider',
-		'Cartalyst\Sentry\SentryServiceProvider',
-		'Bogardo\Mailgun\MailgunServiceProvider',
-		'Frozennode\Administrator\AdministratorServiceProvider',
+
 	),
 
 	/*
@@ -191,8 +188,7 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-        'Cashier'         => 'Laravel\Cashier\CashierServiceProvider',
-        'Sentry'          => 'Cartalyst\Sentry\Facades\Laravel\Sentry'
+
 	),
 
 );
