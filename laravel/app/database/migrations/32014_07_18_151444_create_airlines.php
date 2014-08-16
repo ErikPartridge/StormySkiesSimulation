@@ -12,7 +12,7 @@ class CreateAirlines extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('airlines', function($table){
+	    Schema::create('airlines', function($table){
             $table->increments('id');
             $table->integer('world_id')->unsigned();
             $table->integer('reputation');
@@ -27,11 +27,11 @@ class CreateAirlines extends Migration {
             $table->decimal('costs', 20, 2);
             $table->decimal('earnings', 20, 2);
             $table->decimal('profits', 20, 2);
-            $table->integer('ceo')->unsigned();
+	    $table->integer('ceo')->unsigned();
             $table->timestamps();
 
             #foreign
-            $table->foreign('ceo')->references('id')->on('users');
+	    $table->foreign('ceo')->references('id')->on('users');
             $table->foreign('world_id')->references('id')->on('worlds');
             $table->foreign('country')->references('id')->on('countries');
 
@@ -47,6 +47,6 @@ class CreateAirlines extends Migration {
 	public function down()
 	{
 		Schema::drop('airlines');
-    }
+    	}
 
 }
