@@ -28,11 +28,16 @@ class HomeController extends BaseController {
 		if(Input::get('login') == 'Login'){
 			return Redirect::to('user/login');
 		}
-		if(Input::get('faq') == 'FAQ'){
-			return Redirect::to('faq');
+		if(Input::get('forums') == 'Forums'){
+			return Redirect::to('forums.takeoffsim.com');
 		}
 		if(Input::get('wiki') == 'Wiki'){
-			return Redirect::to('getting_started');
+			return Redirect::to('wiki.takeoffsim.com');
+		}
+		if(Input::get('join') == 'Join Today!'){
+			return Redirect::to('user/register');
+		}if(Input::get('more') == 'Learn More!'){
+			return Redirect::to('features');
 		}else{
 			return View::make('home');
 		}
