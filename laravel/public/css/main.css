@@ -3,19 +3,19 @@ html{
 }
 h2{
     text-align: center;
-    color: deepskyblue;}
+    color: #00BFFF;}
 h4{
     text-align: center;
 }
 h3{
-    color: deepskyblue;
+    color: #00BFFF;
 }
 .head-right {
-    color: deepskyblue;
+    color: #00BFFF;
     margin-left: 50%;
 }
 .head-left{
-    color: deepskyblue;
+    color: #00BFFF;
     font-size: 2em;
     text-align: left;
     padding-left: 4%;
@@ -29,7 +29,7 @@ h3{
     display: inline;
     width: 48%;
     padding-right: 2%
-}
+} 
 #right-bottom{
     float:right;
     display: inline;
@@ -37,6 +37,7 @@ h3{
     padding-left: 2%;
 }
 body{
+
     color:#000;
     font:normal 1em 'Avenir', arial, verdana, sans-serif;
     display: block;
@@ -64,25 +65,20 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .main-button {
-    background: #3498db;
-    -webkit-border-radius: 21;
-    -moz-border-radius: 21;
-    border-radius: 21px;
+    background: #0086B2;
     font-family: Arial;
     color: #ffffff;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
-    border: solid #3498db 2px;
+    border: solid #0086B2 2px;
     text-decoration: none;
     width: 24%;
 }
 
 .main-button:hover {
-    background: #3cb0fd;
+    background: #00BFFF;
     text-decoration: none;
-}
-img{
-    border-radius: 30px;
+    border: solid #00BFFF 2px;
 }
 footer{
     text-align: center;
@@ -98,5 +94,22 @@ th{
     width: 20%;
 }
 hr{
-    color: #3498DB;
+    color: #0086B2;
+}
+#brand{
+    color: #303030;
+    text-align: center;
+}
+#bigbutton{
+    width: 50%;
+    display: inline-block;
+}
+.grid-50{
+    border:solid #FF8200 2px;
+}
+a{
+    color: #FF8200;
+}
+a:visited{
+    color: #B25B00;
 }
