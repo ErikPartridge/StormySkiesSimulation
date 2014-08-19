@@ -12,10 +12,10 @@
 </head>
 <body>
     <div class = "grid-container" id="top">
-        <div class ="grid-50" style="border:none;">
-            <h1 style="color:#FF8200;display:inline-block;font-size:2.1em;"><b>Takeoff<span style="color:#00BFFF">Sim</b></span></h1>
+        <div class ="grid-40" style="border:none;">
+            <h1 style="color:#FF8200;display:inline-block;font-size:2.1em; margin-top: 0px;"><b>Takeoff<span style="color:#00BFFF">Sim</b></span></h1>
         </div>
-        <div class="grid-50" style="border:none;">
+        <div class="grid-60" style="border:none;">
             {{ Form::open(array('url' => '/home/button', 'method' => 'POST'))}}
                 <input type="submit" class="main-button" value="Join" name = "join">
                 <input type="submit" class="main-button" value="Login" name = "login">
@@ -32,7 +32,7 @@
                 {{HTML::image('images/icons/multiplayer.svg', "Multiplayer", array('width' => '80%'))}}
             </div>
             <div class="grid-70 push-multiplayer">
-                <a href="forums.takeoffsim.com"><em style="font-size:1.7em">Multiplayer</em></a>
+                <a href="http://forums.takeoffsim.com"><em style="font-size:1.7em">Multiplayer</em></a>
                 <p>With TakeoffSim, you can compete against other people, certainly better than any AI, in a friendly, competitive environment for all skill levels.</p>
             </div>
         </div>
@@ -82,7 +82,7 @@
             </div>
             <div class="grid-70">
                 <a href="/pricing"><em style="font-size:1.7em">Affordable</em></a>
-                <p>Because I'm a human being, I have to get paid somehow. But I try to keep prices low, less than the amount of spare change the average person has.</p>
+                <p>Because I'm a human being, I have to get paid somehow. But I try to keep prices low, just a few quarters a month.</p>
             </div>
         </div>
     </div>
@@ -98,7 +98,7 @@
     </div>
     <hr>
     <footer>
-        <p>&copy; Erik Malmstrom-Partridge 2014</p>
+        <p>&copy <a href="mailto:admin@takeoffsim.com">Erik Malmstrom-Partridge</a> 2014</p>
         <p>{{HTML::link('/terms', 'Our Terms and Conditions')}}   {{HTML::link('/privacy', 'Privacy Policy')}}</p>
     </footer>
 </body>

@@ -113,3 +113,20 @@ a{
 a:visited{
     color: #B25B00;
 }
+.pricing-content{
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+}
+tr{
+    border:solid #FF8200 2px;
+}
+th{
+    background-color: #FF8200;
+    color: #FFFFFF;
+    border-radius: 2px;
+}
+.helper-content{
+    padding-right: 10%;
+    padding-left: 10%;
+}

@@ -165,10 +165,21 @@ Route::get('/terms', function(){
     return View::make('terms');
 });
 
-Route::get('/prices', function(){
+Route::get('/pricing', function(){
    return View::make('prices');
 });
-
+Route::get('/fun', function(){
+   return View::make('fun');
+});
+Route::get('/educational', function(){
+   return View::make('educational');
+});
+Route::get('/about', function(){
+   return View::make('about');
+});
+Route::get('/features', function(){
+   return View::make('features');
+});
 Route::get('/privacy', function(){
 	return View::make('privacy');
 });

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="author" content="Erik Malmstrom-Partridge">
     {{ HTML::style("css/backend.css") }}
-    {{ HTML::script('js/jquery-2.1.1.min.js') }}
+    {{ HTML::script('js/jquery.min.js') }}
+    {{ HTML::script('js/dropit.js')}}
+    {{ HTML::style("css/dropit.css")}}
     <title>Takeoff Simulation</title>
 
     @yield('head-details')
@@ -35,6 +37,12 @@
         </ul>
     </div>
     @yield('content')
+
+    <script>
+    (function(){
+        $('.menu').dropit();    
+    })(jQuery)
+    </script>
 </body>
 
 </html>

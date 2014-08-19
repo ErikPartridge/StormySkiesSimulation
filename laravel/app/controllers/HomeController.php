@@ -29,10 +29,10 @@ class HomeController extends BaseController {
 			return Redirect::to('user/login');
 		}
 		if(Input::get('forums') == 'Forums'){
-			return Redirect::to('forums.takeoffsim.com');
+			return Redirect::to('http://forums.takeoffsim.com');
 		}
 		if(Input::get('wiki') == 'Wiki'){
-			return Redirect::to('wiki.takeoffsim.com');
+			return Redirect::to('http://wiki.takeoffsim.com');
 		}
 		if(Input::get('join') == 'Join Today!'){
 			return Redirect::to('user/register');

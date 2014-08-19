@@ -11,9 +11,11 @@
         "laravel/cashier": "~2.0",
         "cartalyst/sentry": "2.1.*",
         "guzzlehttp/guzzle": "~4.0",
-	"bogardo/mailgun": "3.0.*",
-	"laravelbook/ardent": "2.*",
-	"frozennode/administrator": "dev-master"
+		"bogardo/mailgun": "3.0.*",
+		"laravelbook/ardent": "2.*",
+		"frozennode/administrator": "dev-master",
+		"creof/geo-parser": "dev-master",
+		"greencape/xml-converter": "1.1.0"
 	},
 	"require-dev": {
 	},
