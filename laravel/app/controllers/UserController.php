@@ -122,4 +122,54 @@ class UserController extends \BaseController {
 
     }
 
+    public function getForgot(){
+        return View::make('user/forgot');
+    }
+
+    public function postForgot(){
+        $input = Input::get('email');
+        try{
+            // Find the user using the user email address
+            $user = Sentry::findUserByLogin($input);
+
+            // Get the password reset code
+            $resetCode = $user->getResetPasswordCode();
+            Mailgun::send('emails.forgot', array('code' => $resetCode, 'email' => $user->email), function($message) use($user)
+            {   
+                $string = $user->first_name.' '.$user->last_name;
+                $message->to($user->email, $string)->subject('Reset Password');
+            });
+        }   
+        catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
+        {
+            return Redirect::to('/user/forgot');
+        }   
+    } 
+    public function reset($code, $email){
+        try{
+            // Find the user using the user id
+            $user = Sentry::findUserByEmail($email);
+
+            // Check if the reset password code is valid
+            if ($user->checkResetPasswordCode($code))
+            {
+
+                if ($user->attemptResetPassword('8f1Z7wA4uVt7VemBpGSfaoI9mcjdEwtK8elCnQOb', 'new_password'))
+                {
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                
+            }       
+        }
+        catch (Cartalyst\Sentry\Users\UserNotFoundException $e){
+            echo 'User was not found.';
+        }
+    }     
+
 }

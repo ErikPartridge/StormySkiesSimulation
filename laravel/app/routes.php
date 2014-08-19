@@ -161,6 +161,8 @@ Route::post('/user/code/{id}', "UserController@checkCode");
 
 Route::get('/user/code/{id}', "UserController@checkCode");
 
+Route::get('/user/reset/{code}/{email}', "UserController@reset");
+
 Route::get('/terms', function(){
     return View::make('terms');
 });

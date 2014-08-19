@@ -15,7 +15,7 @@
 			{{Form::label('email', 'Email:')}}
 			{{Form::email('email', '', array('type' => 'email'))}} <br>
 			{{Form::label('password', 'Password:')}}
-			{{Form::password('password', array('minlength' => '6', 'required' => 'required'))}} <br>
+			{{Form::password('password', array('minlength' => '6', 'required' => 'required', 'id' => 'password'))}} <br>
 		</div>
 		<br><br>
 			{{Form::submit('Join!', array('id' => 'button-submit'))}}
