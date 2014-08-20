@@ -25,7 +25,7 @@
         </div>
     </div>
     <hr>
-    <h2 style="text-align:center">Why Try TakeoffSim?</h2>
+    <h2 style="text-align:center; color:#0086B2;">Why Try TakeoffSim?</h2>
     <div class="grid-container" id="top-middle">
         <div class="grid-50">
             <div class="grid-30">
