@@ -73,19 +73,22 @@ class UserController extends \BaseController {
         $last = Input::get('last_name');
         $email = Input::get('email');
         $password = Input::get('password');
+        $username = Input::get('username');
 
         $validator = Validator::make(
             array(
                 'first' => $first,
                 'last' => $last,
                 'email' => $email,
-                'password' => $password
+                'password' => $password,
+                'username' => $username
             ),
             array(
-                'first' => 'required|max:255',
-                'last'  => 'required|max:255',
+                'first' => 'max:255',
+                'last'  => 'max:255',
                 'password' => 'required|min:6|max:32',
-                'email' => 'required|email|unique:users|max:255'
+                'email' => 'required|email|unique:users|max:255',
+                'username' => 'required|unique:users'
             )
         );
 
@@ -93,7 +96,7 @@ class UserController extends \BaseController {
             return View::make('user.register')->withErrors($validator, 'failures');
         }
 
-        $user = Sentry::createUser(array('email' => $email, 'password' => $password, 'first_name' => $first, 'last_name' => $last));
+        $user = Sentry::createUser(array('email' => $email, 'password' => $password, 'first_name' => $first, 'last_name' => $last, 'username' => $last));
         $code = $user->getActivationCode();
 
         Mailgun::send('emails.code', array('code' => $code, 'name' => $first), function($message) use($user)
@@ -153,23 +156,29 @@ class UserController extends \BaseController {
             // Check if the reset password code is valid
             if ($user->checkResetPasswordCode($code))
             {
+                $password = substr(md5(microtime()),rand(0,26),18);
 
-                if ($user->attemptResetPassword('8f1Z7wA4uVt7VemBpGSfaoI9mcjdEwtK8elCnQOb', 'new_password'))
+                if ($user->attemptResetPassword($code, $password))
                 {
+                    return View::make('user.forgotten')->with('password', $password)->with('error', false);
                 }
                 else
                 {
-
+                    return View::make('user.forgotten')->with('error', true);
                 }
             }
             else
             {
-                
+                return Redirect::to('/');
             }       
         }
         catch (Cartalyst\Sentry\Users\UserNotFoundException $e){
-            echo 'User was not found.';
+            return Redirect::to('/');
         }
+    }
+
+    public function settings(){
+        
     }     
 
 }

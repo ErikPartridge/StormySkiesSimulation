@@ -12,6 +12,8 @@
 			{{Form::text('first_name', '', array('type' => 'text', 'minlength' => '2', 'maxlength' => '255'))}} <br>
 			{{Form::label('lastname', 'Last Name:')}}
 			{{Form::text('last_name', '', array('type' => 'text', 'minlength' => '2', 'maxlength' => '255') )}} <br>
+			{{Form::label('username', 'Username:')}}
+			{{Form::text('username', '', array('type' => 'text', 'maxlength'=> '255'))}}
 			{{Form::label('email', 'Email:')}}
 			{{Form::email('email', '', array('type' => 'email'))}} <br>
 			{{Form::label('password', 'Password:')}}

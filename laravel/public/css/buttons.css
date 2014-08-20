@@ -1,6 +1,6 @@
 /* line 24, ../scss/partials/_buttons.scss */
 .button {
-  background-color: #eeeeee;
+  background-color: #ffffff;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -30,7 +30,7 @@
     -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
     box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);
-    background: #eeeeee;
+    background: #ffffff;
     color: #bbbbbb; }
   /* line 52, ../scss/partials/_buttons.scss */
   .button:focus {
@@ -96,7 +96,7 @@ button.button:disabled {
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  background: #eeeeee;
+  background: #ffffff;
   text-shadow: none; }
   /* line 105, ../scss/partials/_buttons.scss */
   .button-flat:hover {
@@ -724,7 +724,7 @@ input.button-tiny, button.button-tiny {
     font-family: "Avenir", arial, sans-serif;
     font-size: 1em;
     position: absolute;
-    background: #fcfcfc;
+    background: #ffffff;
     top: -2px;
     left: -2px;
     z-index: 1000;
