@@ -15,29 +15,31 @@ class BackendController extends BaseController{
         $user = Sentry::getUser();
         $airlines = Airline::all();
         $participated = array();
-        $count = 0;
         $worlds = World::all();
         //
         foreach($airlines as $a){
             if($a->ceo == $user->id){
-                array_push($participated, $a->world_id);
+                array_push($participated, $a);
             }
         }
         //How many participated in
-        foreach($participated as $p){
-            $count++;
-        }
-        $full = 0;
+        $full = array();
+        $wrd = array();
         //All full worlds
         foreach($worlds as $w){
             if($w->number_users == $w->cap){
-                $full++;
+                array_push($full, $w);
+                array_push($wrd, $w);
+            }else{
+                if($w->hasMany('Airline')->where('ceo', '=', $user->id)->first() != null){
+                    array_push($participated, $w);
+                }
             }
         }
+        $available = array_diff($wrd, $participated, $full);
 
-        return View::make('backend.home')->with('participated', $participated)->with('count', $count)->with('worlds', $worlds)->with('full', $full);
+        return View::make('backend.home')->with('participated', $participated)->with('worlds', $worlds)->with('full', $full);   
     }
-
 	private function ownsAirline($user){
         if(!$this->hasAirline()){
             return Redirect::to('/backend/home');

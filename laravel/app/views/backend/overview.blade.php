@@ -3,7 +3,7 @@
 @section('content')
 <br>
 <div class="t">
-	@if($count > 0)
+	@if(count($participated))
 		<h2>Worlds You Participate In:</h2>
 		<table>
 		<tr>
@@ -23,28 +23,24 @@
 		<tr>
 			<th>Name</th><th>Users</th><th>Max Users</th><th>In-Game Time</th><th>Join</th>
 		</tr>
-	@foreach($worlds as $p)
-		@if($p->number_users < $p->cap)
+	@foreach($available as $p)
 			<tr>
 				<?PHP $carbon = new Carbon\Carbon($p->current_time,'UTC') ?>
 				<td>{{$p->name}}</td><td>{{$p->number_users}}</td><td>{{$p->cap}}</td><td>{{$carbon->toFormattedDateString()}}</td><td>{{ Form::open(array('url' => '/backend/join_world', 'method' => 'POST'))}} {{Form::submit('Join!', array('name' => $p->id, 'class' => 'main-button'))}} {{Form::close()}}</td>	
 			</tr>
-		@endif
 	@endforeach
 	</table>
-	@if($full > 0)
+	@if(count($full) > 0)
 		<h2>Full Worlds:</h2>
 		<table>
 		<tr>
 			<th>Name</th><th>Users</th><th>Max Users</th><th>In-Game Time</th>
 		</tr>
-		@foreach($worlds as $p)
-			@if($p->number_users == $p->cap)
+		@foreach($full as $p)
 			<tr>
 				<?PHP $carbon = new Carbon\Carbon($p->current_time,'UTC') ?>
 				<td>{{$p->name}}</td><td>{{$p->number_users}}</td><td>{{$p->cap}}</td><td>{{$carbon->toFormattedDateString()}}</td>	
 			</tr>
-			@endif
 		@endforeach
 		</table>
 	@endif

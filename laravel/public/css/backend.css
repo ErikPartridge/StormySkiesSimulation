@@ -36,11 +36,11 @@ td{
 table{
 	font-family: "Avenir", sans-serif;
 	border-collapse: collapse;
-	border-color: #002CA1;
+	border-color: #0086B2;
 	width: 100%;
 }
 th{
-	background-color: #002CA1;
+	background-color: #0086B2;
 	color: white;
 	font-weight: normal;
 	font-style: italic;
@@ -82,10 +82,14 @@ th{
 .menu li{
 	background-color: black;
 }
+a{
+	text-decoration: none;
+	font-family: "Avenir", arial, sans-serif;
+	color: #0086B2;
+}
 .menu li a{
 	color: #00BFFF;
 	text-decoration: none;
 	font-family: "Avenir", arial, sans-serif;
 	font-size: 1.2em;
 }
-
