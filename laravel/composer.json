@@ -15,7 +15,15 @@
 		"laravelbook/ardent": "2.*",
 		"frozennode/administrator": "dev-master",
 		"creof/geo-parser": "dev-master",
-		"greencape/xml-converter": "1.1.0"
+		"soapbox/laravel-formatter": "dev-master",
+		"mews/purifier": "dev-master",
+		"pingpong/csv-reader": "1.0.*",
+		"webpatser/laravel-countries": "dev-master",
+		"liebig/cron": "dev-master",
+		"msurguy/honeypot": "dev-master",
+		"tom-lingham/searchy" : "dev-master",
+		"greggilbert/recaptcha": "dev-master",
+		"barryvdh/laravel-translation-manager": "0.1.x"
 	},
 	"require-dev": {
 	},
@@ -46,5 +54,5 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "dist"
 }
