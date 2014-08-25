@@ -5,7 +5,6 @@
     <meta name="author" content="Erik Partridge">
     <meta name="description" content="A multi-player simulation of the airline industry. Compete against your friends, and try to succeed in a cut-throat industry.">
     {{ HTML::style("css/main.css") }}
-    {{ HTML::script('js/fullpage.min.js')}}
     {{ HTML::style("css/unsemantic.css")}}
     <link rel="shortcut icon" href="images/TS.png">
     <title>Takeoff Simulation</title>
