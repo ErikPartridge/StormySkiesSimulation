@@ -14,7 +14,7 @@
 Route::get('/', 'HomeController@showWelcome');
 
 // Update = post, otherwise is get, {id} is a generic variable, specifying the database id for the item
-
+/*
 Route::get('/backend/enter_world/{id}', "BackendController@enterWorld");
 
 Route::get('/backend/airplane/{id}', "BackendController@airplaneDetails");
@@ -117,51 +117,51 @@ Route::post('/user/logoff', "UserController@postLogoff");
 
 Route::get('/user/settings', "UserController@settings");
 
-Route::post('/user/settings', "UserController@settingsUpdate");
+//Route::post('/user/settings', "UserController@settingsUpdate");
 
-Route::get('/user/payment', "UserController@payment");
+//Route::get('/user/payment', "UserController@payment");
 
-Route::post('/user/payment', "UserController@paymentUpdate");
+//Route::post('/user/payment', "UserController@paymentUpdate");
 
-Route::post('/user/register', "UserController@postRegister");
+//Route::post('/user/register', "UserController@postRegister");
 
-Route::get('/user/register', "UserController@getRegister");
-
+//Route::get('/user/register', "UserController@getRegister");
+*/
 Route::post('/home/button', "HomeController@processButton");
 
 Route::get('/home/button', "HomeController@processButton");
 
-Route::get('/user/success', "UserController@getSuccess");
+//Route::get('/user/success', "UserController@getSuccess");
 
-Route::get('/user/forgot', "UserController@getForgot");
+//Route::get('/user/forgot', "UserController@getForgot");
 
-Route::post('/user/forgot', "UserController@postForgot");
+//Route::post('/user/forgot', "UserController@postForgot");
 
-Route::get('/user/activate', "UserController@getActivate");
+//Route::get('/user/activate', "UserController@getActivate");
 
-Route::post('/user/activate', "UserController@postActivate");
+//Route::post('/user/activate', "UserController@postActivate");
 
-Route::get('/login', "UserController@getLogin");
+//Route::get('/login', "UserController@getLogin");
 
-Route::get('/backend/airplane', "BackendController@airplaneRedirect");
+//Route::get('/backend/airplane', "BackendController@airplaneRedirect");
 
-Route::get('/backend/home', "BackendController@home");
+//Route::get('/backend/home', "BackendController@home");
 
-Route::post('/backend/home', "BackendController@postHome");
+//Route::post('/backend/home', "BackendController@postHome");
 
-Route::get('/backend/new_aircraft/{id}', "BackendController@newAircraft");
+//Route::get('/backend/new_aircraft/{id}', "BackendController@newAircraft");
 
-Route::post('/backend/new_aircraft/{id}', "BackendController@newAircraftUpdate");
+//Route::post('/backend/new_aircraft/{id}', "BackendController@newAircraftUpdate");
 
-Route::get('/backend/join_world/{id}', "BackendController@joinWorld");
+//Route::get('/backend/join_world/{id}', "BackendController@joinWorld");
 //the link to join a world
-Route::post('/backend/join_world/{id}', "BackendController@joinWorldSubmit");
+//Route::post('/backend/join_world/{id}', "BackendController@joinWorldSubmit");
 
-Route::post('/user/code/{id}', "UserController@checkCode");
+//Route::post('/user/code/{id}', "UserController@checkCode");
 
-Route::get('/user/code/{id}', "UserController@checkCode");
+//Route::get('/user/code/{id}', "UserController@checkCode");
 
-Route::get('/user/reset/{code}/{email}', "UserController@reset");
+//Route::get('/user/reset/{code}/{email}', "UserController@reset");
 
 Route::get('/terms', function(){
     return View::make('terms');

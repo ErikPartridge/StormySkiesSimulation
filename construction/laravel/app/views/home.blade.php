@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Erik Partridge">
-    <meta name="description" content="A multi-player simulation of the airline industry. Compete against your friends, and try to succeed in a cut-throat industry.">
+    <meta name="description" content="An authentic simulation of the airline industry-- run an airline and try to succeed in a cut-throat industry.">
     {{ HTML::style("css/main.css") }}
     {{ HTML::style("css/unsemantic.css")}}
     <link rel="shortcut icon" href="images/TS.png">
@@ -16,21 +16,22 @@
         </div>
         <div class="grid-60" style="border:none;">
             {{ Form::open(array('url' => '/home/button', 'method' => 'POST'))}}
+                <input type="submit" class="main-button" value="Be Notified" name = "login">
                 <input type="submit" class="main-button" value="Forums" name = "forums">
                 <input type="submit" class="main-button" value="Wiki" name="wiki">
             {{ Form::close() }}
         </div>
     </div>
     <hr>
-    <h2 style="text-align:center; color:#0086B2;">Why TakeoffSim?</h2>
+    <h2 style="text-align:center; color:#0086B2;">Why Try TakeoffSim?</h2>
     <div class="grid-container" id="top-middle">
         <div class="grid-50">
             <div class="grid-30">
-                {{HTML::image('images/icons/multiplayer.svg', "Community", array('width' => '80%'))}}
+                {{HTML::image('images/icons/multiplayer.svg', "Multiplayer", array('width' => '80%'))}}
             </div>
             <div class="grid-70 push-multiplayer">
-                <a href="http://forums.takeoffsim.com"><em style="font-size:1.7em">Community</em></a>
-                <p>I listen to the community for any input they have</p>
+                <a href="http://forums.takeoffsim.com"><em style="font-size:1.7em">Multiplayer</em></a>
+                <p>With TakeoffSim, you can compete against other people, certainly better than any AI, in a friendly, competitive environment for all skill levels.</p>
             </div>
         </div>
         <div class="grid-50">
@@ -39,7 +40,7 @@
             </div>
             <div class="grid-70">
                 <a href="/features"><em style="font-size:1.7em">Dynamic</em></a>
-                <p>TakeoffSim doesn't have a formula to win-- both user decisions and the dynamic AI engine create a unique challenge each time.</p>
+                <p>TakeoffSim doesn't have a formula to win. Like the real world, each player's decision affects the game, meaning no world will ever be the same.</p>
             </div>
         </div>
     </div>
@@ -75,27 +76,21 @@
         </div>
         <div class="grid-50">
             <div class="grid-30">
-                {{HTML::image('images/icons/exclamation.svg', "Notified", array('width' => '80%'))}}
+                {{HTML::image('images/icons/money.svg', "Money", array('width' => '80%'))}}
             </div>
             <div class="grid-70">
-                <em style="font-size:1.7em">Be Notified</em>
-                <p>TakeoffSim is releasing soon for Windows, Mac, and Linux! Sign up below for more information and early access when it's ready!</p>
+                <a href="/pricing"><em style="font-size:1.7em">Affordable</em></a>
+                <p>Because I'm a human being, I have to get paid somehow. But I try to keep prices low, just a few quarters a month.</p>
             </div>
         </div>
     </div>
     <div class="grid-container">
         {{ Form::open(array('url' => '/home/button', 'method' => 'POST'))}}
-        <div class="grid-30" style="border:solid #FF8200 2px;">
-            <input type="text" class="name" value="your name here" id="name" name = "name" style="width:100%; height: 10px;">
+        <div class="grid-50" style="border:none;">
+            <input type="submit" class="main-button" value="Join Today!" id="bigbutton" name = "join" style="width:100%;">
         </div>
-        <div class="grid-50" style="border:solid #FF8200 2px;">
-            <input type="text" class="email" value="your email here" id="email" name = "email" style="width:100%; height:10px;">
-        </div>
-        <div class="grid-20" style="border:solid #FF8200 2px;">
-            <input type="submit" class="main-button" value="submit" style="width:100%;">
-        </div>
-        <div class="grid-100">
-            <p>This information is used in accordance to our {{HTML::link('/privacy', 'privacy policy')}} and {{HTML::link('/terms', 'our terms and conditions')}}</p>
+        <div class="grid-50" style="border:none;">
+            <input type="submit" class="main-button" value="Learn More!" id="bigbutton" name = "more" style="width:100%;">
         </div>
     {{ Form::close() }}
     </div>
@@ -104,22 +99,6 @@
         <p>&copy <a href="mailto:erikdevelopments@gmail.com">Erik Malmstrom-Partridge</a> 2014</p>
         <p>{{HTML::link('/terms', 'Our Terms and Conditions')}}   {{HTML::link('/privacy', 'Privacy Policy')}}</p>
     </footer>
-    <!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//piwik.takeoffsim.com/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 1]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="//piwik.takeoffsim.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->
-
 </body>
 
 </html>

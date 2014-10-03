@@ -34,13 +34,26 @@ class HomeController extends BaseController {
 		if(Input::get('wiki') == 'Wiki'){
 			return Redirect::to('http://wiki.takeoffsim.com');
 		}
-		if(Input::get('join') == 'Join Today!'){
-			return Redirect::to('user/register');
-		}if(Input::get('more') == 'Learn More!'){
-			return Redirect::to('features');
+		if(Input::has('email')){
+			$r = new Recipient();
+			$r->last = Input::get('name');
+			$r->email = Input::get('email');
+			$r->first = '';
+			$r->save();
+			$this->sendEmail($last, $email, $r);
 		}else{
 			return View::make('home');
 		}
 	}
 
+	public function sendEmail($name, $email, Recipient $r){
+		$data = array(
+			'name' => $name,
+			'email' => $email
+		);
+		Mailgun::send('emails.welcome', $data, function($message) use($r)
+		{
+    		$message->to($r->email, $r->name)->subject('Welcome!');
+		});
+	}
 }
